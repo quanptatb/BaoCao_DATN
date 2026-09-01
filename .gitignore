@@ -3,3 +3,10 @@ assets/video/*.mp4
 assets/video/
 assets/*.mp4
 *.mp4
+
+# OS & Editor
+.DS_Store
+Thumbs.db
+*.swp
+.vscode/
+.idea/

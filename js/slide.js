@@ -155,11 +155,54 @@
     if (sh) sh.classList.toggle('visible', shortcutsVisible);
   }
 
+  // ---------- Video Source Switching ----------
+  let currentVideoMode = 'drive';
+
+  function switchVideoSource(mode) {
+    currentVideoMode = mode;
+    const tabDrive = document.getElementById('tabDrive');
+    const tabLocal = document.getElementById('tabLocal');
+    const driveWrapper = document.getElementById('drivePlayerWrapper');
+    const localWrapper = document.getElementById('localPlayerWrapper');
+    const localPicker = document.getElementById('localPickerWrapper');
+    const statusHint = document.getElementById('videoStatusHint');
+    const video = document.getElementById('demoVideo');
+
+    if (mode === 'drive') {
+      if (tabDrive) tabDrive.classList.add('active');
+      if (tabLocal) tabLocal.classList.remove('active');
+      if (driveWrapper) driveWrapper.classList.add('active');
+      if (localWrapper) localWrapper.classList.remove('active');
+      if (localPicker) localPicker.style.display = 'none';
+      if (statusHint) statusHint.innerHTML = '💡 Đang phát trực tuyến <strong>Google Drive Cloud</strong> • Bấm biểu tượng phóng to góc phải video để xem Fullscreen HD';
+      if (video && !video.paused) video.pause();
+    } else {
+      if (tabDrive) tabDrive.classList.remove('active');
+      if (tabLocal) tabLocal.classList.add('active');
+      if (driveWrapper) driveWrapper.classList.remove('active');
+      if (localWrapper) localWrapper.classList.add('active');
+      if (localPicker) localPicker.style.display = 'flex';
+      if (statusHint) statusHint.innerHTML = '💻 Đang phát từ <strong>File Cục Bộ (Offline)</strong> • Bấm phím <kbd>V</kbd> hoặc click màn hình để Play / Pause';
+    }
+  }
+
   // ---------- Video Picker ----------
   function setupVideoPicker() {
     const picker = document.getElementById('videoPicker');
     const video = document.getElementById('demoVideo');
     if (!picker || !video) return;
+
+    // Detect if running on GitHub Pages / Web vs Localhost / File
+    const isOnline = window.location.hostname.includes('github.io') || window.location.protocol === 'https:';
+    if (isOnline) {
+      switchVideoSource('drive');
+    } else {
+      // If local file:// or localhost, check if local video can load
+      video.addEventListener('error', () => {
+        console.warn('[Slides] Local video failed to load, falling back to Google Drive stream.');
+        switchVideoSource('drive');
+      }, { once: true });
+    }
 
     picker.addEventListener('change', (e) => {
       const file = e.target.files[0];
@@ -167,6 +210,7 @@
       const url = URL.createObjectURL(file);
       video.src = url;
       video.load();
+      switchVideoSource('local');
       // Show filename
       const label = document.querySelector('.video-filename');
       if (label) label.textContent = file.name;
@@ -292,6 +336,8 @@
     toggleNotes,
     toggleFullscreen,
     toggleShortcuts,
+    toggleVideo,
+    switchVideoSource,
   };
 
   // ---------- Boot ----------

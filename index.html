@@ -1458,26 +1458,52 @@
 </div>
 
 <!-- SLIDE 38: VIDEO DEMO -->
-<div class="slide" data-notes="Chiếu video demo tổng quan hệ thống. Video được tải trực tiếp từ assets/video/VIDEO DEMO_VER2.mp4 hoặc có thể chọn file khác từ máy.">
+<div class="slide" data-notes="Chiếu video demo tổng quan hệ thống. Hỗ trợ phát trực tuyến mượt mà qua Google Drive Cloud hoặc phát trực tiếp từ file video local khi báo cáo offline.">
   <div class="slide-header"><div class="header-left"><img src="assets/img/FPT_Polytechnic-26eda0e9.png" alt="FPT"><span>PHẦN 7 — KẾT</span></div><div class="header-right">Quân</div></div>
   <div class="slide-content">
     <h1 class="text-center">Video <span class="accent">Demo Hệ Thống</span></h1>
     <div class="video-container">
-      <video id="demoVideo" controls preload="metadata" style="width:1100px; max-height:540px; border-radius:var(--radius-md); box-shadow:var(--shadow-lg);">
-        <source src="assets/video/VIDEO DEMO_VER2.mp4" type="video/mp4">
-        Trình duyệt không hỗ trợ thẻ video HTML5. Vui lòng mở file tại assets/video/VIDEO DEMO_VER2.mp4
-      </video>
-      <div style="display: flex; gap: 16px; align-items: center; flex-wrap: wrap; justify-content: center; margin-top: 8px;">
-        <div class="video-picker">
-          <label for="videoPicker">📂 Import Video Khác</label>
+      <!-- Mode Tabs Switcher -->
+      <div class="video-mode-tabs">
+        <button type="button" class="video-tab-btn active" id="tabDrive" onclick="window.slideEngine && window.slideEngine.switchVideoSource('drive')">
+          <span>🌐</span> Phát Trực Tuyến (Google Drive HD)
+        </button>
+        <button type="button" class="video-tab-btn" id="tabLocal" onclick="window.slideEngine && window.slideEngine.switchVideoSource('local')">
+          <span>💻</span> Video Cục Bộ (Offline MP4)
+        </button>
+      </div>
+
+      <!-- Player Frame -->
+      <div class="video-player-wrapper">
+        <!-- Google Drive Preview Embed (Always works on GitHub Pages) -->
+        <div id="drivePlayerWrapper" class="player-pane active">
+          <iframe id="demoIframe" src="https://drive.google.com/file/d/1lyk_asB88SRet_-HTlTYOQtiDGmndWYT/preview" allow="autoplay; fullscreen" allowfullscreen></iframe>
+        </div>
+
+        <!-- Local HTML5 Video Player (Used when presenting locally or importing file) -->
+        <div id="localPlayerWrapper" class="player-pane">
+          <video id="demoVideo" controls preload="metadata">
+            <source src="assets/video/VIDEO DEMO_VER2.mp4" type="video/mp4">
+            Trình duyệt không tìm thấy file video cục bộ. Vui lòng sử dụng chế độ "Phát Trực Tuyến" hoặc import file từ máy.
+          </video>
+        </div>
+      </div>
+
+      <!-- Toolbar Actions -->
+      <div class="video-toolbar">
+        <div class="video-picker" id="localPickerWrapper" style="display: none;">
+          <label for="videoPicker">📂 Chọn Video Khác</label>
           <input type="file" id="videoPicker" accept="video/*">
           <span class="video-filename text-sm text-muted">assets/video/VIDEO DEMO_VER2.mp4</span>
         </div>
-        <a href="https://drive.google.com/file/d/1lyk_asB88SRet_-HTlTYOQtiDGmndWYT/view?usp=drive_link" target="_blank" style="background: var(--fpt-orange); color: var(--white); padding: 10px 20px; border-radius: var(--radius-md); text-decoration: none; font-weight: 600; font-size: 15px; display: inline-flex; align-items: center; gap: 8px;">
-          🎬 Xem Video Trực Tuyến trên Google Drive →
+        <a href="https://drive.google.com/file/d/1lyk_asB88SRet_-HTlTYOQtiDGmndWYT/view?usp=drive_link" target="_blank" class="drive-link-btn">
+          <span>🎬</span> Mở Trực Tuyến trên Google Drive ↗
         </a>
       </div>
-      <p class="text-xs text-muted" style="margin-top:4px;">Bấm phím <kbd>V</kbd> hoặc click màn hình để Play / Pause • Đang phát: <code>assets/video/VIDEO DEMO_VER2.mp4</code></p>
+
+      <p class="text-xs text-muted video-hint">
+        <span id="videoStatusHint">💡 Đang phát trực tuyến Google Drive Cloud • Bấm biểu tượng phóng to góc phải video để xem Fullscreen HD</span>
+      </p>
     </div>
   </div>
   <div class="slide-footer"><span>FPT Polytechnic — DATN 2026</span></div>
