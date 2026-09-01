@@ -131,9 +131,12 @@ html, body {
 }
 
 .slide-header .header-left img {
-  height: 44px;
+  height: 38px;
   width: auto;
   border-radius: var(--radius-sm);
+  background: var(--white);
+  padding: 3px 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
 }
 
 .slide-header .header-right {
@@ -203,8 +206,9 @@ html, body {
   color: var(--gray-800);
 }
 
-/* ---------- Cover Slide ---------- */
-.slide-cover {
+/* ---------- Cover Slide & End Slide ---------- */
+.slide-cover,
+.slide-end {
   background: linear-gradient(135deg, var(--fpt-orange) 0%, var(--fpt-orange-dark) 100%);
   color: var(--white);
   justify-content: center;
@@ -212,9 +216,11 @@ html, body {
   text-align: center;
 }
 
-.slide-cover .slide-header { display: none; }
+.slide-cover .slide-header,
+.slide-end .slide-header { display: none; }
 
-.slide-cover .cover-content {
+.slide-cover .cover-content,
+.slide-end .cover-content {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -222,12 +228,18 @@ html, body {
   max-width: 1400px;
 }
 
-.slide-cover .school-logo {
-  width: 120px;
+/* School Logo Badge: White container with padding and rounded corners so orange logo text is crisp and contrasted */
+.school-logo,
+.slide-cover .school-logo,
+.slide-end .school-logo {
+  width: 160px;
+  max-width: 180px;
   height: auto;
   border-radius: var(--radius-md);
   background: var(--white);
-  padding: 8px;
+  padding: 10px 18px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  display: block;
 }
 
 .slide-cover .school-name {
@@ -275,7 +287,8 @@ html, body {
   gap: var(--sp-8);
 }
 
-.slide-cover .tech-badges {
+.slide-cover .tech-badges,
+.slide-end .tech-badges {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -283,7 +296,8 @@ html, body {
   margin-top: var(--sp-12);
 }
 
-.slide-cover .tech-badge {
+.slide-cover .tech-badge,
+.slide-end .tech-badge {
   background: rgba(255,255,255,0.2);
   border: 1px solid rgba(255,255,255,0.3);
   padding: 6px 16px;
@@ -291,17 +305,6 @@ html, body {
   font-size: 15px;
   font-weight: 500;
 }
-
-/* ---------- Thank-you / End Slide ---------- */
-.slide-end {
-  background: linear-gradient(135deg, var(--fpt-orange) 0%, var(--fpt-orange-dark) 100%);
-  color: var(--white);
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-.slide-end .slide-header { display: none; }
 
 /* ---------- Section Title Slide ---------- */
 .slide-section {
