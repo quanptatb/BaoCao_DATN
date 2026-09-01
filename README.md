@@ -1,6 +1,11 @@
-# 🎓 Hướng Dẫn Sử Dụng Bộ Slide Thuyết Trình Báo Cáo DATN (FPT Polytechnic)
+# 🎓 Bộ Slide Thuyết Trình Báo Cáo DATN (FPT Polytechnic)
 
-Bộ slide HTML 16:9 chuẩn học đường FPT Polytechnic (Theme cam `#F37021` + trắng) phục vụ báo cáo bảo vệ dự án tốt nghiệp 30 phút cho **Nhóm VietMach (7 thành viên)**.
+Bộ slide HTML 16:9 chuẩn học đường FPT Polytechnic (Theme cam `#F37021` + trắng) phục vụ báo cáo bảo vệ dự án tốt nghiệp 30 phút cho **Nhóm 98 — VietMach (7 thành viên)**.
+
+- **Đề tài:** HỆ THỐNG HỖ TRỢ VẬN HÀNH THÔNG MINH CHO DOANH NGHIỆP VỪA VÀ NHỎ HỖ TRỢ QUẢN LÝ ĐA CẤP VÀ ĐƯA RA QUYẾT ĐỊNH BẰNG AI
+- **Giảng viên hướng dẫn:** Thầy Phan Hoàng Khải
+- **Lớp:** PRO2192.04
+- **Repository:** [https://github.com/quanptatb/BaoCao_DATN](https://github.com/quanptatb/BaoCao_DATN)
 
 ---
 
@@ -8,7 +13,7 @@ Bộ slide HTML 16:9 chuẩn học đường FPT Polytechnic (Theme cam `#F37021
 
 1. **Mở trực tiếp:**
    - Nhấp đúp chuột vào file `index.html` hoặc chuột phải chọn mở bằng **Google Chrome**, **Microsoft Edge**, hoặc **Brave**.
-   - Không cần cài đặt web server (chạy hoàn toàn offline).
+   - Không cần cài đặt web server (toàn bộ ảnh, CSS, JS đã được tích hợp nội bộ trong thư mục `assets/`).
 
 2. **Chế độ trình chiếu toàn màn hình:**
    - Nhấn phím `F` để bật/tắt chế độ toàn màn hình (Fullscreen).
@@ -48,13 +53,12 @@ Bộ slide HTML 16:9 chuẩn học đường FPT Polytechnic (Theme cam `#F37021
 
 ---
 
-## 🎬 Video Demo & Link tùy chỉnh
+## 🎬 Video Demo & Tài liệu kiểm thử
 
 1. **Video Demo:**
-   - Copy file video demo của bạn vào thư mục `docs/datn-slides/assets/demo.mp4`.
+   - Xem trực tuyến: [Google Drive Demo Video](https://drive.google.com/file/d/1lyk_asB88SRet_-HTlTYOQtiDGmndWYT/view?usp=drive_link)
+   - Hoặc copy file video demo offline vào thư mục `assets/demo.mp4`.
    - Hoặc khi đang trình chiếu tại Slide 38, bấm nút **"📂 Import Video Demo"** để chọn file video trực tiếp từ máy tính.
-2. **Link Test Plan & Test Cases (Google Sheets):**
-   - Mở file `index.html`, tìm kiếm `{{GOOGLE_SHEETS_TEST_PLAN_URL}}` và `{{GOOGLE_SHEETS_TESTCASE_URL}}` để dán link tài liệu online của bạn vào.
-3. **Thư mục chứa file test offline:**
-   - Đặt file test plan/testcase vào thư mục `docs/datn-slides/test-artifacts/`.
-# BaoCao_DATN
+2. **Tài liệu kiểm thử (Tester):**
+   - Đã tích hợp sẵn file Test Plan: `test-artifacts/Test_Plan_Manage_KPI_OKR_NEXTGEN.docx`.
+   - Xem thêm tại thư mục `test-artifacts/`.
