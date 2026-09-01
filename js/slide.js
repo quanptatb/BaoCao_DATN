@@ -64,6 +64,12 @@
     const sc = slideCounter();
     if (sc) sc.textContent = `${index + 1} / ${totalSlides}`;
 
+    // Pause demo video if leaving video slide
+    const video = document.getElementById('demoVideo');
+    if (video && !allSlides[index].contains(video) && !video.paused) {
+      video.pause();
+    }
+
     // Update presenter notes
     updateNotes();
   }

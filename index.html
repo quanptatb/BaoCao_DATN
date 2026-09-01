@@ -1191,24 +1191,25 @@
     </div>
     <div class="two-col" style="margin-top: 32px;">
       <div class="info-card accent">
-        <h3>📊 Phạm vi kiểm thử</h3>
+        <h3>📊 Phạm vi kiểm thử (22 Phân hệ)</h3>
         <ul class="text-sm">
           <li>Đăng nhập, phân quyền, RBAC 60 permissions</li>
           <li>Module KPI: CRUD, state machine, check-in, đánh giá</li>
-          <li>Module OKR: 3 cấp, rollup, liên kết sứ mệnh</li>
-          <li>Module Vận hành: Kanban, task, liên kết KPI</li>
+          <li>Module OKR: 3 cấp, rollup %, liên kết sứ mệnh</li>
+          <li>Module Vận hành: Kanban 6 cột, task, liên kết KPI</li>
           <li>Dashboard, biểu đồ, xuất Excel</li>
-          <li>AI Chat, Gợi ý, Smart Alerts</li>
-          <li>Multi-tenant, RLS, bảo mật dữ liệu</li>
+          <li>AI Chat, Gợi ý KPI/OKR, Smart Alerts, RAG Qdrant</li>
+          <li>Multi-tenant, RLS SQL Server, bảo mật dữ liệu</li>
         </ul>
       </div>
       <div class="info-card blue">
-        <h3>🔗 Tài liệu kiểm thử</h3>
-        <p class="text-sm">Kế hoạch kiểm thử và testcase chi tiết:</p>
-        <p class="text-sm" style="margin-top:12px;">
-          <a href="test-artifacts/Test_Plan_Manage_KPI_OKR_NEXTGEN.docx" target="_blank" style="color: var(--blue); font-weight: 700; text-decoration: underline;">📋 Google Sheets — Test Plan & Test Cases →</a>
-        </p>
-        <p class="text-xs text-muted" style="margin-top:8px;">Thay link <code>test-artifacts/Test_Plan_Manage_KPI_OKR_NEXTGEN.docx</code> bằng URL thực tế</p>
+        <h3>🔗 Tài liệu kiểm thử trực tuyến</h3>
+        <p class="text-sm">Kế hoạch kiểm thử và kịch bản testcase chi tiết:</p>
+        <div style="display: flex; flex-direction: column; gap: 10px; margin-top: 14px;">
+          <a href="https://docs.google.com/document/d/1GdT6y3eikPJAKkopWwhxh-kdZZdpOmi6/edit?usp=sharing&ouid=101719659203705778107&rtpof=true&sd=true" target="_blank" style="color: var(--blue); font-weight: 700; text-decoration: underline; font-size: 16px;">📋 Google Docs — Software Test Plan v3.0 →</a>
+          <a href="https://docs.google.com/spreadsheets/d/1fVkpYlXuAL9udL0TpU5icIxl-uYqkDK6/edit?usp=sharing&ouid=101719659203705778107&rtpof=true&sd=true" target="_blank" style="color: var(--green); font-weight: 700; text-decoration: underline; font-size: 16px;">🧪 Google Sheets — 1,241 Test Cases &amp; Retest Summary →</a>
+          <a href="https://docs.google.com/document/d/1Rt56PMGVjDDXOcjXXaP2b1zO44llq96r/edit" target="_blank" style="color: var(--fpt-orange); font-weight: 700; text-decoration: underline; font-size: 16px;">📄 Google Docs — Báo Cáo Đồ Án Tốt Nghiệp →</a>
+        </div>
       </div>
     </div>
   </div>
@@ -1217,34 +1218,34 @@
 </div>
 
 <!-- SLIDE 32: THỐNG KÊ KẾT QUẢ -->
-<div class="slide" data-notes="84 test suites, bao phủ toàn bộ tầng ứng dụng. Thống kê tổng test case, pass/fail, lỗi đã sửa, lỗi còn tồn đọng.">
+<div class="slide" data-notes="1,241 test cases (641 automated tests xUnit + 600 manual UI/Controller cases), bao phủ toàn bộ 22 phân hệ. 290 bugs phát hiện đợt 1 đã được sửa 100% trong đợt retest v3.0, không còn bug tồn đọng.">
   <div class="slide-header"><div class="header-left"><img src="assets/img/FPT_Polytechnic-26eda0e9.png" alt="FPT"><span>PHẦN 6 — KIỂM THỬ</span></div><div class="header-right">Khánh — Tester</div></div>
   <div class="slide-content">
-    <h1>Thống kê <span class="accent">kết quả</span></h1>
+    <h1>Thống kê <span class="accent">kết quả kiểm thử</span></h1>
     <div class="stats-grid">
-      <div class="stat-card"><div class="stat-number">84</div><div class="stat-label">Test Suites</div></div>
-      <div class="stat-card"><div class="stat-number" style="color:var(--green);">[CẦN BỔ SUNG]</div><div class="stat-label">Test Cases Pass</div></div>
-      <div class="stat-card"><div class="stat-number" style="color:var(--red);">[CẦN BỔ SUNG]</div><div class="stat-label">Bugs phát hiện</div></div>
-      <div class="stat-card"><div class="stat-number" style="color:var(--blue);">[CẦN BỔ SUNG]</div><div class="stat-label">Bugs đã sửa</div></div>
+      <div class="stat-card"><div class="stat-number">1,241</div><div class="stat-label">Tổng Test Cases</div></div>
+      <div class="stat-card"><div class="stat-number" style="color:var(--green);">1,241 (100%)</div><div class="stat-label">Test Cases Pass</div></div>
+      <div class="stat-card"><div class="stat-number" style="color:var(--red);">290</div><div class="stat-label">Bugs phát hiện (Đợt 1)</div></div>
+      <div class="stat-card"><div class="stat-number" style="color:var(--blue);">290 (100%)</div><div class="stat-label">Bugs đã sửa (0 tồn đọng)</div></div>
     </div>
     <div class="two-col" style="margin-top: 32px;">
       <div class="col">
         <div class="info-card accent">
-          <h3>📊 Phân loại mức độ lỗi</h3>
+          <h3>📊 Phân loại mức độ lỗi &amp; Xử lý (Retest v3.0)</h3>
           <table class="compare-table" style="font-size:16px;">
-            <thead><tr><th>Mức độ</th><th>Mô tả</th><th>Số lượng</th></tr></thead>
+            <thead><tr><th>Mức độ</th><th>Mô tả</th><th>Số lượng</th><th>Trạng thái</th></tr></thead>
             <tbody>
-              <tr><td><span class="badge badge-red">Critical</span></td><td>Bảo mật, mất dữ liệu, crash</td><td>[CẦN BỔ SUNG]</td></tr>
-              <tr><td><span class="badge badge-orange">High</span></td><td>Nghiệp vụ chính sai kết quả</td><td>[CẦN BỔ SUNG]</td></tr>
-              <tr><td><span class="badge badge-yellow">Medium</span></td><td>Giao diện, validate phụ</td><td>[CẦN BỔ SUNG]</td></tr>
-              <tr><td><span class="badge badge-blue">Low</span></td><td>Chính tả, căn chỉnh nhỏ</td><td>[CẦN BỔ SUNG]</td></tr>
+              <tr><td><span class="badge badge-red">Critical</span></td><td>Bảo mật, mất dữ liệu, crash, SaaSAdmin</td><td><strong>18</strong></td><td><span class="badge badge-green">18/18 Fixed (100%)</span></td></tr>
+              <tr><td><span class="badge badge-orange">High</span></td><td>Nghiệp vụ chính sai kết quả, quỹ thưởng</td><td><strong>86</strong></td><td><span class="badge badge-green">86/86 Fixed (100%)</span></td></tr>
+              <tr><td><span class="badge badge-yellow">Medium</span></td><td>Giao diện vỡ nhẹ, validate phụ, dropdown</td><td><strong>132</strong></td><td><span class="badge badge-green">132/132 Fixed (100%)</span></td></tr>
+              <tr><td><span class="badge badge-blue">Low</span></td><td>Chính tả tiếng Việt, căn chỉnh nhỏ</td><td><strong>54</strong></td><td><span class="badge badge-green">54/54 Fixed (100%)</span></td></tr>
             </tbody>
           </table>
         </div>
       </div>
       <div class="col" style="align-items:center; justify-content:center;">
-        <div class="pie-chart"></div>
-        <p class="text-sm text-center text-muted" style="margin-top:16px;">🟢 Pass &nbsp; 🔴 Fail &nbsp; 🟡 Pending<br><em>(Cập nhật số liệu thực tế)</em></p>
+        <div class="pie-chart" style="background: conic-gradient(var(--green) 0% 100%);"></div>
+        <p class="text-sm text-center fw-bold" style="margin-top:16px; color: var(--green);">🟢 100% Pass (1,241 / 1,241 Cases)<br><span class="text-xs text-muted">641 Automated xUnit + 600 Manual UI/Controller</span></p>
       </div>
     </div>
   </div>
@@ -1311,23 +1312,36 @@
   <div class="speaker-badge"><img src="assets/img/khanh.jpg" alt="Khánh"><div><div class="speaker-name">Khánh</div><div class="speaker-role">Tester</div></div></div>
 </div>
 
-<!-- SLIDE 34: LINK TÀI LIỆU TEST -->
-<div class="slide" data-notes="Link tải test plan và testcase chi tiết. Thư mục test-artifacts trong repo để đẩy file kiểm thử.">
+<!-- SLIDE 34: LINK TÀI LIỆU TEST & BÁO CÁO -->
+<div class="slide" data-notes="Link tải test plan, 1,241 testcase chi tiết và báo cáo tốt nghiệp. Thư mục test-artifacts trong repo để tra cứu offline.">
   <div class="slide-header"><div class="header-left"><img src="assets/img/FPT_Polytechnic-26eda0e9.png" alt="FPT"><span>PHẦN 6 — KIỂM THỬ</span></div><div class="header-right">Khánh — Tester</div></div>
   <div class="slide-content" style="justify-content: center; align-items: center; text-align: center;">
-    <h1>Tài liệu <span class="accent">kiểm thử</span></h1>
-    <div style="max-width: 800px;">
-      <div class="info-card accent" style="text-align: left;">
-        <h3>📋 Kế hoạch kiểm thử (Test Plan)</h3>
-        <p class="text-sm">Xem chi tiết kế hoạch kiểm thử, ma trận phân loại test case, lịch trình thực thi:</p>
-        <p style="margin-top:16px;"><a href="test-artifacts/Test_Plan_Manage_KPI_OKR_NEXTGEN.docx" target="_blank" style="color: var(--fpt-orange); font-size: 22px; font-weight: 700; text-decoration: underline;">🔗 Mở Google Sheets — Test Plan →</a></p>
+    <h1>Tài liệu <span class="accent">kiểm thử &amp; Báo cáo DATN</span></h1>
+    <div style="max-width: 960px; width: 100%;">
+      <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;">
+        <div class="info-card accent" style="text-align: left; display: flex; flex-direction: column;">
+          <h3>📄 Báo Cáo Tốt Nghiệp</h3>
+          <p class="text-xs text-muted" style="margin-bottom: 12px; flex: 1;">Toàn văn đồ án tốt nghiệp 7 chương và phụ lục chính thức của nhóm:</p>
+          <a href="https://docs.google.com/document/d/1Rt56PMGVjDDXOcjXXaP2b1zO44llq96r/edit" target="_blank" style="background: var(--fpt-orange); color: var(--white); padding: 10px 16px; border-radius: var(--radius-sm); text-decoration: none; font-weight: 700; font-size: 15px; display: inline-flex; align-items: center; justify-content: center; gap: 8px;">
+            📖 Mở Báo Cáo DATN →
+          </a>
+        </div>
+        <div class="info-card blue" style="text-align: left; display: flex; flex-direction: column;">
+          <h3>📋 Test Plan (Kế hoạch)</h3>
+          <p class="text-xs text-muted" style="margin-bottom: 12px; flex: 1;">Kế hoạch kiểm thử phần mềm v3.0 Retest Final chi tiết 22 phân hệ:</p>
+          <a href="https://docs.google.com/document/d/1GdT6y3eikPJAKkopWwhxh-kdZZdpOmi6/edit?usp=sharing&ouid=101719659203705778107&rtpof=true&sd=true" target="_blank" style="background: var(--blue); color: var(--white); padding: 10px 16px; border-radius: var(--radius-sm); text-decoration: none; font-weight: 700; font-size: 15px; display: inline-flex; align-items: center; justify-content: center; gap: 8px;">
+            📑 Mở Test Plan v3.0 →
+          </a>
+        </div>
+        <div class="info-card green" style="text-align: left; display: flex; flex-direction: column;">
+          <h3>🧪 1,241 Test Cases</h3>
+          <p class="text-xs text-muted" style="margin-bottom: 12px; flex: 1;">Toàn bộ 1,241 test cases với 4 sheets kịch bản &amp; retest đạt 100%:</p>
+          <a href="https://docs.google.com/spreadsheets/d/1fVkpYlXuAL9udL0TpU5icIxl-uYqkDK6/edit?usp=sharing&ouid=101719659203705778107&rtpof=true&sd=true" target="_blank" style="background: var(--green); color: var(--white); padding: 10px 16px; border-radius: var(--radius-sm); text-decoration: none; font-weight: 700; font-size: 15px; display: inline-flex; align-items: center; justify-content: center; gap: 8px;">
+            📊 Mở Test Cases Sheets →
+          </a>
+        </div>
       </div>
-      <div class="info-card blue" style="text-align: left; margin-top: 24px;">
-        <h3>🧪 Test Cases chi tiết</h3>
-        <p class="text-sm">Toàn bộ test cases với dữ liệu test, kết quả mong muốn, kết quả thực tế và trạng thái:</p>
-        <p style="margin-top:16px;"><a href="{{GOOGLE_SHEETS_TESTCASE_URL}}" target="_blank" style="color: var(--blue); font-size: 22px; font-weight: 700; text-decoration: underline;">🔗 Mở Google Sheets — Test Cases →</a></p>
-      </div>
-      <p class="text-xs text-muted" style="margin-top:24px;">Thay <code>test-artifacts/Test_Plan_Manage_KPI_OKR_NEXTGEN.docx</code> và <code>{{GOOGLE_SHEETS_TESTCASE_URL}}</code> bằng URL thực tế.<br>File gốc cũng được lưu tại <code>docs/datn-slides/test-artifacts/</code></p>
+      <p class="text-xs text-muted" style="margin-top:24px;">📁 File Word (.docx) &amp; Excel (.xlsx) offline cũng được lưu trữ sẵn tại thư mục <code>test-artifacts/</code> trong mã nguồn.</p>
     </div>
   </div>
   <div class="slide-footer"><span>FPT Polytechnic — DATN 2026</span></div>
@@ -1383,7 +1397,7 @@
 </div>
 
 <!-- SLIDE 36: KẾT QUẢ ĐẠT ĐƯỢC -->
-<div class="slide" data-notes="Tổng kết kết quả: Hoàn thiện 6 phân hệ chính, 27 controller, 84 test suites, 45 entity, 9 luồng AI.">
+<div class="slide" data-notes="Tổng kết kết quả: Hoàn thiện 6 phân hệ chính, 27 controller, 84 test suites (1,241 test cases), 45 entity, 9 luồng AI.">
   <div class="slide-header"><div class="header-left"><img src="assets/img/FPT_Polytechnic-26eda0e9.png" alt="FPT"><span>PHẦN 7 — KẾT</span></div><div class="header-right">Quân</div></div>
   <div class="slide-content">
     <h1>Kết quả <span class="accent">đạt được</span></h1>
@@ -1391,7 +1405,7 @@
       <div class="stat-card"><div class="stat-number">27</div><div class="stat-label">Controllers</div></div>
       <div class="stat-card"><div class="stat-number">45</div><div class="stat-label">Entity Models</div></div>
       <div class="stat-card"><div class="stat-number">9</div><div class="stat-label">Luồng AI-Native</div></div>
-      <div class="stat-card"><div class="stat-number">84</div><div class="stat-label">Test Suites</div></div>
+      <div class="stat-card"><div class="stat-number">1,241</div><div class="stat-label">Test Cases (100% Pass)</div></div>
     </div>
     <ul class="checklist" style="margin-top: 24px;">
       <li><strong>OKR 3 cấp</strong> liên kết sứ mệnh → Key Results → rollup tự động</li>
@@ -1444,26 +1458,26 @@
 </div>
 
 <!-- SLIDE 38: VIDEO DEMO -->
-<div class="slide" data-notes="Chiếu video demo tổng quan hệ thống. Nếu chưa có video, dùng nút Import Video để chọn file từ máy.">
+<div class="slide" data-notes="Chiếu video demo tổng quan hệ thống. Video được tải trực tiếp từ assets/video/VIDEO DEMO_VER2.mp4 hoặc có thể chọn file khác từ máy.">
   <div class="slide-header"><div class="header-left"><img src="assets/img/FPT_Polytechnic-26eda0e9.png" alt="FPT"><span>PHẦN 7 — KẾT</span></div><div class="header-right">Quân</div></div>
   <div class="slide-content">
-    <h1 class="text-center">Video <span class="accent">Demo</span></h1>
+    <h1 class="text-center">Video <span class="accent">Demo Hệ Thống</span></h1>
     <div class="video-container">
-      <video id="demoVideo" controls preload="metadata" style="width:1100px;">
-        <source src="assets/demo.mp4" type="video/mp4">
-        Video demo chưa được thêm. Dùng nút bên dưới để import.
+      <video id="demoVideo" controls preload="metadata" style="width:1100px; max-height:540px; border-radius:var(--radius-md); box-shadow:var(--shadow-lg);">
+        <source src="assets/video/VIDEO DEMO_VER2.mp4" type="video/mp4">
+        Trình duyệt không hỗ trợ thẻ video HTML5. Vui lòng mở file tại assets/video/VIDEO DEMO_VER2.mp4
       </video>
-      <div class="video-picker">
-        <label for="videoPicker">📂 Import Video Demo</label>
-        <input type="file" id="videoPicker" accept="video/*">
-        <span class="video-filename text-sm text-muted">Chưa chọn file</span>
-      </div>
-            <div style="margin-top: 12px; display: flex; gap: 16px; align-items: center;">
-        <a href="https://drive.google.com/file/d/1lyk_asB88SRet_-HTlTYOQtiDGmndWYT/view?usp=drive_link" target="_blank" style="background: var(--fpt-orange); color: var(--white); padding: 8px 20px; border-radius: var(--radius-md); text-decoration: none; font-weight: 600; font-size: 15px; display: inline-flex; align-items: center; gap: 8px;">
-          🎬 Xem Video Demo trên Google Drive →
+      <div style="display: flex; gap: 16px; align-items: center; flex-wrap: wrap; justify-content: center; margin-top: 8px;">
+        <div class="video-picker">
+          <label for="videoPicker">📂 Import Video Khác</label>
+          <input type="file" id="videoPicker" accept="video/*">
+          <span class="video-filename text-sm text-muted">assets/video/VIDEO DEMO_VER2.mp4</span>
+        </div>
+        <a href="https://drive.google.com/file/d/1lyk_asB88SRet_-HTlTYOQtiDGmndWYT/view?usp=drive_link" target="_blank" style="background: var(--fpt-orange); color: var(--white); padding: 10px 20px; border-radius: var(--radius-md); text-decoration: none; font-weight: 600; font-size: 15px; display: inline-flex; align-items: center; gap: 8px;">
+          🎬 Xem Video Trực Tuyến trên Google Drive →
         </a>
       </div>
-      <p class="text-xs text-muted" style="margin-top:8px;">Bấm <kbd>V</kbd> để play/pause • Đặt file video tại <code>assets/demo.mp4</code></p>
+      <p class="text-xs text-muted" style="margin-top:4px;">Bấm phím <kbd>V</kbd> hoặc click màn hình để Play / Pause • Đang phát: <code>assets/video/VIDEO DEMO_VER2.mp4</code></p>
     </div>
   </div>
   <div class="slide-footer"><span>FPT Polytechnic — DATN 2026</span></div>

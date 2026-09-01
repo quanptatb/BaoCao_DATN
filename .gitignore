@@ -1,0 +1,5 @@
+# Ignore large binary video files (>100MB exceeds GitHub push limits)
+assets/video/*.mp4
+assets/video/
+assets/*.mp4
+*.mp4
