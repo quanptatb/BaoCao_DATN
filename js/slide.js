@@ -180,13 +180,13 @@
   function updateScale() {
     const vw = window.innerWidth;
     const vh = window.innerHeight;
-    const scaleX = vw / 1920;
-    const scaleY = vh / 1080;
-    const scale = Math.min(scaleX, scaleY);
+    const scale = Math.min(vw / 1920, vh / 1080);
+    const offsetX = (vw - 1920 * scale) / 2;
+    const offsetY = (vh - 1080 * scale) / 2;
 
     const allSlides = slides();
     allSlides.forEach(s => {
-      s.style.transform = `scale(${scale})`;
+      s.style.transform = `translate(${offsetX}px, ${offsetY}px) scale(${scale})`;
     });
   }
 
