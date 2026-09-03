@@ -1,6 +1,6 @@
 # 🎓 Bộ Slide Thuyết Trình Báo Cáo DATN (FPT Polytechnic)
 
-Bộ slide HTML 16:9 chuẩn học đường FPT Polytechnic (Theme cam `#F37021` + trắng) phục vụ báo cáo bảo vệ dự án tốt nghiệp cho **Nhóm 98 — VietMach / NEXTGEN (7 thành viên)**.
+Bộ slide HTML 16:9 chuẩn học đường FPT Polytechnic (Theme cam `#F37021` + trắng) phục vụ báo cáo bảo vệ dự án tốt nghiệp cho **Nhóm 98 — NEXTGEN (7 thành viên)**.
 
 - **Đề tài:** HỆ THỐNG HỖ TRỢ VẬN HÀNH THÔNG MINH CHO DOANH NGHIỆP VỪA VÀ NHỎ HỖ TRỢ QUẢN LÝ ĐA CẤP VÀ ĐƯA RA QUYẾT ĐỊNH BẰNG AI
 - **Giảng viên hướng dẫn:** ThS. Phan Hoàng Khải
@@ -55,7 +55,7 @@ Bộ slide HTML 16:9 chuẩn học đường FPT Polytechnic (Theme cam `#F37021
 
 ### Phần 1: Mở Đầu (Slide 1 → 8) — Phạm Trần Anh Quân (Leader / AI)
 - **Slide 1:** Trang bìa (FPT Polytechnic, đề tài, tech badges, GVHD)
-- **Slide 2:** Thành viên nhóm VietMach (7 thành viên, ảnh, MSSV, vai trò)
+- **Slide 2:** Thành viên nhóm NEXTGEN (7 thành viên, ảnh, MSSV, vai trò)
 - **Slide 3:** Mục lục trình bày
 - **Slide 4:** Thực trạng & Vấn đề doanh nghiệp SME
 - **Slide 5:** Yêu cầu khách hàng (Khảo sát 15 SME)

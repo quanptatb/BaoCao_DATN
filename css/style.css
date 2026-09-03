@@ -206,9 +206,8 @@ html, body {
   color: var(--gray-800);
 }
 
-/* ---------- Cover Slide & End Slide ---------- */
-.slide-cover,
-.slide-end {
+/* ---------- Cover Slide ---------- */
+.slide-cover {
   background: linear-gradient(135deg, var(--fpt-orange) 0%, var(--fpt-orange-dark) 100%);
   color: var(--white);
   justify-content: center;
@@ -216,11 +215,9 @@ html, body {
   text-align: center;
 }
 
-.slide-cover .slide-header,
-.slide-end .slide-header { display: none; }
+.slide-cover .slide-header { display: none; }
 
-.slide-cover .cover-content,
-.slide-end .cover-content {
+.slide-cover .cover-content {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -230,8 +227,7 @@ html, body {
 
 /* School Logo Badge: White container with padding and rounded corners so orange logo text is crisp and contrasted */
 .school-logo,
-.slide-cover .school-logo,
-.slide-end .school-logo {
+.slide-cover .school-logo {
   width: 160px;
   max-width: 180px;
   height: auto;
@@ -287,8 +283,7 @@ html, body {
   gap: var(--sp-8);
 }
 
-.slide-cover .tech-badges,
-.slide-end .tech-badges {
+.slide-cover .tech-badges {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -296,13 +291,88 @@ html, body {
   margin-top: var(--sp-12);
 }
 
-.slide-cover .tech-badge,
-.slide-end .tech-badge {
+.slide-cover .tech-badge {
   background: rgba(255,255,255,0.2);
   border: 1px solid rgba(255,255,255,0.3);
   padding: 6px 16px;
   border-radius: var(--radius-full);
   font-size: 15px;
+  font-weight: 500;
+}
+
+/* ---------- End Slide (Thank You) ---------- */
+.slide-end {
+  background: var(--white);
+  color: var(--gray-800);
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  border-bottom: 12px solid var(--fpt-orange);
+}
+
+.slide-end .slide-header { display: none; }
+
+.slide-end .end-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: var(--sp-32);
+}
+
+.slide-end .end-logo {
+  width: 320px;
+  max-width: 360px;
+  height: auto;
+  margin-bottom: var(--sp-24);
+  display: block;
+}
+
+.slide-end .thank-you {
+  font-family: var(--font-heading);
+  font-size: 64px;
+  font-weight: 800;
+  color: var(--navy);
+  letter-spacing: -0.5px;
+  line-height: 1.2;
+  margin-bottom: var(--sp-16);
+}
+
+.slide-end .sub-message {
+  font-size: 24px;
+  color: var(--gray-600);
+  font-weight: 500;
+  max-width: 900px;
+  margin-bottom: var(--sp-40);
+}
+
+.slide-end .team-members-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--sp-12);
+  margin-bottom: var(--sp-28);
+  max-width: 1100px;
+}
+
+.slide-end .team-members-list span {
+  background: var(--off-white);
+  color: var(--gray-700);
+  padding: 10px 20px;
+  border-radius: var(--radius-full);
+  font-size: 16px;
+  font-weight: 600;
+  border: 1px solid var(--gray-200);
+  box-shadow: var(--shadow-sm);
+}
+
+.slide-end .end-meta {
+  font-size: 18px;
+  color: var(--gray-500);
   font-weight: 500;
 }
 

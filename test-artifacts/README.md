@@ -1,6 +1,6 @@
 # 📁 Thư Mục Tài Liệu Kiểm Thử & Báo Cáo DATN (Artifacts)
 
-Thư mục này lưu trữ toàn bộ các tài liệu kiểm thử và báo cáo tốt nghiệp chính thức của nhóm **NEXTGEN (VietMach)** — Phụ trách kiểm thử: **Đoàn Quốc Khánh (TB01544 - Tester)** & Trưởng nhóm: **Phạm Trần Anh Quân (TB01758 - Leader / AI)**.
+Thư mục này lưu trữ toàn bộ các tài liệu kiểm thử và báo cáo tốt nghiệp chính thức của nhóm **NEXTGEN** — Phụ trách kiểm thử: **Đoàn Quốc Khánh (TB01544 - Tester)** & Trưởng nhóm: **Phạm Trần Anh Quân (TB01758 - Leader / AI)**.
 
 ---
 
