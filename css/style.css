@@ -349,48 +349,75 @@ html, body {
   flex: 1;
 }
 
-/* ---------- Team Grid ---------- */
-.team-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
+/* ---------- Team Section (Uniform Cards & Prominent Headshots) ---------- */
+.team-container {
+  display: flex;
+  flex-direction: column;
   gap: var(--sp-24);
+  width: 100%;
+  margin: auto 0;
+}
+
+.team-row {
+  display: flex;
+  justify-content: center;
+  gap: var(--sp-24);
+  width: 100%;
+}
+
+.team-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--sp-24);
+  width: 100%;
 }
 
 .team-grid.row-2 {
-  grid-template-columns: repeat(3, 1fr);
-  max-width: 900px;
-  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  gap: var(--sp-24);
+  max-width: none;
+  margin: 0;
 }
 
 .team-card {
+  width: 410px;
+  min-width: 410px;
+  max-width: 410px;
+  height: 330px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   gap: var(--sp-12);
-  padding: var(--sp-20);
+  padding: 20px 24px;
   background: var(--white);
   border-radius: var(--radius-lg);
-  border: 1px solid var(--gray-100);
-  box-shadow: var(--shadow-sm);
-  transition: transform 0.2s, box-shadow 0.2s;
+  border: 1.5px solid var(--gray-200);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  position: relative;
 }
 
 .team-card:hover {
   transform: translateY(-4px);
-  box-shadow: var(--shadow-md);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
 }
 
 .team-card.leader {
-  border-color: var(--fpt-orange);
-  border-width: 2px;
+  border: 2.5px solid var(--fpt-orange);
+  background: #FFFDFB;
+  box-shadow: 0 6px 20px rgba(243, 112, 33, 0.12);
 }
 
 .team-card img {
-  width: 90px;
-  height: 90px;
+  width: 150px;
+  height: 150px;
   border-radius: 50%;
   object-fit: cover;
-  border: 3px solid var(--gray-100);
+  border: 4px solid var(--gray-200);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
 .team-card.leader img {
@@ -399,21 +426,26 @@ html, body {
 
 .team-card .name {
   font-family: var(--font-heading);
-  font-size: 17px;
+  font-size: 20px;
   font-weight: 700;
   color: var(--gray-800);
   text-align: center;
+  margin-top: 4px;
 }
 
 .team-card .mssv {
-  font-size: 13px;
-  color: var(--gray-400);
+  font-size: 14px;
+  color: var(--gray-600);
   font-family: var(--font-mono);
+  font-weight: 600;
+  background: var(--gray-100);
+  padding: 3px 12px;
+  border-radius: 12px;
 }
 
 .team-card .role {
-  font-size: 14px;
-  font-weight: 600;
+  font-size: 15px;
+  font-weight: 700;
   color: var(--fpt-orange);
   text-align: center;
 }

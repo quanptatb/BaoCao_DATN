@@ -67,8 +67,10 @@
     // Step 1: Đếm tổng số lượng slide trong DOM
     totalSlides = slides().length;
 
-    // Step 2: Hiển thị slide đầu tiên (Trang bìa)
-    showSlide(0);
+    // Step 2: Kiểm tra URL hash (ví dụ #2) để nhảy trực tiếp đến slide tương ứng
+    const hash = window.location.hash;
+    const initialIndex = hash ? parseInt(hash.replace('#', ''), 10) - 1 : 0;
+    showSlide(!isNaN(initialIndex) && initialIndex >= 0 && initialIndex < totalSlides ? initialIndex : 0);
 
     // Step 3: Tính toán tỷ lệ co giãn phù hợp với màn hình hiện tại
     updateScale();
@@ -76,9 +78,13 @@
     // Step 4: Tự động khởi động đồng hồ đếm ngược 15:00
     startTimer();
 
-    // Step 5: Gắn các trình lắng nghe sự kiện ngoại vi (Resize, Phím tắt, Click chuột)
+    // Step 5: Gắn các trình lắng nghe sự kiện ngoại vi (Resize, Phím tắt, Click chuột, Hashchange)
     window.addEventListener('resize', updateScale);
     window.addEventListener('keydown', handleKeydown);
+    window.addEventListener('hashchange', () => {
+      const idx = parseInt(window.location.hash.replace('#', ''), 10) - 1;
+      if (!isNaN(idx) && idx !== currentSlide) showSlide(idx);
+    });
     document.addEventListener('click', handleClick);
 
     // Step 6: Thiết lập trình chọn video nếu slide có chứa video player
