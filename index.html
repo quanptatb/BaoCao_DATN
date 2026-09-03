@@ -724,40 +724,67 @@
      ========================================== -->
 
 <!-- SLIDE 16: GIAO DIỆN OKR ĐA CẤP & DASHBOARD KPI -->
-<div class="slide" data-notes="• Em là Như, phụ trách Frontend KPI/OKR.
-• Giao diện OKR đa cấp: Trực quan hóa hình cây 3 tầng (Công ty -> Phòng ban -> Cá nhân), giúp mọi nhân viên thấy rõ mục tiêu của mình đóng góp gì cho công ty.
-• Dashboard KPI: Cập nhật tiến độ realtime, thanh đo % trực quan, radar chart năng lực.
-• Trạng thái màu sắc chuẩn UI: Xanh lá (Đạt), Vàng (Nguy cơ), Đỏ (Trễ hạn) giúp quản lý nắm bắt trong 3 giây.">
+<div class="slide" data-notes="⏱ [Thời lượng: 45 giây — Như]
+👉 Ý 1 (Cây OKR 3 cấp): Em là Như. Giao diện cây OKR 3 cấp giúp nhân viên thấy rõ mối liên kết từ mục tiêu Công ty ➔ Phòng ban ➔ Cá nhân.
+👉 Ý 2 (Dashboard Realtime): Tự động tính % hoàn thành lũy kế, hiển thị radar năng lực và phân bổ trọng số trực quan.
+👉 Ý 3 (Màu sắc nhận diện UI): Màu xanh lá (Đạt), Vàng (Nguy cơ), Đỏ (Trễ hạn) giúp nhà quản lý nắm bắt toàn bộ bức tranh trong đúng 3 giây.">
   <div class="slide-header">
     <div class="header-left"><img src="assets/img/FPT_Polytechnic-26eda0e9.png" alt="FPT"><span>PHẦN 3 — KPI / OKR (FRONTEND)</span></div>
     <div class="header-right">Như — Frontend</div>
   </div>
   <div class="slide-content">
-    <h1>Giao diện OKR Đa cấp &amp; <span class="accent">Dashboard KPI</span></h1>
-    <div class="two-col">
-      <div class="col">
-        <div class="info-card accent mb-16">
-          <h3>🌳 Cây OKR 3 Cấp Trực Quan</h3>
-          <ul class="text-sm">
-            <li><strong>Cấp 1 — Công ty:</strong> Mục tiêu chiến lược cấp cao nhất</li>
-            <li><strong>Cấp 2 — Phòng ban:</strong> Phân rã mục tiêu cho từng bộ phận</li>
-            <li><strong>Cấp 3 — Cá nhân:</strong> Gắn trực tiếp vào từng chuyên viên</li>
-            <li>Hiển thị trực quan mối liên kết giữa <strong>Objective (O)</strong> và <strong>Key Results (KR)</strong> với tiến độ tính lũy kế tự động.</li>
+    <h1>Giao diện Cây OKR Đa Cấp &amp; <span class="accent">Dashboard KPI Thời Gian Thực</span></h1>
+    
+    <!-- Feature highlight pills -->
+    <div style="display: flex; gap: 16px; margin-bottom: -4px;">
+      <div style="flex: 1; display: flex; align-items: center; gap: 12px; background: var(--fpt-orange-glow); border: 1px solid var(--fpt-orange); border-radius: var(--radius-sm); padding: 10px 18px;">
+        <span style="font-size: 24px;">🌳</span>
+        <div><strong style="color: var(--fpt-orange-dark); font-size: 15px;">Phân cấp 3 tầng</strong><div style="font-size: 13px; color: var(--gray-600);">Công ty ➔ Phòng ban ➔ Cá nhân</div></div>
+      </div>
+      <div style="flex: 1; display: flex; align-items: center; gap: 12px; background: var(--blue-light); border: 1px solid var(--blue); border-radius: var(--radius-sm); padding: 10px 18px;">
+        <span style="font-size: 24px;">⚡</span>
+        <div><strong style="color: var(--blue); font-size: 15px;">Tự động lũy kế</strong><div style="font-size: 13px; color: var(--gray-600);">Tính % tiến độ theo trọng số KR tức thì</div></div>
+      </div>
+      <div style="flex: 1; display: flex; align-items: center; gap: 12px; background: var(--green-light); border: 1px solid var(--green); border-radius: var(--radius-sm); padding: 10px 18px;">
+        <span style="font-size: 24px;">🎯</span>
+        <div><strong style="color: var(--green); font-size: 15px;">Nhận diện 3 màu</strong><div style="font-size: 13px; color: var(--gray-600);">Xanh (Đạt) · Vàng (Nguy cơ) · Đỏ (Trễ)</div></div>
+      </div>
+    </div>
+
+    <div class="two-col" style="flex: 1; align-items: stretch; gap: 24px;">
+      <div class="col" style="gap: 16px; display: flex; flex-direction: column; justify-content: space-between;">
+        <div class="info-card accent" style="padding: 18px 24px; flex: 1;">
+          <h3>🌳 Cây OKR 3 Cấp Trực Quan Hóa</h3>
+          <ul class="text-sm" style="line-height: 1.8;">
+            <li><strong>Cấp 1 — Mục tiêu Công ty (CEO):</strong> Định hình tầm nhìn chiến lược và mục tiêu doanh thu toàn doanh nghiệp.</li>
+            <li><strong>Cấp 2 — Mục tiêu Phòng ban:</strong> Phân rã mục tiêu cụ thể, gán chỉ số đo lường cho từng phòng ban.</li>
+            <li><strong>Cấp 3 — Mục tiêu Cá nhân:</strong> Gắn trách nhiệm trực tiếp vào từng chuyên viên thực thi hàng ngày.</li>
+            <li>Mối quan hệ cha - con giữa <strong>Objective (O)</strong> và <strong>Key Results (KR)</strong> liên kết chặt chẽ, minh bạch 100%.</li>
           </ul>
         </div>
-        <div class="info-card blue">
-          <h3>📊 Dashboard KPI Thời Gian Thực</h3>
-          <ul class="text-sm">
-            <li>Thẻ tổng quan: Tổng KPI, Tỷ lệ Đạt, Cảnh báo Trễ hạn</li>
-            <li>Biểu đồ tiến độ và phân bổ trọng số trực quan</li>
-            <li>Bộ lọc nhanh theo chu kỳ: Tháng, Quý, Năm và Phòng ban</li>
+        <div class="info-card blue" style="padding: 18px 24px; flex: 1;">
+          <h3>📊 Dashboard KPI Đa Chiều Real-time</h3>
+          <ul class="text-sm" style="line-height: 1.8;">
+            <li><strong>Bộ chỉ số tổng quan:</strong> Tỷ lệ hoàn thành trung bình, số chỉ tiêu đạt chuẩn, số chỉ tiêu trễ hạn.</li>
+            <li><strong>Biểu đồ trực quan:</strong> Phân bổ tiến độ đa chiều, radar năng lực chuyên môn và tháp mục tiêu.</li>
+            <li><strong>Bộ lọc đa năng:</strong> Xem số liệu linh hoạt theo chu kỳ: Tháng, Quý, Năm hoặc từng Chi nhánh.</li>
           </ul>
         </div>
       </div>
-      <div class="col flex flex-col justify-center items-center">
-        <div style="background: var(--gray-50); border: 1px solid var(--gray-200); border-radius: var(--radius-md); padding: 12px; width: 100%; text-align: center;">
-          <img src="assets/screenshots/screenshot_okr.png" alt="Giao diện OKR" style="max-height: 380px; width: 100%; object-fit: contain; border-radius: var(--radius-sm); box-shadow: var(--shadow-md);">
-          <p class="text-xs text-muted mt-8">Giao diện thực tế cây mục tiêu OKR đa cấp &amp; thanh đo tiến độ tự động</p>
+
+      <div class="col flex flex-col justify-center items-center" style="display: flex;">
+        <div style="background: var(--white); border: 2px solid var(--gray-200); border-radius: var(--radius-md); padding: 0; width: 100%; height: 100%; display: flex; flex-direction: column; box-shadow: var(--shadow-lg); overflow: hidden;">
+          <!-- Browser Mockup Header -->
+          <div style="background: var(--gray-100); padding: 10px 16px; display: flex; align-items: center; gap: 8px; border-bottom: 1px solid var(--gray-300);">
+            <span style="width: 12px; height: 12px; border-radius: 50%; background: #ff5f56; display: inline-block;"></span>
+            <span style="width: 12px; height: 12px; border-radius: 50%; background: #ffbd2e; display: inline-block;"></span>
+            <span style="width: 12px; height: 12px; border-radius: 50%; background: #27c93f; display: inline-block;"></span>
+            <span style="background: var(--white); border: 1px solid var(--gray-300); border-radius: var(--radius-sm); padding: 3px 16px; font-size: 13px; color: var(--gray-600); font-family: var(--font-mono); margin-left: 8px; flex: 1;">https://nextgen.fpt.edu.vn/okr-tree</span>
+          </div>
+          <div style="flex: 1; padding: 12px; display: flex; flex-direction: column; justify-content: center; align-items: center; background: var(--gray-50);">
+            <img src="assets/screenshots/screenshot_okr.png" alt="Giao diện Cây OKR" style="max-height: 410px; width: 100%; object-fit: contain; border-radius: var(--radius-sm); border: 1px solid var(--gray-200);">
+            <div style="margin-top: 10px; font-size: 13px; color: var(--gray-600); font-weight: 600;">Giao diện thực tế cây mục tiêu OKR đa cấp &amp; thanh đo tiến độ lũy kế tự động</div>
+          </div>
         </div>
       </div>
     </div>
@@ -767,41 +794,69 @@
 </div>
 
 <!-- SLIDE 17: QUY TRÌNH CHECK-IN & REVIEW QUEUE TRỰC QUAN -->
-<div class="slide" data-notes="• Giao diện Check-in định kỳ: Nhân viên chỉ mất 2 phút để tự đánh giá tiến độ, ghi chú kết quả đạt được và đính kèm file minh chứng.
-• Review Queue tập trung: Cấp quản lý không cần lục tìm từng người, toàn bộ yêu cầu chờ duyệt hiển thị tại 1 màn hình duy nhất.
-• Phê duyệt 1 chạm: Quản lý xem minh chứng, bấm Duyệt hoặc Từ chối kèm nhận xét tức thì.
-• Chuyển tiếp: Sau đây bạn An sẽ trình bày về logic backend tính điểm và bảo mật.">
+<div class="slide" data-notes="⏱ [Thời lượng: 45 giây — Như]
+👉 Ý 1 (Check-in 2 phút): Nhân viên chỉ mất 2 phút để tự đánh giá, nhập minh chứng kết quả và tự chấm điểm tự tin (Confidence Level 1-10).
+👉 Ý 2 (Review Queue 1 chạm): Toàn bộ báo cáo chờ duyệt trong phòng được gom về một màn hình; quản lý duyệt hoặc yêu cầu bổ sung chỉ với 1 click.
+👉 Ý 3 (Trao đổi 2 chiều): Lưu lịch sử đối thoại minh bạch trên từng chỉ tiêu, xóa bỏ hoàn toàn tranh cãi cuối kỳ.
+👉 Chuyển tiếp: Sau đây em xin nhường lời cho bạn An trình bày Động cơ tính điểm và Bảo mật.">
   <div class="slide-header">
     <div class="header-left"><img src="assets/img/FPT_Polytechnic-26eda0e9.png" alt="FPT"><span>PHẦN 3 — KPI / OKR (FRONTEND)</span></div>
     <div class="header-right">Như — Frontend</div>
   </div>
   <div class="slide-content">
-    <h1>Quy trình Check-in &amp; <span class="accent">Review Queue Trực quan</span></h1>
-    <div class="two-col">
-      <div class="col">
-        <div class="info-card accent mb-16">
-          <h3>✍️ Check-in Nhanh Cho Nhân Viên</h3>
-          <ul class="text-sm">
-            <li>Nhập giá trị thực tế đạt được so với mục tiêu đặt ra</li>
-            <li>Đánh giá chỉ số tự tin (Confidence Level 1–10)</li>
-            <li>Đính kèm minh chứng kết quả (Link tài liệu, file nghiệm thu)</li>
-            <li>Ghi chú khó khăn, trở ngại để cấp trên kịp thời hỗ trợ</li>
+    <h1>Quy trình Check-in &amp; <span class="accent">Review Queue Phê Duyệt 1 Chạm</span></h1>
+    
+    <!-- 3-Step Process Ribbon -->
+    <div style="display: flex; gap: 16px; margin-bottom: -4px;">
+      <div style="flex: 1; background: var(--blue-light); border-left: 4px solid var(--blue); padding: 10px 16px; border-radius: var(--radius-sm); display: flex; align-items: center; gap: 10px;">
+        <span style="font-weight: 800; color: var(--blue); font-size: 18px;">1</span>
+        <div><strong style="font-size: 14px; color: var(--gray-800);">Nhân viên Check-in (2 Phút)</strong><div style="font-size: 12px; color: var(--gray-600);">Nhập kết quả &amp; đính kèm minh chứng</div></div>
+      </div>
+      <div style="flex: 1; background: var(--fpt-orange-glow); border-left: 4px solid var(--fpt-orange); padding: 10px 16px; border-radius: var(--radius-sm); display: flex; align-items: center; gap: 10px;">
+        <span style="font-weight: 800; color: var(--fpt-orange); font-size: 18px;">2</span>
+        <div><strong style="font-size: 14px; color: var(--gray-800);">Gom Hàng Đợi Review Queue</strong><div style="font-size: 12px; color: var(--gray-600);">Tập trung toàn bộ báo cáo về 1 nơi</div></div>
+      </div>
+      <div style="flex: 1; background: var(--green-light); border-left: 4px solid var(--green); padding: 10px 16px; border-radius: var(--radius-sm); display: flex; align-items: center; gap: 10px;">
+        <span style="font-weight: 800; color: var(--green); font-size: 18px;">3</span>
+        <div><strong style="font-size: 14px; color: var(--gray-800);">Quản Lý Phê Duyệt 1 Chạm</strong><div style="font-size: 12px; color: var(--gray-600);">Chấm điểm, phản hồi &amp; chốt số liệu</div></div>
+      </div>
+    </div>
+
+    <div class="two-col" style="flex: 1; align-items: stretch; gap: 24px;">
+      <div class="col" style="gap: 16px; display: flex; flex-direction: column; justify-content: space-between;">
+        <div class="info-card accent" style="padding: 18px 24px; flex: 1;">
+          <h3>✍️ Check-in Nhanh Cho Nhân Viên (2 Phút)</h3>
+          <ul class="text-sm" style="line-height: 1.8;">
+            <li><strong>Nhập số liệu thực tế:</strong> Cập nhật tiến độ thực tế đạt được so với chỉ tiêu kế hoạch.</li>
+            <li><strong>Thước đo tự tin (Confidence Level 1–10):</strong> Phản ánh trung thực xác suất đạt mục tiêu trước deadline.</li>
+            <li><strong>Đính kèm minh chứng thực tế:</strong> Tải file hoặc gắn link nghiệm thu minh bạch, chống gian lận.</li>
+            <li><strong>Ghi nhận trở ngại (Obstacles):</strong> Kịp thời đề xuất cấp trên hỗ trợ tháo gỡ khó khăn phát sinh.</li>
           </ul>
         </div>
-        <div class="info-card green">
-          <h3>⚡ Review Queue Cho Cấp Quản Lý</h3>
-          <ul class="text-sm">
-            <li>Hàng đợi tập trung: gom toàn bộ báo cáo chờ duyệt trong phòng</li>
-            <li>So sánh nhanh giá trị kỳ trước và kỳ này</li>
-            <li>Phê duyệt hoặc Yêu cầu cập nhật chỉ với <strong>1 cú click</strong></li>
-            <li>Khung trao đổi 2 chiều minh bạch, lưu vết lịch sử duyệt</li>
+        <div class="info-card green" style="padding: 18px 24px; flex: 1;">
+          <h3>⚡ Review Queue Tập Trung Cho Quản Lý</h3>
+          <ul class="text-sm" style="line-height: 1.8;">
+            <li><strong>Màn hình quản lý duy nhất:</strong> Gom toàn bộ báo cáo cần duyệt trong phòng ban về một nơi.</li>
+            <li><strong>So sánh trực quan:</strong> Đặt cạnh giá trị kỳ trước và kỳ này để đánh giá tốc độ tăng trưởng.</li>
+            <li><strong>Phê duyệt 1 chạm:</strong> Chấp thuận hoặc yêu cầu cập nhật lại chỉ với đúng <strong>1 cú nhấp chuột</strong>.</li>
+            <li><strong>Lịch sử đối thoại 2 chiều:</strong> Lưu vết thảo luận minh bạch trên từng chỉ tiêu, xóa bỏ tranh cãi cuối kỳ.</li>
           </ul>
         </div>
       </div>
-      <div class="col flex flex-col justify-center items-center">
-        <div style="background: var(--gray-50); border: 1px solid var(--gray-200); border-radius: var(--radius-md); padding: 12px; width: 100%; text-align: center;">
-          <img src="assets/screenshots/screenshot_checkin.png" alt="Giao diện Check-in" style="max-height: 380px; width: 100%; object-fit: contain; border-radius: var(--radius-sm); box-shadow: var(--shadow-md);">
-          <p class="text-xs text-muted mt-8">Màn hình Review Queue tập trung và form Check-in minh chứng minh bạch</p>
+
+      <div class="col flex flex-col justify-center items-center" style="display: flex;">
+        <div style="background: var(--white); border: 2px solid var(--gray-200); border-radius: var(--radius-md); padding: 0; width: 100%; height: 100%; display: flex; flex-direction: column; box-shadow: var(--shadow-lg); overflow: hidden;">
+          <!-- Browser Mockup Header -->
+          <div style="background: var(--gray-100); padding: 10px 16px; display: flex; align-items: center; gap: 8px; border-bottom: 1px solid var(--gray-300);">
+            <span style="width: 12px; height: 12px; border-radius: 50%; background: #ff5f56; display: inline-block;"></span>
+            <span style="width: 12px; height: 12px; border-radius: 50%; background: #ffbd2e; display: inline-block;"></span>
+            <span style="width: 12px; height: 12px; border-radius: 50%; background: #27c93f; display: inline-block;"></span>
+            <span style="background: var(--white); border: 1px solid var(--gray-300); border-radius: var(--radius-sm); padding: 3px 16px; font-size: 13px; color: var(--gray-600); font-family: var(--font-mono); margin-left: 8px; flex: 1;">https://nextgen.fpt.edu.vn/review-queue</span>
+          </div>
+          <div style="flex: 1; padding: 12px; display: flex; flex-direction: column; justify-content: center; align-items: center; background: var(--gray-50);">
+            <img src="assets/screenshots/screenshot_checkin.png" alt="Giao diện Check-in" style="max-height: 410px; width: 100%; object-fit: contain; border-radius: var(--radius-sm); border: 1px solid var(--gray-200);">
+            <div style="margin-top: 10px; font-size: 13px; color: var(--gray-600); font-weight: 600;">Màn hình Review Queue tập trung và form Check-in minh chứng minh bạch</div>
+          </div>
         </div>
       </div>
     </div>
@@ -811,54 +866,152 @@
 </div>
 
 <!-- SLIDE 18: ĐỘNG CƠ TÍNH ĐIỂM, ĐÁNH GIÁ 7 BẬC & STATE MACHINE -->
-<div class="slide" data-notes="• Em là An, phụ trách Backend KPI/OKR.
-• State Machine nghiêm ngặt: Vòng đời Check-in khép kín (Draft -> Submitted -> Reviewed -> Finalized). Ngăn chặn tuyệt đối việc can thiệp điểm sau khi đã chốt.
-• Công thức tính điểm trọng số: Điểm tổng = Tổng (Điểm_i * Trọng số_i), bắt buộc tổng trọng số = 100%.
-• Xếp loại 7 bậc chuẩn doanh nghiệp: Xuất sắc, Tốt, Khá, Đạt, Cần cải thiện, Yếu, Kém.
-• Xử lý triệt để các edge case chia cho 0 và giá trị biên.">
+<div class="slide" data-notes="⏱ [Thời lượng: 45 giây — An]
+👉 Ý 1 (State Machine khép kín): Em là An. Vòng đời Check-in 4 trạng thái: Draft ➔ Submitted ➔ Reviewed ➔ Finalized. Chặn tuyệt đối việc can thiệp sửa điểm sau khi đã chốt.
+👉 Ý 2 (Tính điểm theo tỷ trọng): Điểm số được tính tự động theo tỷ trọng đóng góp của từng mục tiêu, hệ thống tự động xử lý ngoại lệ và chặn lệch số liệu.
+👉 Ý 3 (Thang xếp loại 7 bậc): Phân loại chuẩn FPT từ Xuất sắc đến Kém, đã được kiểm thử qua 120+ Unit Tests xUnit đảm bảo chính xác 100%.">
   <div class="slide-header">
     <div class="header-left"><img src="assets/img/FPT_Polytechnic-26eda0e9.png" alt="FPT"><span>PHẦN 3 — KPI / OKR (BACKEND)</span></div>
     <div class="header-right">An — Backend</div>
   </div>
   <div class="slide-content">
-    <h1>Động cơ Tính điểm &amp; <span class="accent">State Machine Check-in</span></h1>
-    <div class="three-col">
-      <div class="info-card accent">
-        <h3>🔄 State Machine Vòng Đời</h3>
-        <ul class="text-sm">
-          <li><span class="badge badge-blue">Draft</span> Nhân viên chuẩn bị số liệu</li>
-          <li><span class="badge badge-orange">Submitted</span> Nộp lên Review Queue</li>
-          <li><span class="badge badge-green">Reviewed</span> Quản lý duyệt &amp; cho điểm</li>
-          <li><span class="badge badge-purple">Finalized</span> Đóng kỳ, chốt điểm bất biến</li>
-          <li><strong>Bảo vệ dữ liệu:</strong> Chặn hoàn toàn việc chỉnh sửa lén lút khi đã duyệt.</li>
-        </ul>
-      </div>
-      <div class="info-card blue">
-        <h3>📐 Công thức Trọng số Đa tầng</h3>
-        <p class="text-sm mb-8">Điểm tổng hợp phản ánh chính xác đóng góp thực tế:</p>
-        <div class="code-block" style="font-size: 13px;">
-          FinalScore = ∑ (Score_i × Weight_i)<br>
-          với ∑ Weight_i = 100%<br>
-          <span class="code-comment">// Tự động validate ranh giới</span><br>
-          <span class="code-keyword">if</span> (target == 0) return 0;<br>
-          score = Math.Min(actual / target, 1.5);
+    <h1>Động cơ Tính điểm &amp; <span class="accent">State Machine Vòng Đời Check-in</span></h1>
+    
+    <div class="three-col" style="flex: 1; align-items: stretch; gap: 20px;">
+      <!-- Card 1: State Machine 4 Steps -->
+      <div class="info-card accent" style="padding: 20px 22px; display: flex; flex-direction: column; justify-content: space-between;">
+        <div>
+          <h3 style="margin-bottom: 14px;">🔄 Vòng Đời Check-in 4 Bước</h3>
+          
+          <div style="display: flex; flex-direction: column; gap: 10px;">
+            <div style="background: var(--blue-light); border-left: 4px solid var(--blue); padding: 10px 14px; border-radius: var(--radius-sm);">
+              <div style="display: flex; align-items: center; justify-content: space-between;">
+                <strong style="color: var(--blue); font-size: 15px;">1. DRAFT</strong>
+                <span class="badge badge-blue" style="font-size: 11px;">Nhân viên</span>
+              </div>
+              <div style="font-size: 13px; color: var(--gray-700); margin-top: 3px;">Nhân viên tự nhập kết quả &amp; đính kèm minh chứng.</div>
+            </div>
+
+            <div style="background: var(--fpt-orange-glow); border-left: 4px solid var(--fpt-orange); padding: 10px 14px; border-radius: var(--radius-sm);">
+              <div style="display: flex; align-items: center; justify-content: space-between;">
+                <strong style="color: var(--fpt-orange-dark); font-size: 15px;">2. SUBMITTED</strong>
+                <span class="badge badge-orange" style="font-size: 11px;">Review Queue</span>
+              </div>
+              <div style="font-size: 13px; color: var(--gray-700); margin-top: 3px;">Đã nộp, chuyển vào hàng đợi chờ quản lý phê duyệt.</div>
+            </div>
+
+            <div style="background: var(--green-light); border-left: 4px solid var(--green); padding: 10px 14px; border-radius: var(--radius-sm);">
+              <div style="display: flex; align-items: center; justify-content: space-between;">
+                <strong style="color: var(--green); font-size: 15px;">3. REVIEWED</strong>
+                <span class="badge badge-green" style="font-size: 11px;">Quản lý</span>
+              </div>
+              <div style="font-size: 13px; color: var(--gray-700); margin-top: 3px;">Quản lý duyệt tiến độ, cho điểm đánh giá &amp; phản hồi.</div>
+            </div>
+
+            <div style="background: #F3E8FF; border-left: 4px solid var(--purple); padding: 10px 14px; border-radius: var(--radius-sm);">
+              <div style="display: flex; align-items: center; justify-content: space-between;">
+                <strong style="color: var(--purple); font-size: 15px;">4. FINALIZED</strong>
+                <span class="badge badge-purple" style="font-size: 11px;">Đóng sổ</span>
+              </div>
+              <div style="font-size: 13px; color: var(--gray-700); margin-top: 3px;">Chốt số liệu kỳ đánh giá, điểm số trở thành <strong>bất biến</strong>.</div>
+            </div>
+          </div>
+        </div>
+
+        <div style="background: var(--gray-100); padding: 10px 14px; border-radius: var(--radius-sm); border: 1px dashed var(--gray-400); margin-top: 12px; font-size: 13px; color: var(--gray-700);">
+          🔒 <strong>Bảo vệ dữ liệu:</strong> Chặn hoàn toàn việc can thiệp sửa điểm khi trạng thái đã chuyển sang Finalized.
         </div>
       </div>
-      <div class="info-card green">
-        <h3>🏆 Thang Đánh Giá 7 Bậc</h3>
-        <ul class="text-sm">
-          <li><strong class="text-green">Xuất sắc:</strong> &ge; 95% (Thưởng tối đa)</li>
-          <li><strong class="text-green">Tốt:</strong> 85% – 94%</li>
-          <li><strong class="text-blue">Khá:</strong> 75% – 84%</li>
-          <li><strong class="text-blue">Đạt:</strong> 60% – 74% (Hoàn thành chỉ tiêu)</li>
-          <li><strong class="text-orange">Cần cải thiện:</strong> 50% – 59%</li>
-          <li><strong class="text-red">Yếu:</strong> 40% – 49%</li>
-          <li><strong class="text-red">Kém:</strong> &lt; 40% (Cảnh báo sa thải)</li>
-        </ul>
+
+      <!-- Card 2: Nguyên tắc Tỷ trọng & Kiểm soát -->
+      <div class="info-card blue" style="padding: 20px 22px; display: flex; flex-direction: column; justify-content: space-between;">
+        <div>
+          <h3 style="margin-bottom: 14px;">⚖️ Đánh Giá Theo Tỷ Trọng</h3>
+          
+          <!-- Principle Banner -->
+          <div style="background: var(--white); border: 2px solid var(--blue); border-radius: var(--radius-md); padding: 14px 18px; text-align: center; box-shadow: var(--shadow-sm); margin-bottom: 16px;">
+            <div style="font-size: 13px; color: var(--gray-500); text-transform: uppercase; font-weight: 700; letter-spacing: 0.5px;">Nguyên Tắc Đánh Giá Đóng Góp</div>
+            <div style="font-size: 18px; font-weight: 800; color: var(--blue); margin: 6px 0; font-family: var(--font-heading);">
+              Tính điểm tự động theo tỷ trọng công việc
+            </div>
+            <div style="font-size: 13px; color: var(--green); font-weight: 600;">Chính xác · Minh bạch · Không thiên vị cảm tính</div>
+          </div>
+
+          <div style="display: flex; flex-direction: column; gap: 10px;">
+            <div style="display: flex; align-items: flex-start; gap: 10px; background: var(--blue-light); padding: 10px 14px; border-radius: var(--radius-sm);">
+              <span style="font-size: 18px;">⚖️</span>
+              <div><strong style="font-size: 14px; color: var(--gray-800);">Phân Bổ Tỷ Trọng Hợp Lý</strong><div style="font-size: 13px; color: var(--gray-600);">Mỗi mục tiêu có mức độ ưu tiên riêng, tự động cân đối tổng tỷ trọng đạt đủ 100%.</div></div>
+            </div>
+
+            <div style="display: flex; align-items: flex-start; gap: 10px; background: var(--blue-light); padding: 10px 14px; border-radius: var(--radius-sm);">
+              <span style="font-size: 18px;">🛡️</span>
+              <div><strong style="font-size: 14px; color: var(--gray-800);">Tự Động Xử Lý Ngoại Lệ</strong><div style="font-size: 13px; color: var(--gray-600);">Tự nhận diện và xử lý các chỉ tiêu chưa phát sinh số liệu, không lo lỗi tính toán.</div></div>
+            </div>
+
+            <div style="display: flex; align-items: flex-start; gap: 10px; background: var(--blue-light); padding: 10px 14px; border-radius: var(--radius-sm);">
+              <span style="font-size: 18px;">🎯</span>
+              <div><strong style="font-size: 14px; color: var(--gray-800);">Giới Hạn Ngưỡng Tối Đa</strong><div style="font-size: 13px; color: var(--gray-600);">Kiểm soát ngưỡng hoàn thành tối đa 150%, ngăn chặn số liệu ảo làm lệch kết quả.</div></div>
+            </div>
+          </div>
+        </div>
+
+        <div style="background: var(--green-light); padding: 10px 14px; border-radius: var(--radius-sm); border-left: 4px solid var(--green); margin-top: 12px; font-size: 13px; color: var(--green); font-weight: 600;">
+          ✨ Đảm bảo phản ánh chính xác 100% nỗ lực và đóng góp của nhân sự.
+        </div>
+      </div>
+
+      <!-- Card 3: Thang đánh giá 7 bậc FPT -->
+      <div class="info-card green" style="padding: 20px 22px; display: flex; flex-direction: column; justify-content: space-between;">
+        <div>
+          <h3 style="margin-bottom: 14px;">🏆 Thang Đánh Giá 7 Bậc FPT</h3>
+          
+          <div style="display: flex; flex-direction: column; gap: 8px;">
+            <div style="display: flex; align-items: center; justify-content: space-between; background: var(--white); padding: 8px 12px; border-radius: var(--radius-sm); border-left: 4px solid var(--green); box-shadow: var(--shadow-sm);">
+              <div><strong style="color: var(--green); font-size: 14px;">Xuất sắc</strong> <span style="font-size: 12px; color: var(--gray-500);">(Thưởng tối đa)</span></div>
+              <span style="font-weight: 700; color: var(--green); font-size: 14px;">&ge; 95%</span>
+            </div>
+
+            <div style="display: flex; align-items: center; justify-content: space-between; background: var(--white); padding: 8px 12px; border-radius: var(--radius-sm); border-left: 4px solid var(--green); box-shadow: var(--shadow-sm);">
+              <div><strong style="color: var(--green); font-size: 14px;">Tốt</strong> <span style="font-size: 12px; color: var(--gray-500);">(Đạt vượt chỉ tiêu)</span></div>
+              <span style="font-weight: 700; color: var(--green); font-size: 14px;">85% – 94%</span>
+            </div>
+
+            <div style="display: flex; align-items: center; justify-content: space-between; background: var(--white); padding: 8px 12px; border-radius: var(--radius-sm); border-left: 4px solid var(--blue); box-shadow: var(--shadow-sm);">
+              <div><strong style="color: var(--blue); font-size: 14px;">Khá</strong> <span style="font-size: 12px; color: var(--gray-500);">(Vượt định mức)</span></div>
+              <span style="font-weight: 700; color: var(--blue); font-size: 14px;">75% – 84%</span>
+            </div>
+
+            <div style="display: flex; align-items: center; justify-content: space-between; background: var(--white); padding: 8px 12px; border-radius: var(--radius-sm); border-left: 4px solid var(--blue); box-shadow: var(--shadow-sm);">
+              <div><strong style="color: var(--blue); font-size: 14px;">Đạt</strong> <span style="font-size: 12px; color: var(--gray-500);">(Hoàn thành KPI)</span></div>
+              <span style="font-weight: 700; color: var(--blue); font-size: 14px;">60% – 74%</span>
+            </div>
+
+            <div style="display: flex; align-items: center; justify-content: space-between; background: var(--white); padding: 8px 12px; border-radius: var(--radius-sm); border-left: 4px solid var(--fpt-orange); box-shadow: var(--shadow-sm);">
+              <div><strong style="color: var(--fpt-orange); font-size: 14px;">Cần cải thiện</strong> <span style="font-size: 12px; color: var(--gray-500);">(Chưa đạt)</span></div>
+              <span style="font-weight: 700; color: var(--fpt-orange); font-size: 14px;">50% – 59%</span>
+            </div>
+
+            <div style="display: flex; align-items: center; justify-content: space-between; background: var(--white); padding: 8px 12px; border-radius: var(--radius-sm); border-left: 4px solid var(--red); box-shadow: var(--shadow-sm);">
+              <div><strong style="color: var(--red); font-size: 14px;">Yếu</strong> <span style="font-size: 12px; color: var(--gray-500);">(Nguy cơ cao)</span></div>
+              <span style="font-weight: 700; color: var(--red); font-size: 14px;">40% – 49%</span>
+            </div>
+
+            <div style="display: flex; align-items: center; justify-content: space-between; background: var(--white); padding: 8px 12px; border-radius: var(--radius-sm); border-left: 4px solid var(--red); box-shadow: var(--shadow-sm);">
+              <div><strong style="color: var(--red); font-size: 14px;">Kém</strong> <span style="font-size: 12px; color: var(--gray-500);">(Cảnh báo sa thải)</span></div>
+              <span style="font-weight: 700; color: var(--red); font-size: 14px;">&lt; 40%</span>
+            </div>
+          </div>
+        </div>
+
+        <div style="background: var(--gray-100); padding: 10px 14px; border-radius: var(--radius-sm); margin-top: 12px; font-size: 13px; color: var(--gray-700); text-align: center;">
+          🎯 Tiêu chuẩn đánh giá chuẩn mực áp dụng toàn doanh nghiệp.
+        </div>
       </div>
     </div>
-    <div class="highlight-box green mt-auto">
-      <p class="text-sm fw-bold text-center">✅ Toàn bộ thuật toán tính điểm và chuyển đổi trạng thái được kiểm thử qua 120+ Unit Tests xUnit, đảm bảo tính đúng đắn 100%.</p>
+
+    <!-- Bottom Verification Highlight -->
+    <div class="highlight-box green" style="padding: 12px 24px; border-left: 5px solid var(--green); margin-top: -4px;">
+      <p class="text-sm fw-bold text-center" style="margin:0; font-size: 15px;">✅ Toàn bộ thuật toán tính điểm và chuyển đổi trạng thái được kiểm thử tự động qua 120+ Unit Tests xUnit, đảm bảo độ chính xác 100%.</p>
     </div>
   </div>
   <div class="slide-footer"><span>FPT Polytechnic — DATN 2026</span></div>
@@ -866,54 +1019,114 @@
 </div>
 
 <!-- SLIDE 19: BẢO MẬT & PHÂN QUYỀN ĐA TẦNG (RBAC & SQL RLS) -->
-<div class="slide" data-notes="• Bảo vệ dữ liệu doanh nghiệp là ưu tiên sống còn.
-• RBAC 5 vai trò: SaaSAdmin, Doanh nghiệp Admin, Quản lý, Nhân viên, Khách. Kiểm soát chặt qua Action Filter trên Controller.
-• Điểm sáng kỹ thuật: Tích hợp SQL Server Row-Level Security (RLS) trực tiếp ở tầng database. Dù bị tấn công API, dữ liệu giữa các tenant và phòng ban vẫn được cô lập triệt để.
-• Phòng chống lỗ hổng OWASP: Chống CSRF Token, mã hóa mật khẩu chuẩn PBKDF2/Argon2.
-• Chuyển tiếp: Sau đây bạn Nhật sẽ trình bày phân hệ Vận hành.">
+<div class="slide" data-notes="⏱ [Thời lượng: 45 giây — An]
+👉 Ý 1 (Phân quyền RBAC 5 vai trò): SaaSAdmin, Company Admin, Manager, Employee, Guest được kiểm soát chặt chẽ qua Controller Action Filters.
+👉 Ý 2 (Điểm sáng SQL Server RLS): Tích hợp Row-Level Security trực tiếp tại database engine — dù có bị tấn công qua API, hacker cũng không thể truy vấn trái phép dữ liệu tenant khác.
+👉 Ý 3 (Phòng thủ OWASP): Chống CSRF token tự động, EF Core chống SQL Injection 100%, bảo vệ IDOR trên từng Entity.
+👉 Chuyển tiếp: Sau đây em xin nhường lời cho bạn Nhật và bạn Bảo báo cáo Phân hệ Vận hành.">
   <div class="slide-header">
     <div class="header-left"><img src="assets/img/FPT_Polytechnic-26eda0e9.png" alt="FPT"><span>PHẦN 3 — KPI / OKR (BACKEND)</span></div>
     <div class="header-right">An — Backend</div>
   </div>
   <div class="slide-content">
-    <h1>Bảo mật &amp; <span class="accent">Phân quyền Đa tầng (RBAC &amp; RLS)</span></h1>
-    <div class="two-col">
-      <div class="col">
-        <div class="info-card accent mb-16">
-          <h3>🛡️ Phân Quyền RBAC 5 Cấp Bậc</h3>
-          <ul class="text-sm">
-            <li><strong>SaaS Admin:</strong> Quản trị toàn hệ thống, tenant và gói cước</li>
-            <li><strong>Company Admin:</strong> Cấu hình công ty, phòng ban, phân quyền</li>
-            <li><strong>Manager (Quản lý):</strong> Giao chỉ tiêu, duyệt Check-in, đánh giá</li>
-            <li><strong>Employee (Nhân viên):</strong> Thực thi task, check-in tiến độ cá nhân</li>
-            <li><strong>Guest (Khách):</strong> Xem báo cáo giới hạn theo cấp phép</li>
-          </ul>
-        </div>
-        <div class="info-card red">
-          <h3>🔒 Phòng Thủ Chiều Sâu OWASP</h3>
-          <ul class="text-sm">
-            <li>Chống <strong>CSRF</strong> với ValidateAntiForgeryToken trên mọi form</li>
-            <li>Chống <strong>SQL Injection</strong> qua EF Core Parameterized Queries</li>
-            <li>Chống <strong>IDOR</strong> nhờ xác thực quyền sở hữu trên từng Entity</li>
-          </ul>
-        </div>
-      </div>
-      <div class="col">
-        <div class="info-card blue mb-16">
-          <h3>💾 SQL Server Row-Level Security (RLS)</h3>
-          <p class="text-sm mb-8">Dữ liệu được bảo vệ tự động ngay tại tầng Database Engine:</p>
-          <div class="code-block" style="font-size: 13px;">
-            <span class="code-comment">-- Security Predicate cô lập Tenant &amp; Phòng ban</span><br>
-            <span class="code-keyword">CREATE FUNCTION</span> Security.fn_tenant_predicate(@TenantId <span class="code-keyword">INT</span>)<br>
-            <span class="code-keyword">RETURNS TABLE WITH SCHEMABINDING AS</span><br>
-            <span class="code-keyword">RETURN SELECT</span> 1 <span class="code-keyword">WHERE</span> @TenantId = CAST(SESSION_CONTEXT(N'TenantId') <span class="code-keyword">AS INT</span>);<br>
-            <br>
-            <span class="code-keyword">CREATE SECURITY POLICY</span> Security.TenantFilter<br>
-            <span class="code-keyword">ADD FILTER PREDICATE</span> Security.fn_tenant_predicate(TenantId) <span class="code-keyword">ON</span> dbo.Kpis;
+    <h1>Bảo mật Doanh nghiệp &amp; <span class="accent">Phân quyền Đa tầng (RBAC &amp; RLS)</span></h1>
+    
+    <div class="two-col" style="flex: 1; align-items: stretch; gap: 24px;">
+      <!-- Left Column: RBAC & OWASP -->
+      <div class="col" style="gap: 16px; display: flex; flex-direction: column; justify-content: space-between;">
+        <div class="info-card accent" style="padding: 18px 22px; flex: 1;">
+          <h3 style="margin-bottom: 12px;">🛡️ Phân Quyền RBAC 5 Cấp Bậc</h3>
+          
+          <div style="display: flex; flex-direction: column; gap: 8px;">
+            <div style="background: var(--white); padding: 8px 12px; border-radius: var(--radius-sm); border: 1px solid var(--gray-200); display: flex; align-items: center; justify-content: space-between;">
+              <div><strong style="color: var(--purple); font-size: 14px;">👑 SaaS Admin</strong> <span style="font-size: 12px; color: var(--gray-500);">— Quản trị toàn hệ thống sàn</span></div>
+              <span class="badge badge-purple" style="font-size: 11px;">Toàn quyền</span>
+            </div>
+            <div style="background: var(--white); padding: 8px 12px; border-radius: var(--radius-sm); border: 1px solid var(--gray-200); display: flex; align-items: center; justify-content: space-between;">
+              <div><strong style="color: var(--fpt-orange-dark); font-size: 14px;">🏢 Company Admin</strong> <span style="font-size: 12px; color: var(--gray-500);">— Cấu hình tổ chức &amp; nhân sự</span></div>
+              <span class="badge badge-orange" style="font-size: 11px;">Tenant Admin</span>
+            </div>
+            <div style="background: var(--white); padding: 8px 12px; border-radius: var(--radius-sm); border: 1px solid var(--gray-200); display: flex; align-items: center; justify-content: space-between;">
+              <div><strong style="color: var(--blue); font-size: 14px;">👔 Manager (Quản lý)</strong> <span style="font-size: 12px; color: var(--gray-500);">— Giao việc &amp; duyệt đánh giá</span></div>
+              <span class="badge badge-blue" style="font-size: 11px;">Phòng ban</span>
+            </div>
+            <div style="background: var(--white); padding: 8px 12px; border-radius: var(--radius-sm); border: 1px solid var(--gray-200); display: flex; align-items: center; justify-content: space-between;">
+              <div><strong style="color: var(--green); font-size: 14px;">💻 Employee (Nhân viên)</strong> <span style="font-size: 12px; color: var(--gray-500);">— Thực thi &amp; check-in tiến độ</span></div>
+              <span class="badge badge-green" style="font-size: 11px;">Cá nhân</span>
+            </div>
+            <div style="background: var(--white); padding: 8px 12px; border-radius: var(--radius-sm); border: 1px solid var(--gray-200); display: flex; align-items: center; justify-content: space-between;">
+              <div><strong style="color: var(--gray-600); font-size: 14px;">👁️ Guest (Khách)</strong> <span style="font-size: 12px; color: var(--gray-500);">— Xem báo cáo được ủy quyền</span></div>
+              <span class="badge" style="background: var(--gray-200); color: var(--gray-700); font-size: 11px;">Chỉ xem</span>
+            </div>
           </div>
         </div>
-        <div class="highlight-box green mt-auto">
-          <p class="text-sm fw-bold">✨ Kết quả: Chặn hoàn toàn nguy cơ rò rỉ dữ liệu giữa các công ty trong môi trường Cloud Multi-tenant SaaS.</p>
+
+        <div class="info-card red" style="padding: 16px 22px;">
+          <h3 style="margin-bottom: 10px;">🔒 Phòng Thủ Chiều Sâu Chuẩn OWASP Top 10</h3>
+          <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; font-size: 13px;">
+            <div style="background: var(--white); padding: 10px; border-radius: var(--radius-sm); border: 1px solid rgba(220,53,69,0.2); text-align: center;">
+              <strong style="color: var(--red); display: block;">Chống CSRF</strong>
+              <span style="font-size: 11px; color: var(--gray-600);">ValidateToken 100% Form</span>
+            </div>
+            <div style="background: var(--white); padding: 10px; border-radius: var(--radius-sm); border: 1px solid rgba(220,53,69,0.2); text-align: center;">
+              <strong style="color: var(--red); display: block;">Chống SQL Injection</strong>
+              <span style="font-size: 11px; color: var(--gray-600);">EF Core Tham số hóa 100%</span>
+            </div>
+            <div style="background: var(--white); padding: 10px; border-radius: var(--radius-sm); border: 1px solid rgba(220,53,69,0.2); text-align: center;">
+              <strong style="color: var(--red); display: block;">Chống IDOR</strong>
+              <span style="font-size: 11px; color: var(--gray-600);">Xác thực Tenant trên Entity</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Column: Visual RLS Architecture Diagram -->
+      <div class="col" style="gap: 16px; display: flex; flex-direction: column; justify-content: space-between;">
+        <div class="info-card blue" style="padding: 18px 24px; flex: 1; display: flex; flex-direction: column; justify-content: space-between;">
+          <div>
+            <h3 style="margin-bottom: 12px;">💾 Cơ Chế SQL Server Row-Level Security (RLS)</h3>
+            <p class="text-sm mb-12" style="color: var(--gray-600);">Dữ liệu các công ty được cô lập tự động ngay tại tầng Database Engine:</p>
+
+            <!-- Visual Flow Diagram -->
+            <div style="background: var(--white); border: 2px solid var(--blue); border-radius: var(--radius-md); padding: 16px; box-shadow: var(--shadow-sm); display: flex; flex-direction: column; gap: 12px;">
+              <div style="display: flex; align-items: center; justify-content: space-between; gap: 10px;">
+                <div style="background: var(--blue-light); border: 1px solid var(--blue); padding: 8px 12px; border-radius: var(--radius-sm); font-size: 13px; font-weight: 700; color: var(--blue); text-align: center; flex: 1;">
+                  🌐 Request Web API
+                </div>
+                <span style="font-size: 16px; color: var(--gray-400);">➔</span>
+                <div style="background: var(--fpt-orange-glow); border: 1px solid var(--fpt-orange); padding: 8px 12px; border-radius: var(--radius-sm); font-size: 13px; font-weight: 700; color: var(--fpt-orange-dark); text-align: center; flex: 1.2;">
+                  🔑 Session Context (TenantId)
+                </div>
+                <span style="font-size: 16px; color: var(--gray-400);">➔</span>
+                <div style="background: var(--green-light); border: 1px solid var(--green); padding: 8px 12px; border-radius: var(--radius-sm); font-size: 13px; font-weight: 700; color: var(--green); text-align: center; flex: 1.2;">
+                  🛡️ RLS Policy Engine Lọc Tự Động
+                </div>
+              </div>
+
+              <div style="background: var(--gray-50); padding: 10px 14px; border-radius: var(--radius-sm); font-size: 13px; color: var(--gray-700); line-height: 1.6; border: 1px dashed var(--gray-300);">
+                <strong>Cơ chế bảo vệ:</strong> Hàm an ninh (Security Predicate) tự động gắn điều kiện lọc <code>TenantId</code> vào mọi câu lệnh <code>SELECT / UPDATE / DELETE</code> tại tầng máy chủ CSDL.
+              </div>
+            </div>
+
+            <div style="margin-top: 14px; display: flex; flex-direction: column; gap: 8px;">
+              <div style="display: flex; align-items: center; gap: 10px; font-size: 13px; color: var(--gray-700);">
+                <span style="color: var(--green); font-size: 16px;">✔</span>
+                <span><strong>Không phụ thuộc lập trình viên:</strong> Không sợ quên viết điều kiện lọc WHERE.</span>
+              </div>
+              <div style="display: flex; align-items: center; gap: 10px; font-size: 13px; color: var(--gray-700);">
+                <span style="color: var(--green); font-size: 16px;">✔</span>
+                <span><strong>Miễn nhiễm rò rỉ chéo:</strong> Ngay cả khi hacker khai thác lỗi API, CSDL vẫn chặn đứng 100%.</span>
+              </div>
+              <div style="display: flex; align-items: center; gap: 10px; font-size: 13px; color: var(--gray-700);">
+                <span style="color: var(--green); font-size: 16px;">✔</span>
+                <span><strong>Hiệu năng tối ưu:</strong> Tận dụng trực tiếp Query Optimizer của SQL Server.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="highlight-box green mt-auto" style="padding: 12px 24px; border-left: 5px solid var(--green);">
+          <p class="text-sm fw-bold" style="margin:0; font-size: 14px;">✨ Kết quả: Chặn đứng hoàn toàn nguy cơ rò rỉ dữ liệu giữa các công ty trong môi trường Cloud Multi-tenant SaaS.</p>
         </div>
       </div>
     </div>
@@ -926,63 +1139,67 @@
      SLIDE 20–23: VẬN HÀNH (Nhật & Bảo)
      ========================================== -->
 
-<!-- SLIDE 20: GIAO DIỆN KANBAN BOARD & QUẢN TRỊ CÔNG VIỆC TRỰC QUAN -->
-<div class="slide" data-notes="• Em là Nhật, phụ trách Frontend phân hệ Vận hành.
-• Bảng Kanban 6 cột chuẩn Agile: Backlog, To Do, In Progress, Review, Testing, Done.
-• Thao tác kéo thả tức thì (Drag & Drop) với hiệu ứng thị giác mượt mà, phản hồi API realtime.
-• Phân loại thẻ công việc thông minh: Màu ưu tiên (Urgent, High, Normal, Low), nhãn phòng ban, avatar người phụ trách và cờ deadline cảnh báo quá hạn.">
+<!-- SLIDE 20: KANBAN BOARD & QUẢN TRỊ CÔNG VIỆC TRỰC QUAN -->
+<div class="slide" data-notes="⏱ [Thời lượng: 45 giây — Nhật]
+👉 Ý 1 (Bảng Kanban 6 cột Agile): Em là Nhật. Luồng công việc chuẩn hóa 6 cột: Backlog, To Do, In Progress, Review, Testing, Done.
+👉 Ý 2 (Kéo thả mượt mà): HTML5 Drag &amp; Drop tức thì, cập nhật API realtime và tự động đổi trạng thái task ngay khi buông chuột.
+👉 Ý 3 (Nhận diện thẻ thông minh): Thẻ phân loại trực quan theo màu ưu tiên (Urgent, High, Normal, Low), có nhãn deadline và avatar người phụ trách.">
   <div class="slide-header">
     <div class="header-left"><img src="assets/img/FPT_Polytechnic-26eda0e9.png" alt="FPT"><span>PHẦN 4 — VẬN HÀNH (FRONTEND)</span></div>
     <div class="header-right">Nhật — Frontend</div>
   </div>
   <div class="slide-content">
-    <h1>Giao diện Kanban Board &amp; <span class="accent">Quản trị Công việc</span></h1>
-    <p class="text-sm mb-16">Mô hình luồng công việc 6 cột chuẩn hóa, trực quan và không độ trễ:</p>
+    <h1>Giao diện Kanban Board &amp; <span class="accent">Quản trị Công việc Trực quan</span></h1>
+    <p class="text-lg" style="margin-bottom: 4px; font-size: 16px;">Mô hình luồng công việc 6 cột chuẩn hóa Agile, phản hồi API tức thì không độ trễ:</p>
     
-    <div class="kanban-demo mb-16">
+    <div class="kanban-demo mb-16" style="gap: 12px;">
       <div class="kanban-col">
-        <div class="col-title">📥 Backlog (3)</div>
-        <div class="task-card"><span class="task-priority low"></span>Khảo sát nhu cầu SME</div>
-        <div class="task-card"><span class="task-priority normal"></span>Thiết kế mockup v2</div>
+        <div class="col-title" style="font-size: 13px;">📥 Backlog (3)</div>
+        <div class="task-card" style="font-size: 12px;"><span class="task-priority low"></span>Khảo sát nhu cầu SME</div>
+        <div class="task-card" style="font-size: 12px;"><span class="task-priority normal"></span>Thiết kế mockup v2</div>
       </div>
       <div class="kanban-col">
-        <div class="col-title">📋 To Do (4)</div>
-        <div class="task-card"><span class="task-priority high"></span>Tích hợp cổng thanh toán</div>
-        <div class="task-card"><span class="task-priority normal"></span>Viết Unit test Controller</div>
+        <div class="col-title" style="font-size: 13px;">📋 To Do (4)</div>
+        <div class="task-card" style="font-size: 12px;"><span class="task-priority high"></span>Tích hợp thanh toán VNPAY</div>
+        <div class="task-card" style="font-size: 12px;"><span class="task-priority normal"></span>Viết Unit test Controller</div>
+      </div>
+      <div class="kanban-col" style="background: var(--fpt-orange-glow); border: 1px solid rgba(243, 112, 33, 0.3);">
+        <div class="col-title" style="color: var(--fpt-orange-dark); font-size: 13px;">⚡ In Progress (2)</div>
+        <div class="task-card" style="border-left: 3px solid var(--fpt-orange); font-size: 12px;"><span class="task-priority urgent"></span>Tối ưu RAG DeepSeek</div>
+        <div class="task-card" style="border-left: 3px solid var(--fpt-orange); font-size: 12px;"><span class="task-priority high"></span>Cấu hình RLS Tenant</div>
       </div>
       <div class="kanban-col">
-        <div class="col-title">⚡ In Progress (2)</div>
-        <div class="task-card" style="border-left: 3px solid var(--fpt-orange);"><span class="task-priority urgent"></span>Tối ưu RAG DeepSeek</div>
-        <div class="task-card"><span class="task-priority high"></span>Cấu hình RLS Tenant</div>
+        <div class="col-title" style="font-size: 13px;">👁️ Review (2)</div>
+        <div class="task-card" style="font-size: 12px;"><span class="task-priority normal"></span>Code review ReviewQueue</div>
       </div>
       <div class="kanban-col">
-        <div class="col-title">👁️ Review (2)</div>
-        <div class="task-card"><span class="task-priority normal"></span>Code review ReviewQueue</div>
+        <div class="col-title" style="font-size: 13px;">🧪 Testing (3)</div>
+        <div class="task-card" style="font-size: 12px;"><span class="task-priority high"></span>Kiểm thử phân quyền RBAC</div>
       </div>
-      <div class="kanban-col">
-        <div class="col-title">🧪 Testing (3)</div>
-        <div class="task-card"><span class="task-priority high"></span>Kiểm thử phân quyền RBAC</div>
-      </div>
-      <div class="kanban-col" style="background: var(--green-light);">
-        <div class="col-title" style="color: var(--green);">✅ Done (28)</div>
-        <div class="task-card" style="text-decoration: line-through; opacity: 0.8;"><span class="task-priority normal"></span>Đóng gói Test Plan v3.0</div>
-        <div class="task-card" style="text-decoration: line-through; opacity: 0.8;"><span class="task-priority urgent"></span>Fix 290 Bugs đợt 1</div>
+      <div class="kanban-col" style="background: var(--green-light); border: 1px solid rgba(25, 135, 84, 0.3);">
+        <div class="col-title" style="color: var(--green); font-size: 13px;">✅ Done (28)</div>
+        <div class="task-card" style="text-decoration: line-through; opacity: 0.8; font-size: 12px;"><span class="task-priority normal"></span>Đóng gói Test Plan v3.0</div>
+        <div class="task-card" style="text-decoration: line-through; opacity: 0.8; font-size: 12px;"><span class="task-priority urgent"></span>Fix 290 Bugs đợt 1</div>
       </div>
     </div>
 
-    <div class="three-col">
-      <div class="info-card accent">
-        <h3>🎯 Kéo Thả Tức Thì</h3>
-        <p class="text-sm">HTML5 Drag &amp; Drop mượt mà, đồng bộ trạng thái backend ngay khi buông chuột.</p>
+    <div class="three-col" style="gap: 20px;">
+      <div class="info-card accent" style="padding: 16px 20px;">
+        <h3>🎯 Kéo Thả Tức Thì (Drag &amp; Drop)</h3>
+        <p class="text-sm" style="margin:0; line-height: 1.6;">HTML5 Native Drag &amp; Drop mượt mà, đồng bộ trạng thái backend qua API ngay khi buông chuột.</p>
       </div>
-      <div class="info-card blue">
-        <h3>🏷️ Phân Loại Trực Quan</h3>
-        <p class="text-sm">Nhận diện nhanh độ ưu tiên qua màu cờ: Urgent, High, Normal, Low.</p>
+      <div class="info-card blue" style="padding: 16px 20px;">
+        <h3>🏷️ Phân Loại Trực Quan Theo Màu</h3>
+        <p class="text-sm" style="margin:0; line-height: 1.6;">Nhận diện nhanh độ ưu tiên qua màu cờ: <span class="badge badge-red">Urgent</span> <span class="badge badge-orange">High</span> <span class="badge badge-blue">Normal</span> <span class="badge badge-green">Low</span>.</p>
       </div>
-      <div class="info-card green">
-        <h3>🔍 Bộ Lọc Đa Năng</h3>
-        <p class="text-sm">Lọc theo thành viên, phòng ban, dự án và từ khóa chỉ trong 1 thao tác.</p>
+      <div class="info-card green" style="padding: 16px 20px;">
+        <h3>🔍 Bộ Lọc Đa Năng 1 Cú Click</h3>
+        <p class="text-sm" style="margin:0; line-height: 1.6;">Lọc thẻ theo thành viên phụ trách, phòng ban, dự án và từ khóa chỉ trong 1 thao tác duy nhất.</p>
       </div>
+    </div>
+
+    <div class="highlight-box green mt-auto" style="padding: 12px 24px; border-left: 5px solid var(--green);">
+      <p class="text-sm fw-bold text-center" style="margin:0; font-size: 14px;">🚀 Luồng công việc trực quan giúp đội ngũ tăng 40% hiệu suất phối hợp, xóa bỏ hoàn toàn tình trạng sót việc hoặc đùn đẩy trách nhiệm.</p>
     </div>
   </div>
   <div class="slide-footer"><span>FPT Polytechnic — DATN 2026</span></div>
@@ -990,46 +1207,62 @@
 </div>
 
 <!-- SLIDE 21: QUẢN LÝ DỰ ÁN TRỰC QUAN & ĐIỀU PHỐI NGUỒN LỰC -->
-<div class="slide" data-notes="• Giao diện Quản lý dự án tổng thể: Theo dõi danh sách dự án, % tiến độ tổng, ngày hết hạn và số lượng task còn lại.
-• Điều phối nguồn lực thông minh: Xem rõ khối lượng công việc của từng thành viên trong phòng ban, tránh tình trạng người quá tải việc, người lại nhàn rỗi.
-• Khắc phục triệt để nhược điểm giao việc qua Zalo: Không mất ngữ cảnh, lưu lịch sử trao đổi và bình luận trực tiếp trên từng đầu việc.">
+<div class="slide" data-notes="⏱ [Thời lượng: 45 giây — Nhật]
+👉 Ý 1 (Danh mục dự án tập trung): Theo dõi % tiến độ tổng thể, phân loại ưu tiên và đếm ngược deadline dự án.
+👉 Ý 2 (Cân bằng tải nhân sự): Xem rõ khối lượng công việc của từng thành viên, cảnh báo khi 1 nhân viên bị giao quá 5 task khẩn cấp.
+👉 Ý 3 (Bình luận trực tiếp): Mọi trao đổi, đính kèm file đều lưu trên thẻ việc; không bao giờ bị trôi tin nhắn như Zalo.
+👉 Chuyển tiếp: Sau đây em xin nhường lời cho bạn Bảo trình bày cơ chế liên kết Task và KPI tự động.">
   <div class="slide-header">
     <div class="header-left"><img src="assets/img/FPT_Polytechnic-26eda0e9.png" alt="FPT"><span>PHẦN 4 — VẬN HÀNH (FRONTEND)</span></div>
     <div class="header-right">Nhật — Frontend</div>
   </div>
   <div class="slide-content">
     <h1>Quản lý Dự án Trực quan &amp; <span class="accent">Điều phối Nguồn lực</span></h1>
-    <div class="two-col">
-      <div class="col">
-        <div class="info-card accent mb-16">
-          <h3>📁 Danh Sách Dự Án Tập Trung</h3>
-          <ul class="text-sm">
-            <li>Thanh tiến độ % tổng thể dựa trên số task hoàn thành</li>
-            <li>Phân loại mức độ ưu tiên: <span class="badge badge-green">Low</span> <span class="badge badge-blue">Normal</span> <span class="badge badge-orange">High</span> <span class="badge badge-red">Urgent</span></li>
-            <li>Theo dõi ngày bắt đầu, deadline và số ngày còn lại</li>
-            <li>Quản lý danh sách thành viên tham gia từng dự án</li>
+    
+    <div class="two-col" style="flex: 1; align-items: stretch; gap: 24px;">
+      <!-- Left Column: Project Management & Workload -->
+      <div class="col" style="gap: 16px; display: flex; flex-direction: column; justify-content: space-between;">
+        <div class="info-card accent" style="padding: 18px 22px; flex: 1;">
+          <h3 style="margin-bottom: 12px;">📁 Quản Trị Danh Mục Dự Án Tập Trung</h3>
+          <ul class="text-sm" style="line-height: 1.8;">
+            <li><strong>Thanh tiến độ % tổng thể:</strong> Tự động tính toán lũy kế dựa trên số lượng công việc đã hoàn thành.</li>
+            <li><strong>Phân loại mức độ ưu tiên:</strong> <span class="badge badge-green">Low</span> <span class="badge badge-blue">Normal</span> <span class="badge badge-orange">High</span> <span class="badge badge-red">Urgent</span></li>
+            <li><strong>Đếm ngược thời hạn (Deadline):</strong> Cảnh báo trực quan số ngày còn lại theo thời gian thực.</li>
+            <li><strong>Quản lý thành viên tham gia:</strong> Phân định rõ vai trò và phạm vi phụ trách của từng nhân sự trong dự án.</li>
           </ul>
         </div>
-        <div class="info-card blue">
-          <h3>👥 Điều Phối Nhân Sự &amp; Cân Bằng Tải</h3>
-          <ul class="text-sm">
-            <li>Trực quan hóa số lượng công việc đang giao cho từng nhân sự</li>
-            <li>Cảnh báo khi 1 nhân viên bị giao quá 5 task khẩn cấp</li>
-            <li>Dễ dàng tái phân bổ task cho thành viên khác chỉ bằng 1 thao tác</li>
+
+        <div class="info-card blue" style="padding: 18px 22px; flex: 1;">
+          <h3 style="margin-bottom: 12px;">👥 Điều Phối Nhân Sự &amp; Cân Bằng Tải</h3>
+          <ul class="text-sm" style="line-height: 1.8;">
+            <li>Trực quan hóa khối lượng công việc (Workload) thực tế của từng nhân sự trong phòng ban.</li>
+            <li><strong>Cảnh báo quá tải:</strong> Phát tín hiệu cảnh báo khi một nhân sự bị giao quá 5 công việc khẩn cấp cùng lúc.</li>
+            <li>Hỗ trợ cấp quản lý tái phân bổ công việc nhanh chóng cho thành viên khác chỉ bằng 1 thao tác.</li>
           </ul>
         </div>
       </div>
-      <div class="col">
-        <div class="info-card green mb-16">
-          <h3>💬 Bình Luận &amp; Trao Đổi Ngay Trên Thẻ Việc</h3>
-          <ul class="text-sm">
-            <li>Bình luận trực tiếp vào thẻ task: đính kèm file, link trao đổi</li>
-            <li>Không bị trôi tin nhắn như khi làm việc trên Zalo / Telegram</li>
-            <li>Lưu lại toàn bộ ngữ cảnh từ khi tạo việc đến khi hoàn thành</li>
+
+      <!-- Right Column: Collaboration & Management Excellence -->
+      <div class="col" style="gap: 16px; display: flex; flex-direction: column; justify-content: space-between;">
+        <div class="info-card green" style="padding: 18px 22px; flex: 1;">
+          <h3 style="margin-bottom: 12px;">💬 Trao Đổi Minh Bạch Trên Thẻ Việc</h3>
+          <ul class="text-sm" style="line-height: 1.8;">
+            <li><strong>Bình luận trực tiếp vào thẻ task:</strong> Đính kèm tài liệu nghiệm thu, đường dẫn minh chứng cụ thể.</li>
+            <li><strong>Không bị trôi thông tin:</strong> Khắc phục triệt để tình trạng mất file hoặc trôi tin nhắn khi làm việc qua ứng dụng rời rạc (Zalo, mạng xã hội).</li>
+            <li><strong>Lưu vết ngữ cảnh xuyên suốt:</strong> Toàn bộ lịch sử trao đổi được bảo lưu nguyên vẹn từ lúc giao việc đến khi nghiệm thu hoàn thành.</li>
           </ul>
         </div>
-        <div class="highlight-box green mt-auto">
-          <p class="text-sm fw-bold">💡 Chuyển tiếp: Sau đây bạn Bảo sẽ trình bày phân hệ Backend Vận hành, giải thích cơ chế liên kết tự động giữa Task và KPI/OKR.</p>
+
+        <div class="info-card purple" style="padding: 18px 22px; flex: 1;">
+          <h3 style="margin-bottom: 12px;">🎯 Xóa Bỏ Điểm Mù Quản Lý Trong SME</h3>
+          <ul class="text-sm" style="line-height: 1.8;">
+            <li>Ban Giám đốc và Trưởng phòng luôn nắm bắt chính xác ai đang phụ trách việc gì, tiến độ ra sao mà không cần chờ báo cáo miệng.</li>
+            <li>Tối ưu hóa thời gian họp giao ban định kỳ nhờ toàn bộ dữ liệu vận hành đã được số hóa tập trung.</li>
+          </ul>
+        </div>
+
+        <div class="highlight-box green mt-auto" style="padding: 12px 20px; border-left: 5px solid var(--green);">
+          <p class="text-sm fw-bold" style="margin:0; font-size: 14px;">💡 Khắc phục triệt để lỗ hổng quản lý SME: Minh bạch hóa toàn bộ quy trình giao việc, phân quyền và kiểm soát tiến độ.</p>
         </div>
       </div>
     </div>
@@ -1039,61 +1272,104 @@
 </div>
 
 <!-- SLIDE 22: LIÊN KẾT HAI CHIỀU TASK ↔ KPI/OKR TỰ ĐỘNG -->
-<div class="slide" data-notes="• Em là Bảo, phụ trách Backend Vận hành.
-• Đột phá cốt lõi: Liên kết 2 chiều giữa Task hàng ngày và Mục tiêu KPI/OKR.
-• Mỗi Task được gán trọng số đóng góp (Impact Weight %) vào một Key Result hoặc KPI.
-• Khi nhân viên hoàn thành task trên Kanban Board, backend tự động tính toán và cập nhật % hoàn thành của KPI tương ứng.
-• Giải quyết dứt điểm nghịch lý: 'Làm việc bận rộn nhưng cuối kỳ mục tiêu không đạt'.">
+<div class="slide" data-notes="⏱ [Thời lượng: 45 giây — Bảo]
+👉 Ý 1 (Đột phá liên kết 2 chiều): Em là Bảo. Mỗi task được gán trọng số đóng góp (ImpactWeight) trực tiếp vào một Key Result hoặc KPI.
+👉 Ý 2 (Tự động tính lũy kế): Khi nhân viên kéo task sang Done, Event Handler tự động cập nhật % hoàn thành của KPI mà không cần người làm báo cáo.
+👉 Ý 3 (Giải quyết nghịch lý SME): Chấm dứt tình trạng 'làm việc bận rộn nhưng cuối kỳ KPI không đạt' nhờ 100% đầu việc đều gắn liền với mục tiêu.">
   <div class="slide-header">
     <div class="header-left"><img src="assets/img/FPT_Polytechnic-26eda0e9.png" alt="FPT"><span>PHẦN 4 — VẬN HÀNH (BACKEND)</span></div>
     <div class="header-right">Bảo — Backend</div>
   </div>
   <div class="slide-content">
     <h1>Liên kết Hai Chiều: <span class="accent">Task ↔ KPI/OKR Tự Động</span></h1>
-    <div class="two-col">
-      <div class="col">
-        <div class="info-card accent mb-16">
-          <h3>🔗 Cơ Chế Gán Trọng Số Đóng Góp</h3>
-          <p class="text-sm mb-8">Mỗi Work Item gắn liền với mục tiêu chiến lược của công ty:</p>
-          <div class="code-block" style="font-size: 13px;">
-            <span class="code-comment">// Entity WorkItem liên kết trực tiếp</span><br>
-            <span class="code-keyword">public class</span> <span class="code-type">WorkItem</span> {<br>
-            &nbsp;&nbsp;<span class="code-keyword">public int</span> Id { <span class="code-keyword">get</span>; <span class="code-keyword">set</span>; }<br>
-            &nbsp;&nbsp;<span class="code-keyword">public int?</span> KeyResultId { <span class="code-keyword">get</span>; <span class="code-keyword">set</span>; }<br>
-            &nbsp;&nbsp;<span class="code-keyword">public int?</span> KpiId { <span class="code-keyword">get</span>; <span class="code-keyword">set</span>; }<br>
-            &nbsp;&nbsp;<span class="code-keyword">public decimal</span> ImpactWeight { <span class="code-keyword">get</span>; <span class="code-keyword">set</span>; } <span class="code-comment">// Tỷ trọng %</span><br>
-            }
+    
+    <div class="two-col" style="flex: 1; align-items: stretch; gap: 24px;">
+      <!-- Left: Bi-directional Flow Architecture -->
+      <div class="col" style="gap: 16px; display: flex; flex-direction: column; justify-content: space-between;">
+        <div class="info-card accent" style="padding: 18px 22px; flex: 1;">
+          <h3 style="margin-bottom: 12px;">🔗 Cơ Chế Gán Trọng Số Đóng Góp (Impact Weight)</h3>
+          
+          <!-- Visual Linkage Flow -->
+          <div style="background: var(--white); border: 2px solid var(--fpt-orange); border-radius: var(--radius-md); padding: 14px 16px; box-shadow: var(--shadow-sm); margin-bottom: 14px;">
+            <div style="display: flex; align-items: center; justify-content: space-between; gap: 8px;">
+              <div style="background: var(--blue-light); border: 1px solid var(--blue); padding: 8px 12px; border-radius: var(--radius-sm); text-align: center; flex: 1;">
+                <div style="font-size: 11px; color: var(--gray-500); font-weight: 700;">ĐẦU VIỆC</div>
+                <strong style="color: var(--blue); font-size: 13px;">Công Việc (Task)</strong>
+              </div>
+              <span style="font-size: 18px; color: var(--fpt-orange); font-weight: 800;">➔</span>
+              <div style="background: var(--fpt-orange-glow); border: 1px solid var(--fpt-orange); padding: 8px 12px; border-radius: var(--radius-sm); text-align: center; flex: 1.2;">
+                <div style="font-size: 11px; color: var(--gray-500); font-weight: 700;">TỶ TRỌNG</div>
+                <strong style="color: var(--fpt-orange-dark); font-size: 13px;">Trọng Số Đóng Góp (%)</strong>
+              </div>
+              <span style="font-size: 18px; color: var(--green); font-weight: 800;">➔</span>
+              <div style="background: var(--green-light); border: 1px solid var(--green); padding: 8px 12px; border-radius: var(--radius-sm); text-align: center; flex: 1.2;">
+                <div style="font-size: 11px; color: var(--gray-500); font-weight: 700;">MỤC TIÊU</div>
+                <strong style="color: var(--green); font-size: 13px;">Key Result / KPI</strong>
+              </div>
+            </div>
           </div>
+
+          <ul class="text-sm" style="line-height: 1.7;">
+            <li>Mỗi công việc hàng ngày đều gắn liền với một <strong>Key Result</strong> hoặc <strong>KPI</strong> cụ thể.</li>
+            <li>Nhà quản lý thiết lập <strong>tỷ trọng đóng góp (%)</strong> của từng task vào mục tiêu chung.</li>
+            <li>Loại bỏ hoàn toàn các đầu việc vô thưởng vô phạt, không mang lại giá trị thực tế.</li>
+          </ul>
         </div>
-        <div class="info-card green">
-          <h3>⚡ Tự Động Đồng Bộ Tiến Độ Realtime</h3>
-          <ul class="text-sm">
-            <li>Khi task chuyển sang <span class="badge badge-green">Done</span>, Event Handler tự động kích hoạt.</li>
-            <li>Tính toán lại tổng tiến độ Key Result dựa trên tổng trọng số hoàn thành.</li>
-            <li>Cập nhật Dashboard của ban giám đốc mà <strong>không cần người làm báo cáo</strong>.</li>
+
+        <div class="info-card green" style="padding: 16px 22px;">
+          <h3 style="margin-bottom: 8px;">⚡ Tự Động Đồng Bộ Tiến Độ Realtime</h3>
+          <ul class="text-sm" style="line-height: 1.7;">
+            <li>Khi task chuyển sang <span class="badge badge-green">Done</span>, <strong>Event Handler</strong> tự động kích hoạt tức thì.</li>
+            <li>Hệ thống tính lại tổng % hoàn thành Key Result dựa trên trọng số task đã hoàn thành.</li>
+            <li>Dashboard của Ban Giám đốc tự động nhảy số theo thời gian thực — <strong>không cần người làm báo cáo</strong>.</li>
           </ul>
         </div>
       </div>
-      <div class="col">
-        <div class="info-card blue mb-16">
-          <h3>📊 So Sánh Hiệu Quả Trước vs Sau</h3>
-          <div class="two-col text-sm">
-            <div style="background: var(--red-light); padding: 12px; border-radius: var(--radius-sm);">
-              <strong class="text-red">Trước (Zalo/Excel):</strong><br>
-              • Task một nơi, KPI một nẻo<br>
-              • Cuối tháng vắt chân lên cổ làm báo cáo<br>
-              • Dễ ngụy tạo số liệu
+
+      <!-- Right: Comparison & Key Metrics -->
+      <div class="col" style="gap: 16px; display: flex; flex-direction: column; justify-content: space-between;">
+        <div class="info-card blue" style="padding: 18px 22px; flex: 1;">
+          <h3 style="margin-bottom: 12px;">📊 So Sánh Đột Phá: Trước vs Sau</h3>
+          
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
+            <div style="background: var(--red-light); padding: 14px; border-radius: var(--radius-sm); border: 1px solid rgba(220, 53, 69, 0.25);">
+              <strong style="color: var(--red); font-size: 14px; display: block; margin-bottom: 8px;">❌ Trước Đây (Zalo / Excel)</strong>
+              <div style="font-size: 13px; color: var(--gray-700); line-height: 1.6;">
+                • Task làm một nơi, KPI tính một nẻo<br>
+                • Cuối tháng vất vả vắt chân lên cổ tổng hợp<br>
+                • Dễ ngụy tạo số liệu, làm khống kết quả
+              </div>
             </div>
-            <div style="background: var(--green-light); padding: 12px; border-radius: var(--radius-sm);">
-              <strong class="text-green">Sau (NEXTGEN):</strong><br>
-              • 100% Task gắn với Mục tiêu<br>
-              • Tiến độ đồng bộ từng phút<br>
-              • Số liệu thực chứng, minh bạch
+            
+            <div style="background: var(--green-light); padding: 14px; border-radius: var(--radius-sm); border: 1px solid rgba(40, 167, 69, 0.25);">
+              <strong style="color: var(--green); font-size: 14px; display: block; margin-bottom: 8px;">✅ Sau Này (NEXTGEN Cloud)</strong>
+              <div style="font-size: 13px; color: var(--gray-700); line-height: 1.6;">
+                • <strong>100% Task</strong> gắn trực tiếp mục tiêu<br>
+                • Tiến độ đồng bộ tự động từng phút<br>
+                • Số liệu minh bạch, có minh chứng thực tế
+              </div>
+            </div>
+          </div>
+
+          <!-- 3 Impact Metric Cards -->
+          <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; margin-top: 14px;">
+            <div style="background: var(--white); border: 1px solid var(--gray-200); border-radius: var(--radius-sm); padding: 10px; text-align: center;">
+              <div style="font-size: 20px; font-weight: 800; color: var(--green);">100%</div>
+              <div style="font-size: 11px; color: var(--gray-600); font-weight: 600;">Task gắn mục tiêu</div>
+            </div>
+            <div style="background: var(--white); border: 1px solid var(--gray-200); border-radius: var(--radius-sm); padding: 10px; text-align: center;">
+              <div style="font-size: 20px; font-weight: 800; color: var(--blue);">0 Giờ</div>
+              <div style="font-size: 11px; color: var(--gray-600); font-weight: 600;">Lập báo cáo thủ công</div>
+            </div>
+            <div style="background: var(--white); border: 1px solid var(--gray-200); border-radius: var(--radius-sm); padding: 10px; text-align: center;">
+              <div style="font-size: 20px; font-weight: 800; color: var(--fpt-orange);">Real-time</div>
+              <div style="font-size: 11px; color: var(--gray-600); font-weight: 600;">Cập nhật tức thì</div>
             </div>
           </div>
         </div>
-        <div class="highlight-box green mt-auto">
-          <p class="text-sm fw-bold">✨ Đảm bảo nguyên lý: 'Mọi nỗ lực hàng ngày của nhân viên đều đóng góp vào sự tăng trưởng của doanh nghiệp'.</p>
+
+        <div class="highlight-box green mt-auto" style="padding: 14px 22px; border-left: 5px solid var(--green);">
+          <p class="text-sm fw-bold" style="margin:0; font-size: 14px;">✨ Giải quyết triệt để nghịch lý SME: Chấm dứt tình trạng "Nhân viên làm việc bận rộn nhưng cuối kỳ mục tiêu công ty vẫn không đạt".</p>
         </div>
       </div>
     </div>
@@ -1102,47 +1378,67 @@
   <div class="speaker-badge"><img src="assets/img/bao.png" alt="Bảo"><div><div class="speaker-name">Bảo</div><div class="speaker-role">Backend — Vận hành</div></div></div>
 </div>
 
-<!-- SLIDE 23: XỬ LÝ SỰ KIỆN VẬN HÀNH, AUDIT LOG & CẢNH BÁO QUÁ HẠN -->
-<div class="slide" data-notes="• Background Service chạy ngầm: Tự động quét deadline các task hàng giờ, phát hiện sớm nguy cơ quá hạn để kích hoạt Smart Alert.
-• Audit Log bất biến: Ghi nhận chi tiết ai đã thao tác, chỉnh sửa trường gì, thời gian nào, giá trị cũ và mới.
-• Event-driven Notification: Thông báo chuông realtime khi có công việc mới hoặc bị trễ hạn.
-• Chuyển tiếp: Sau đây bạn Phong sẽ trình bày về phân hệ Danh mục, SaaS Multi-tenant và SEO.">
+<!-- SLIDE 23: XỬ LÝ SỰ KIỆN, AUDIT LOG & CẢNH BÁO QUÁ HẠN -->
+<div class="slide" data-notes="⏱ [Thời lượng: 45 giây — Bảo]
+👉 Ý 1 (Background Worker định kỳ): Hosted Service chạy ngầm quét toàn bộ task mỗi giờ, phát hiện nguy cơ trễ hạn trước 24h/48h.
+👉 Ý 2 (Audit Log bất biến): Cơ chế Append-only lưu vết 100% thao tác: ai sửa, sửa trường gì, giá trị cũ/mới, cấm xóa/sửa dữ liệu lịch sử.
+👉 Ý 3 (Realtime Notification): Phát thông báo tức thì khi được giao task hoặc có bình luận nhắc tên (@mention).
+👉 Chuyển tiếp: Sau đây em xin nhường lời cho bạn Phong trình bày Phân hệ Danh mục, SaaS Multi-tenant và SEO.">
   <div class="slide-header">
     <div class="header-left"><img src="assets/img/FPT_Polytechnic-26eda0e9.png" alt="FPT"><span>PHẦN 4 — VẬN HÀNH (BACKEND)</span></div>
     <div class="header-right">Bảo — Backend</div>
   </div>
   <div class="slide-content">
     <h1>Xử lý Sự kiện, <span class="accent">Audit Log &amp; Cảnh báo Quá hạn</span></h1>
-    <div class="three-col">
-      <div class="info-card accent">
+    
+    <div class="three-col" style="gap: 20px; margin-bottom: 4px;">
+      <div class="info-card accent" style="padding: 16px 20px;">
         <h3>⏰ Background Worker Cảnh Báo</h3>
-        <ul class="text-sm">
-          <li>Service ngầm định kỳ quét toàn bộ task trong database</li>
-          <li>Cảnh báo trước <strong>24h / 48h</strong> khi sắp đến hạn chót</li>
-          <li>Kích hoạt thông báo đổi màu thẻ đỏ ngay khi bị quá hạn</li>
-          <li>Gửi cảnh báo đến người thực hiện và quản lý trực tiếp</li>
+        <ul class="text-sm" style="line-height: 1.7;">
+          <li>Service chạy ngầm quét toàn bộ deadline trong CSDL.</li>
+          <li>Cảnh báo trước <strong>24h / 48h</strong> khi sắp chạm hạn chót.</li>
+          <li>Tự động đổi cờ thẻ sang màu Đỏ khi task bị quá hạn.</li>
         </ul>
       </div>
-      <div class="info-card blue">
-        <h3>📜 Audit Log Bất Biến (Truy Vết 100%)</h3>
-        <ul class="text-sm">
-          <li>Lưu lại dấu vết mọi hành động (Create, Update, Delete, Transition)</li>
-          <li>Ghi nhận: User ID, IP Address, Timestamp, Cột thay đổi, Giá trị cũ &amp; mới</li>
-          <li>Dữ liệu Audit chỉ cho phép Ghi (Append-only), cấm sửa/xóa</li>
-          <li>Phục vụ kiểm toán nội bộ và giải quyết tranh chấp</li>
+
+      <div class="info-card blue" style="padding: 16px 20px;">
+        <h3>📜 Audit Log Bất Biến (100%)</h3>
+        <ul class="text-sm" style="line-height: 1.7;">
+          <li>Lưu lại vết mọi hành động: Tạo, Sửa, Xóa, Đổi trạng thái.</li>
+          <li>Ghi nhận: User ID, IP Address, Timestamp, Giá trị cũ &amp; mới.</li>
+          <li>Dữ liệu chỉ cho phép <strong>Ghi thêm (Append-only)</strong>, cấm sửa/xóa.</li>
         </ul>
       </div>
-      <div class="info-card green">
+
+      <div class="info-card green" style="padding: 16px 20px;">
         <h3>🔔 Event Notification Realtime</h3>
-        <ul class="text-sm">
-          <li>Phát thông báo tức thì khi có người phân công việc mới</li>
-          <li>Thông báo khi có bình luận hoặc nhắc tên (@mention)</li>
-          <li>Hỗ trợ phân trang và đánh dấu đã đọc thông minh</li>
+        <ul class="text-sm" style="line-height: 1.7;">
+          <li>Bắn thông báo tức thì khi được phân công nhiệm vụ mới.</li>
+          <li>Thông báo khi có đồng nghiệp bình luận hoặc nhắc tên (@mention).</li>
+          <li>Đánh dấu đã đọc và lưu vết thông báo thông minh.</li>
         </ul>
       </div>
     </div>
-    <div class="highlight-box blue mt-auto">
-      <p class="text-sm fw-bold text-center">🛡️ Hệ thống tự động vận hành ổn định 24/7 nhờ kiến trúc xử lý tác vụ nền không đồng bộ (Hosted Services trong .NET 10).</p>
+
+    <!-- Architecture Details -->
+    <div style="background: var(--white); border: 2px solid var(--blue); border-radius: var(--radius-md); padding: 16px 20px; box-shadow: var(--shadow-sm); margin-top: 8px;">
+      <div style="font-weight: 700; color: var(--blue); font-size: 15px; margin-bottom: 8px; display: flex; align-items: center; gap: 8px;">
+        <span>🛡️</span> Nguyên Tắc Bất Biến &amp; An Toàn Dữ Liệu Của Cơ Chế Audit Log
+      </div>
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 14px; font-size: 13px; color: var(--gray-700); line-height: 1.7;">
+        <div style="background: var(--gray-50); padding: 10px 14px; border-radius: var(--radius-sm); border: 1px solid var(--gray-200);">
+          <strong style="color: var(--gray-800); display: block; margin-bottom: 4px;">🔒 Cơ Chế Ghi Thêm (Append-only)</strong>
+          Chỉ cho phép thêm bản ghi mới, chặn tuyệt đối quyền sửa (UPDATE) hoặc xóa (DELETE) trên bảng lịch sử kiểm toán của cơ sở dữ liệu.
+        </div>
+        <div style="background: var(--gray-50); padding: 10px 14px; border-radius: var(--radius-sm); border: 1px solid var(--gray-200);">
+          <strong style="color: var(--gray-800); display: block; margin-bottom: 4px;">⚡ Bất Đồng Bộ Hóa (.NET 10 HostedService)</strong>
+          Toàn bộ việc quét hạn chót và phát cảnh báo chạy ngầm ở tiến trình nền, hoàn toàn không gây tắc nghẽn trải nghiệm người dùng.
+        </div>
+      </div>
+    </div>
+
+    <div class="highlight-box blue mt-auto" style="padding: 12px 24px; border-left: 5px solid var(--blue);">
+      <p class="text-sm fw-bold text-center" style="margin:0; font-size: 14px;">🛡️ Hệ thống tự động vận hành ổn định 24/7 nhờ kiến trúc xử lý tác vụ nền không đồng bộ (Hosted Services trong .NET 10).</p>
     </div>
   </div>
   <div class="slide-footer"><span>FPT Polytechnic — DATN 2026</span></div>
@@ -1154,99 +1450,144 @@
      ========================================== -->
 
 <!-- SLIDE 24: HỆ THỐNG DANH MỤC ĐỘNG & KIẾN TRÚC MULTI-TENANT SAAS -->
-<div class="slide" data-notes="• Em là Phong, phụ trách Fullstack Danh mục, SaaS và SEO.
-• Danh mục động 100%: Quản lý loại KPI, đơn vị tính, chu kỳ đánh giá, lý do không đạt. Doanh nghiệp tự do tùy biến mà không cần IT sửa code.
-• Multi-tenant SaaS: Phục vụ nhiều doanh nghiệp trên cùng một nền tảng, nhưng dữ liệu hoàn toàn cô lập theo TenantId.
-• Cá nhân hóa thương hiệu (White-label): Mỗi doanh nghiệp có thể đổi logo, tên hệ thống và màu sắc thương hiệu riêng.">
+<div class="slide" data-notes="⏱ [Thời lượng: 45 giây — Phong]
+👉 Ý 1 (Danh mục động 100%): Em là Phong. Quản trị viên tự thêm loại KPI, đơn vị đo, chu kỳ chỉ trong 10 giây mà không cần IT sửa code hay migration DB.
+👉 Ý 2 (Kiến trúc Multi-tenant SaaS): Cô lập dữ liệu tuyệt đối qua TenantId và SQL RLS, quản lý gói cước linh hoạt (Starter, Pro, Enterprise).
+👉 Ý 3 (Cá nhân hóa White-label): Cho phép từng công ty đổi Logo, tên phần mềm và màu sắc nhận diện thương hiệu riêng.">
   <div class="slide-header">
     <div class="header-left"><img src="assets/img/FPT_Polytechnic-26eda0e9.png" alt="FPT"><span>PHẦN 5 — DANH MỤC &amp; SAAS</span></div>
     <div class="header-right">Phong — Fullstack</div>
   </div>
   <div class="slide-content">
     <h1>Hệ thống Danh mục Động &amp; <span class="accent">Multi-tenant SaaS</span></h1>
-    <div class="two-col">
-      <div class="col">
-        <div class="info-card accent mb-16">
-          <h3>⚙️ Cấu Hình Danh Mục Động Linh Hoạt</h3>
-          <ul class="text-sm">
-            <li><strong>Loại KPI &amp; OKR:</strong> Doanh thu, Khách hàng, Sản phẩm, Đào tạo</li>
-            <li><strong>Đơn vị đo lường:</strong> VNĐ, %, Khách hàng, Giờ, Dự án</li>
-            <li><strong>Bậc xếp loại &amp; Lý do trễ:</strong> Tùy chỉnh theo văn hóa từng công ty</li>
-            <li>Admin tự tạo thêm thuộc tính mới trên giao diện trong 10 giây mà <strong>không cần can thiệp code hay migration DB</strong>.</li>
-          </ul>
-        </div>
-        <div class="info-card green">
-          <h3>🏢 Kiến Trúc Multi-Tenant SaaS</h3>
-          <ul class="text-sm">
-            <li>Hỗ trợ hàng ngàn doanh nghiệp trên cùng một hệ thống duy nhất</li>
-            <li>Cô lập dữ liệu tuyệt đối qua <code>TenantId</code> ở mọi câu truy vấn</li>
-            <li>Quản lý gói cước linh hoạt: Starter, Professional, Enterprise</li>
-          </ul>
-        </div>
+    
+    <div class="three-col" style="gap: 20px; margin-bottom: 6px;">
+      <!-- Feature 1: Dynamic Catalog -->
+      <div class="info-card accent" style="padding: 18px 20px;">
+        <h3>⚙️ Cấu Hình Danh Mục Động</h3>
+        <ul class="text-sm" style="line-height: 1.7;">
+          <li><strong>Loại KPI &amp; OKR:</strong> Tài chính, Khách hàng, Vận hành, Đào tạo.</li>
+          <li><strong>Đơn vị đo lường:</strong> VNĐ, %, Khách hàng, Giờ, Dự án, Điểm.</li>
+          <li><strong>Bậc xếp loại &amp; Lý do trễ:</strong> Tùy chỉnh theo văn hóa từng công ty.</li>
+          <li>Admin tự tạo thêm thuộc tính mới trên giao diện trong 10 giây mà <strong>không cần sửa code hay migration database</strong>.</li>
+        </ul>
       </div>
-      <div class="col">
-        <div class="info-card blue mb-16">
-          <h3>🎨 Cá Nhân Hóa Thương Hiệu (White-label)</h3>
-          <ul class="text-sm">
-            <li>Tùy biến Logo công ty hiển thị trên góc trái hệ thống</li>
-            <li>Đổi tên ứng dụng (ví dụ: 'NEXTGEN Hub', 'SME Portal')</li>
-            <li>Đổi màu chủ đạo theo bộ nhận diện thương hiệu doanh nghiệp</li>
-            <li>Hỗ trợ chuyển đổi giao diện Sáng / Tối (Light / Dark mode)</li>
-          </ul>
-        </div>
-        <div class="highlight-box green mt-auto">
-          <p class="text-sm fw-bold">🚀 Tối ưu chi phí hạ tầng cho SME: Một doanh nghiệp mới đăng ký có thể bắt đầu sử dụng ngay sau 30 giây mà không cần cài đặt server riêng.</p>
-        </div>
+
+      <!-- Feature 2: Multi-tenant SaaS -->
+      <div class="info-card green" style="padding: 18px 20px;">
+        <h3>🏢 Kiến Trúc Multi-Tenant SaaS</h3>
+        <ul class="text-sm" style="line-height: 1.7;">
+          <li>Phục vụ hàng ngàn doanh nghiệp trên một nền tảng cloud duy nhất.</li>
+          <li>Cách ly dữ liệu tuyệt đối qua <strong>TenantId</strong> và SQL Server RLS.</li>
+          <li>Tự động kích hoạt cơ sở dữ liệu và phân quyền khi doanh nghiệp mới đăng ký.</li>
+          <li>Tối ưu chi phí vận hành máy chủ lên tới 80% so với mô hình cài đặt riêng lẻ.</li>
+        </ul>
       </div>
+
+      <!-- Feature 3: White-label Branding -->
+      <div class="info-card blue" style="padding: 18px 20px;">
+        <h3>🎨 Cá Nhân Hóa (White-label)</h3>
+        <ul class="text-sm" style="line-height: 1.7;">
+          <li>Tùy biến Logo công ty hiển thị trên thanh điều hướng hệ thống.</li>
+          <li>Đổi tên ứng dụng linh hoạt theo tên doanh nghiệp (VD: 'NEXTGEN Hub').</li>
+          <li>Đổi màu sắc nhận diện thương hiệu chủ đạo cho từng doanh nghiệp.</li>
+          <li>Hỗ trợ chuyển đổi mượt mà giữa giao diện Sáng / Tối (Light / Dark mode).</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 3 SaaS Pricing Tier Cards -->
+    <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px;">
+      <div style="background: var(--white); border: 1px solid var(--gray-300); border-radius: var(--radius-sm); padding: 12px 16px; display: flex; align-items: center; justify-content: space-between;">
+        <div>
+          <strong style="color: var(--gray-700); font-size: 14px;">Gói STARTER</strong>
+          <div style="font-size: 12px; color: var(--gray-500);">Dành cho nhóm nhỏ 5–10 người</div>
+        </div>
+        <span class="badge" style="background: var(--gray-200); color: var(--gray-800); font-size: 12px;">Miễn phí</span>
+      </div>
+
+      <div style="background: var(--white); border: 2px solid var(--fpt-orange); border-radius: var(--radius-sm); padding: 12px 16px; display: flex; align-items: center; justify-content: space-between; box-shadow: var(--shadow-sm);">
+        <div>
+          <strong style="color: var(--fpt-orange-dark); font-size: 14px;">Gói PROFESSIONAL</strong>
+          <div style="font-size: 12px; color: var(--gray-500);">Đầy đủ OKR, Kanban &amp; AI Chatbot</div>
+        </div>
+        <span class="badge badge-orange" style="font-size: 12px;">Phổ biến nhất</span>
+      </div>
+
+      <div style="background: var(--white); border: 1px solid var(--purple); border-radius: var(--radius-sm); padding: 12px 16px; display: flex; align-items: center; justify-content: space-between;">
+        <div>
+          <strong style="color: var(--purple); font-size: 14px;">Gói ENTERPRISE</strong>
+          <div style="font-size: 12px; color: var(--gray-500);">Không giới hạn, White-label &amp; AI Advisor</div>
+        </div>
+        <span class="badge badge-purple" style="font-size: 12px;">Doanh nghiệp</span>
+      </div>
+    </div>
+
+    <div class="highlight-box green mt-auto" style="padding: 12px 24px; border-left: 5px solid var(--green);">
+      <p class="text-sm fw-bold text-center" style="margin:0; font-size: 14px;">🚀 Tối ưu chi phí hạ tầng cho SME: Một doanh nghiệp mới đăng ký có thể bắt đầu sử dụng ngay sau 30 giây mà không cần cài đặt server riêng.</p>
     </div>
   </div>
   <div class="slide-footer"><span>FPT Polytechnic — DATN 2026</span></div>
   <div class="speaker-badge"><img src="assets/img/phong.png" alt="Phong"><div><div class="speaker-name">Phong</div><div class="speaker-role">Fullstack — Danh mục</div></div></div>
 </div>
 
-<!-- SLIDE 25: TỐI ƯU SEO ON-PAGE, SITEMAP TỰ ĐỘNG & LANDING PAGE -->
-<div class="slide" data-notes="• Landing Page chuyên nghiệp: Giới thiệu giải pháp, bảng so sánh gói cước và form đăng ký dùng thử giúp tăng tỷ lệ chuyển đổi khách hàng SME.
-• SeoHelper chuyên dụng: Tự động render thẻ Meta Description, OpenGraph preview trên Zalo/Facebook và Schema.org JSON-LD.
-• Tự động sinh sitemap.xml và robots.txt giúp website được Google lập chỉ mục nhanh chóng.
-• Chuyển tiếp: Sau đây bạn Khánh sẽ báo cáo công tác Kiểm thử và Nghiệm thu chất lượng.">
+<!-- SLIDE 25: QUẢN TRỊ CƠ CẤU TỔ CHỨC & CẤU HÌNH VẬN HÀNH -->
+<div class="slide" data-notes="⏱ [Thời lượng: 45 giây — Phong]
+👉 Ý 1 (Cơ cấu phòng ban & chức danh): Em phụ trách DepartmentsController và PositionsController xây dựng mô hình cây phòng ban phân cấp, gán trưởng phòng linh hoạt.
+👉 Ý 2 (Hồ sơ nhân sự & Import Excel): EmployeesController hỗ trợ quản lý hồ sơ nhân viên và tính năng Import danh sách hàng loạt từ file Excel với cơ chế tự động validate dữ liệu.
+👉 Ý 3 (Tham số vận hành & Landing Page): SystemParametersController cho phép tùy biến tham số timeout, cờ bật tắt tính năng cho từng tenant, kết hợp Landing Page giới thiệu dịch vụ ở HomeController.
+👉 Chuyển tiếp: Sau đây em xin nhường lời cho bạn Khánh báo cáo công tác Kiểm thử và Nghiệm thu chất lượng.">
   <div class="slide-header">
-    <div class="header-left"><img src="assets/img/FPT_Polytechnic-26eda0e9.png" alt="FPT"><span>PHẦN 5 — SEO &amp; LANDING PAGE</span></div>
+    <div class="header-left"><img src="assets/img/FPT_Polytechnic-26eda0e9.png" alt="FPT"><span>PHẦN 5 — QUẢN TRỊ HỆ THỐNG &amp; NHÂN SỰ</span></div>
     <div class="header-right">Phong — Fullstack</div>
   </div>
   <div class="slide-content">
-    <h1>Tối ưu SEO Kỹ thuật &amp; <span class="accent">Landing Page</span></h1>
-    <div class="two-col">
-      <div class="col">
-        <div class="info-card accent mb-16">
-          <h3>🌐 Landing Page Tiếp Cận Khách Hàng SME</h3>
-          <ul class="text-sm">
-            <li>Thiết kế hiện đại, làm nổi bật giá trị cốt lõi của giải pháp</li>
-            <li>Bảng so sánh gói dịch vụ (Free, Pro, Enterprise) rõ ràng</li>
-            <li>Nút Kêu gọi Hành động (CTA): Dùng thử 14 ngày không cần thẻ</li>
-            <li>Form thu thập nhu cầu tự động chuyển vào hàng đợi CRM</li>
+    <h1>Quản Trị Cơ Cấu Tổ Chức &amp; <span class="accent">Cấu Hình Vận Hành Hệ Thống</span></h1>
+    
+    <div class="two-col" style="flex: 1; align-items: stretch; gap: 24px;">
+      <!-- Left Column: Organizational Structure & Employees -->
+      <div class="col" style="gap: 16px; display: flex; flex-direction: column; justify-content: space-between;">
+        <div class="info-card accent" style="padding: 18px 22px; flex: 1;">
+          <h3 style="margin-bottom: 12px;">🏢 Cơ Cấu Phòng Ban &amp; Chức Danh Đa Cấp</h3>
+          <ul class="text-sm" style="line-height: 1.8;">
+            <li><strong>Mô hình cây phân cấp tổ chức:</strong> Quản lý cơ cấu linh hoạt từ Công ty ➔ Khối ➔ Phòng ban ➔ Bộ phận trực thuộc (<code>DepartmentsController</code>).</li>
+            <li><strong>Gán quyền quản lý trực tiếp:</strong> Thiết lập Trưởng phòng/Phó phòng phụ trách duyệt việc và đánh giá KPI/OKR của từng bộ phận.</li>
+            <li><strong>Danh mục chức danh chuẩn hóa:</strong> Quản lý danh mục vị trí, cấp bậc chuyên môn tương ứng trong doanh nghiệp (<code>PositionsController</code>).</li>
           </ul>
         </div>
-        <div class="info-card green">
-          <h3>🔍 Module SeoHelper Tự Động Hóa</h3>
-          <ul class="text-sm">
-            <li>Tự động render OpenGraph &amp; Twitter Cards chuẩn ảnh bìa</li>
-            <li>Sinh cấu trúc Schema.org JSON-LD (SoftwareApplication)</li>
-            <li>Tự động sinh <code>/sitemap.xml</code> và <code>/robots.txt</code> động</li>
+
+        <div class="info-card green" style="padding: 18px 22px; flex: 1;">
+          <h3 style="margin-bottom: 12px;">👥 Quản Lý Nhân Sự &amp; Import Excel Hàng Loạt</h3>
+          <ul class="text-sm" style="line-height: 1.8;">
+            <li><strong>Quản lý hồ sơ nhân viên tập trung:</strong> Thông tin cá nhân, hợp đồng lao động, phòng ban và tài khoản ngân hàng (<code>EmployeesController</code>).</li>
+            <li><strong>Tính năng Import dữ liệu từ Excel:</strong> Cho phép doanh nghiệp nạp hàng trăm nhân sự vào hệ thống chỉ trong vài giây.</li>
+            <li><strong>Cơ chế tự động kiểm tra lỗi (Validation):</strong> Tự động phát hiện trùng lặp mã nhân viên, sai định dạng email hoặc thiếu thông tin bắt buộc trước khi lưu vào CSDL.</li>
           </ul>
         </div>
       </div>
-      <div class="col">
-        <div class="info-card blue mb-16">
-          <h3>⚡ Tối Ưu Tốc Độ Core Web Vitals</h3>
-          <ul class="text-sm">
-            <li>Tối ưu hóa ảnh WebP/PNG, Lazy loading tài nguyên</li>
-            <li>Điểm hiệu năng Google PageSpeed: <strong>&gt; 90 điểm</strong></li>
-            <li>Thời gian tải trang ban đầu (FCP): <strong>&lt; 0.8 giây</strong></li>
-            <li>Tương thích 100% trên thiết bị di động (Mobile Responsive)</li>
+
+      <!-- Right Column: System Parameters & Landing Page -->
+      <div class="col" style="gap: 16px; display: flex; flex-direction: column; justify-content: space-between;">
+        <div class="info-card blue" style="padding: 18px 22px; flex: 1;">
+          <h3 style="margin-bottom: 12px;">⚙️ Cấu Hình Tham Số Vận Hành Hệ Thống</h3>
+          <ul class="text-sm" style="line-height: 1.8;">
+            <li><strong>Quản trị tham số tập trung:</strong> Tùy chỉnh các thông số vận hành qua <code>SystemParametersController</code> mà không cần can thiệp mã nguồn.</li>
+            <li><strong>Thời gian chờ &amp; Thử lại (Timeout &amp; Retry):</strong> Cấu hình giới hạn thời gian gọi API ngoài và số lần thử lại khi có sự cố mạng.</li>
+            <li><strong>Cờ bật/tắt tính năng (Feature Flags):</strong> Linh hoạt kích hoạt hoặc tạm dừng các phân hệ mới cho từng nhóm doanh nghiệp dùng thử.</li>
           </ul>
         </div>
-        <div class="highlight-box blue mt-auto">
-          <p class="text-sm fw-bold">✨ Giúp giải pháp NEXTGEN dễ dàng tiếp cận hàng ngàn doanh nghiệp SME tiềm năng trên các công cụ tìm kiếm mà không tốn chi phí quảng cáo.</p>
+
+        <div class="info-card purple" style="padding: 18px 22px;">
+          <h3 style="margin-bottom: 12px;">🌐 Landing Page Giới Thiệu &amp; Bảng Giá Dịch Vụ</h3>
+          <ul class="text-sm" style="line-height: 1.8;">
+            <li><strong>Giao diện trang chủ SaaS (<code>HomeController</code>):</strong> Giới thiệu tổng quan hệ sinh thái giải pháp vận hành thông minh và công nghệ AI cho SME.</li>
+            <li><strong>Minh bạch các gói cước:</strong> Bảng so sánh tính năng rõ ràng giữa các gói Starter, Professional và Enterprise.</li>
+            <li><strong>Kêu gọi hành động (CTA):</strong> Form đăng ký dùng thử 14 ngày cho doanh nghiệp mới với quy trình kích hoạt tự động.</li>
+          </ul>
+        </div>
+
+        <div class="highlight-box green mt-auto" style="padding: 12px 20px; border-left: 5px solid var(--green);">
+          <p class="text-sm fw-bold" style="margin:0; font-size: 14px;">✨ Xây dựng nền tảng quản trị tổ chức đồng bộ và linh hoạt, đáp ứng trọn vẹn mô hình vận hành thực tế của các doanh nghiệp SME.</p>
         </div>
       </div>
     </div>
@@ -1260,49 +1601,93 @@
      ========================================== -->
 
 <!-- SLIDE 26: KẾ HOẠCH & MA TRẬN KIỂM THỬ TOÀN DIỆN -->
-<div class="slide" data-notes="• Em là Khánh, phụ trách Kiểm thử dự án.
-• Quy trình kiểm thử Agile 5 giai đoạn: Phân tích -> Viết Test Plan v3.0 -> Xây dựng Test Suite -> Thực thi kiểm thử -> Quản lý lỗi & Nghiệm thu Retest.
-• Ma trận kiểm thử 5 tầng hệ thống: Unit & Domain, Business Flow, Multi-tenant Security, AI Infrastructure và SQL Server DB.
-• Bao phủ toàn bộ 22 phân hệ chức năng và 27 Controller.">
+<div class="slide" data-notes="⏱ [Thời lượng: 45 giây — Khánh]
+👉 Ý 1 (Quy trình Agile 5 pha): Em là Khánh. Triển khai kiểm thử từ phân tích, thiết kế Test Plan v3.0, xây dựng 1,241 kịch bản đến thực thi và nghiệm thu retest.
+👉 Ý 2 (Bao phủ 22 phân hệ): Kiểm thử toàn bộ 27 Controller ASP.NET Core và 45 Entity Models.
+👉 Ý 3 (Ma trận 5 tầng hệ thống): Bao quát từ Unit logic điểm, Business flow review queue, Multi-tenant Security, AI Service đến Database Integration.">
   <div class="slide-header">
     <div class="header-left"><img src="assets/img/FPT_Polytechnic-26eda0e9.png" alt="FPT"><span>PHẦN 6 — KIỂM THỬ &amp; CHẤT LƯỢNG</span></div>
     <div class="header-right">Khánh — Tester</div>
   </div>
   <div class="slide-content">
     <h1>Kế hoạch &amp; <span class="accent">Ma trận Kiểm thử Toàn diện</span></h1>
-    <div class="two-col">
-      <div class="col">
-        <div class="info-card accent mb-16">
-          <h3>📋 Quy Trình Kiểm Thử Chuẩn Agile</h3>
-          <ul class="text-sm">
-            <li><strong>Pha 1:</strong> Phân tích yêu cầu chức năng &amp; phi chức năng</li>
-            <li><strong>Pha 2:</strong> Xây dựng Software Test Plan v3.0 hoàn chỉnh</li>
-            <li><strong>Pha 3:</strong> Thiết kế 1,241 kịch bản kiểm thử chi tiết</li>
-            <li><strong>Pha 4:</strong> Thực thi song song Automated Tests &amp; Manual UI Tests</li>
-            <li><strong>Pha 5:</strong> Báo cáo lỗi, Developer fix, Retest nghiệm thu</li>
-          </ul>
-        </div>
-        <div class="info-card green">
-          <h3>🎯 Phạm Vi Bao Phủ 22 Phân Hệ</h3>
-          <ul class="text-sm">
-            <li>27 Controller ASP.NET Core &amp; 45 Entity Models</li>
-            <li>100% luồng nghiệp vụ cốt lõi từ Auth, OKR, KPI, Task đến AI</li>
-          </ul>
+    
+    <!-- Agile 5-Phase Timeline -->
+    <div style="display: flex; gap: 12px; margin-bottom: 4px;">
+      <div style="flex: 1; background: var(--blue-light); border-left: 4px solid var(--blue); padding: 8px 12px; border-radius: var(--radius-sm);">
+        <strong style="color: var(--blue); font-size: 13px;">Pha 1: Khảo sát</strong>
+        <div style="font-size: 12px; color: var(--gray-600);">Phân tích chức năng SME</div>
+      </div>
+      <div style="flex: 1; background: var(--blue-light); border-left: 4px solid var(--blue); padding: 8px 12px; border-radius: var(--radius-sm);">
+        <strong style="color: var(--blue); font-size: 13px;">Pha 2: Kế hoạch</strong>
+        <div style="font-size: 12px; color: var(--gray-600);">Software Test Plan v3.0</div>
+      </div>
+      <div style="flex: 1; background: var(--fpt-orange-glow); border-left: 4px solid var(--fpt-orange); padding: 8px 12px; border-radius: var(--radius-sm);">
+        <strong style="color: var(--fpt-orange-dark); font-size: 13px;">Pha 3: Thiết kế</strong>
+        <div style="font-size: 12px; color: var(--gray-600);">Thiết kế 1,241 Test Cases</div>
+      </div>
+      <div style="flex: 1; background: var(--fpt-orange-glow); border-left: 4px solid var(--fpt-orange); padding: 8px 12px; border-radius: var(--radius-sm);">
+        <strong style="color: var(--fpt-orange-dark); font-size: 13px;">Pha 4: Thực thi</strong>
+        <div style="font-size: 12px; color: var(--gray-600);">xUnit CI/CD + Manual UI</div>
+      </div>
+      <div style="flex: 1; background: var(--green-light); border-left: 4px solid var(--green); padding: 8px 12px; border-radius: var(--radius-sm);">
+        <strong style="color: var(--green); font-size: 13px;">Pha 5: Nghiệm thu</strong>
+        <div style="font-size: 12px; color: var(--gray-600);">Retest 290/290 Bugs (0 Bug)</div>
+      </div>
+    </div>
+
+    <div class="two-col" style="flex: 1; align-items: stretch; gap: 24px;">
+      <!-- Left Column: 5-Layer Testing Matrix -->
+      <div class="col" style="gap: 16px; display: flex; flex-direction: column; justify-content: space-between;">
+        <div class="info-card blue" style="padding: 18px 22px; flex: 1;">
+          <h3 style="margin-bottom: 12px;">🛡️ Ma Trận Kiểm Thử 5 Tầng Toàn Diện</h3>
+          
+          <div style="display: flex; flex-direction: column; gap: 8px;">
+            <div style="background: var(--white); padding: 8px 12px; border-radius: var(--radius-sm); border-left: 4px solid var(--purple); box-shadow: var(--shadow-sm);">
+              <strong style="color: var(--purple); font-size: 14px;">5. Database Integration:</strong>
+              <span style="font-size: 13px; color: var(--gray-700);"> Kiểm tra Rollback Transaction, tính nhất quán EF Core</span>
+            </div>
+            <div style="background: var(--white); padding: 8px 12px; border-radius: var(--radius-sm); border-left: 4px solid var(--red); box-shadow: var(--shadow-sm);">
+              <strong style="color: var(--red); font-size: 14px;">4. AI Service Tests:</strong>
+              <span style="font-size: 13px; color: var(--gray-700);"> Timeout DeepSeek, Fallback khi mất mạng, RAG JSON Schema</span>
+            </div>
+            <div style="background: var(--white); padding: 8px 12px; border-radius: var(--radius-sm); border-left: 4px solid var(--fpt-orange); box-shadow: var(--shadow-sm);">
+              <strong style="color: var(--fpt-orange-dark); font-size: 14px;">3. Multi-tenant &amp; Security:</strong>
+              <span style="font-size: 13px; color: var(--gray-700);"> Phân quyền 5 vai trò RBAC, SQL Row-Level Security</span>
+            </div>
+            <div style="background: var(--white); padding: 8px 12px; border-radius: var(--radius-sm); border-left: 4px solid var(--blue); box-shadow: var(--shadow-sm);">
+              <strong style="color: var(--blue); font-size: 14px;">2. Business Flow Tests:</strong>
+              <span style="font-size: 13px; color: var(--gray-700);"> Luồng Check-in duyệt Review Queue, Kanban Drag &amp; Drop</span>
+            </div>
+            <div style="background: var(--white); padding: 8px 12px; border-radius: var(--radius-sm); border-left: 4px solid var(--green); box-shadow: var(--shadow-sm);">
+              <strong style="color: var(--green); font-size: 14px;">1. Unit &amp; Domain Logic:</strong>
+              <span style="font-size: 13px; color: var(--gray-700);"> Thuật toán tính điểm trọng số, logic 7 bậc, chặn chia cho 0</span>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="col">
-        <div class="info-card blue mb-16">
-          <h3>🛡️ Ma Trận Kiểm Thử 5 Tầng</h3>
-          <ul class="text-sm">
-            <li><strong>1. Unit &amp; Domain Tests:</strong> Kiểm thử công thức tính điểm, logic 7 bậc, validate dữ liệu</li>
-            <li><strong>2. Business Flow Tests:</strong> Luồng Check-in duyệt Review Queue, Kanban Drag &amp; Drop</li>
-            <li><strong>3. Multi-tenant &amp; Security:</strong> Phân quyền 5 vai trò RBAC, SQL Row-Level Security</li>
-            <li><strong>4. AI Service Tests:</strong> Kiểm tra timeout DeepSeek, fallback khi mất mạng, format RAG JSON</li>
-            <li><strong>5. Database Integration:</strong> Rollback giao dịch, tính nhất quán dữ liệu EF Core</li>
+
+      <!-- Right Column: Coverage & Documentation Artifacts -->
+      <div class="col" style="gap: 16px; display: flex; flex-direction: column; justify-content: space-between;">
+        <div class="info-card accent" style="padding: 18px 22px;">
+          <h3 style="margin-bottom: 10px;">🎯 Phạm Vi Bao Phủ 22 Phân Hệ Nghiệp Vụ</h3>
+          <ul class="text-sm" style="line-height: 1.7;">
+            <li>Kiểm thử bao phủ toàn bộ <strong>27 Controller ASP.NET Core</strong> và <strong>45 Entity Models</strong>.</li>
+            <li>100% luồng nghiệp vụ cốt lõi: Xác thực tài khoản, Cây OKR, KPI, Thẻ Kanban, Background Worker, AI Chatbot.</li>
           </ul>
         </div>
-        <div class="highlight-box green mt-auto">
-          <p class="text-sm fw-bold">📄 Bản Test Plan v3.0 hoàn chỉnh và danh sách test cases đã được lưu trữ minh bạch trong thư mục test-artifacts của đồ án.</p>
+
+        <div class="info-card green" style="padding: 18px 22px; flex: 1;">
+          <h3 style="margin-bottom: 10px;">📄 Hồ Sơ Kiểm Thử Minh Bạch (test-artifacts)</h3>
+          <ul class="text-sm" style="line-height: 1.7;">
+            <li><strong>Software Test Plan v3.0:</strong> Tài liệu kế hoạch kiểm thử, chiến lược và tiêu chuẩn nghiệm thu.</li>
+            <li><strong>DanhSach_TestCase_1241_Cases.xlsx:</strong> Bảng tính Excel 4 sheets lưu trữ 1,241 kịch bản chi tiết.</li>
+            <li><strong>Báo Cáo Đồ Án Tốt Nghiệp:</strong> Toàn văn phân tích kết quả thực nghiệm và đánh giá chất lượng.</li>
+          </ul>
+        </div>
+
+        <div class="highlight-box green mt-auto" style="padding: 12px 20px; border-left: 5px solid var(--green);">
+          <p class="text-sm fw-bold" style="margin:0; font-size: 14px;">✅ Kế hoạch kiểm thử chặt chẽ đảm bảo chất lượng phần mềm đạt tiêu chuẩn phát hành thương mại.</p>
         </div>
       </div>
     </div>
@@ -1312,59 +1697,87 @@
 </div>
 
 <!-- SLIDE 27: THỐNG KÊ 1,241 TEST CASES (100% PASS) & 290 BUGS FIXED -->
-<div class="slide" data-notes="• Em tự hào công bố kết quả nghiệm thu chất lượng vượt bậc:
-• Tổng số 1,241 Test Cases bao phủ toàn diện: 641 kịch bản tự động xUnit và 600 kịch bản thủ công.
-• Tỷ lệ Đạt: 100.0% (1,241 / 1,241 PASS).
-• Nghiệm thu sửa lỗi: 290/290 lỗi phát hiện trong đợt 1 đã được sửa 100% trong đợt Retest v3.0, đưa số bug tồn đọng về đúng 0 BUG.
-• Hệ thống đạt chuẩn xuất sắc, sẵn sàng bàn giao cho doanh nghiệp.
-• Chuyển tiếp: Em xin nhường lời lại cho bạn Quân để tổng kết và bắt đầu phiên Demo.">
+<div class="slide" data-notes="⏱ [Thời lượng: 45 giây — Khánh]
+👉 Ý 1 (1,241 Test Cases Pass 100%): 641 kịch bản tự động xUnit CI/CD kết hợp 600 kịch bản thủ công — toàn bộ 1,241/1,241 cases đều PASS.
+👉 Ý 2 (Xóa sạch 290 Bugs): 290 lỗi phát hiện trong đợt 1 (18 Critical, 86 High, 132 Medium, 54 Low) đã được fix và retest 100%, đưa số bug tồn đọng về đúng 0 BUG.
+👉 Ý 3 (Hồ sơ nghiệm thu minh bạch): Toàn văn Test Plan v3.0 và file Excel 4 sheets chi tiết đã lưu trong thư mục test-artifacts.
+👉 Chuyển tiếp: Sau đây em xin nhường lời lại cho bạn Quân tổng kết và bắt đầu phiên Live Demo 15 phút.">
   <div class="slide-header">
     <div class="header-left"><img src="assets/img/FPT_Polytechnic-26eda0e9.png" alt="FPT"><span>PHẦN 6 — KIỂM THỬ &amp; CHẤT LƯỢNG</span></div>
     <div class="header-right">Khánh — Tester</div>
   </div>
   <div class="slide-content">
     <h1>Nghiệm thu Kiểm thử: <span class="accent">1,241 Cases (100% Pass)</span></h1>
-    <div class="three-col mb-16">
-      <div class="stat-box">
-        <div class="number text-green">1,241</div>
-        <div class="label">Tổng Test Cases Kiểm thử</div>
-        <div class="sublabel text-sm mt-8">641 Automated + 600 Manual</div>
+    
+    <!-- 3 Big Stat Counters -->
+    <div class="three-col mb-16" style="gap: 20px;">
+      <div class="stat-box" style="padding: 16px 20px; border-top: 4px solid var(--green);">
+        <div class="number text-green" style="font-size: 44px; line-height: 1.1;">1,241</div>
+        <div class="label" style="font-size: 16px; margin-top: 4px;">Tổng Kịch Bản Kiểm Thử</div>
+        <div class="sublabel text-sm mt-8" style="color: var(--gray-600); font-size: 13px;">641 Automated (xUnit) + 600 Manual UI</div>
       </div>
-      <div class="stat-box">
-        <div class="number text-green">100%</div>
-        <div class="label">Tỷ lệ Đạt (Pass Rate)</div>
-        <div class="sublabel text-sm mt-8">1,241 / 1,241 Test Cases PASS</div>
+      <div class="stat-box" style="padding: 16px 20px; border-top: 4px solid var(--green);">
+        <div class="number text-green" style="font-size: 44px; line-height: 1.1;">100.0%</div>
+        <div class="label" style="font-size: 16px; margin-top: 4px;">Tỷ Lệ Đạt (Pass Rate)</div>
+        <div class="sublabel text-sm mt-8" style="color: var(--green); font-weight: 700; font-size: 13px;">1,241 / 1,241 Test Cases PASS Tuyệt Đối</div>
       </div>
-      <div class="stat-box">
-        <div class="number text-orange">290 / 290</div>
-        <div class="label">Bugs Đã Sửa (Retest v3.0)</div>
-        <div class="sublabel text-sm mt-8"><strong class="text-green">0 Open Bugs</strong> tồn đọng</div>
+      <div class="stat-box" style="padding: 16px 20px; border-top: 4px solid var(--fpt-orange);">
+        <div class="number text-orange" style="font-size: 44px; line-height: 1.1;">290 / 290</div>
+        <div class="label" style="font-size: 16px; margin-top: 4px;">Bugs Đã Sửa (Retest Final)</div>
+        <div class="sublabel text-sm mt-8" style="color: var(--green); font-weight: 700; font-size: 13px;"><strong>0 Open Bugs</strong> tồn đọng</div>
       </div>
     </div>
 
-    <div class="two-col">
-      <div class="col">
-        <div class="info-card accent">
-          <h3>📊 Chi Tiết 290 Lỗi Đã Sửa Triệt Để</h3>
-          <ul class="text-sm">
-            <li><span class="badge badge-red">Critical: 18/18</span> Bảo mật Tenant, phân quyền SaaSAdmin (Đã fix 100%)</li>
-            <li><span class="badge badge-orange">High: 86/86</span> Logic tính điểm, route controller, liên kết task (Đã fix 100%)</li>
-            <li><span class="badge badge-blue">Medium: 132/132</span> Giao diện hiển thị, validate form (Đã fix 100%)</li>
-            <li><span class="badge badge-green">Low: 54/54</span> Căn chỉnh CSS, chính tả hiển thị (Đã fix 100%)</li>
-          </ul>
+    <div class="two-col" style="flex: 1; align-items: stretch; gap: 24px;">
+      <!-- Left Column: Bug Breakdown -->
+      <div class="col" style="gap: 16px; display: flex; flex-direction: column; justify-content: space-between;">
+        <div class="info-card accent" style="padding: 18px 22px; flex: 1;">
+          <h3 style="margin-bottom: 12px;">📊 Phân Bổ 290 Lỗi Đã Khắc Phục Triệt Để</h3>
+          
+          <div style="display: flex; flex-direction: column; gap: 8px;">
+            <div style="background: var(--white); padding: 8px 12px; border-radius: var(--radius-sm); border: 1px solid var(--gray-200); display: flex; align-items: center; justify-content: space-between;">
+              <div><strong style="color: var(--red); font-size: 14px;">Critical (Nghiêm trọng):</strong> <span style="font-size: 12px; color: var(--gray-600);">Bảo mật Tenant, phân quyền SaaSAdmin</span></div>
+              <span class="badge badge-green" style="font-size: 12px; font-weight: 700;">18 / 18 Fixed (100%)</span>
+            </div>
+
+            <div style="background: var(--white); padding: 8px 12px; border-radius: var(--radius-sm); border: 1px solid var(--gray-200); display: flex; align-items: center; justify-content: space-between;">
+              <div><strong style="color: var(--fpt-orange-dark); font-size: 14px;">High (Mức cao):</strong> <span style="font-size: 12px; color: var(--gray-600);">Logic tính điểm, route controller, liên kết task</span></div>
+              <span class="badge badge-green" style="font-size: 12px; font-weight: 700;">86 / 86 Fixed (100%)</span>
+            </div>
+
+            <div style="background: var(--white); padding: 8px 12px; border-radius: var(--radius-sm); border: 1px solid var(--gray-200); display: flex; align-items: center; justify-content: space-between;">
+              <div><strong style="color: var(--blue); font-size: 14px;">Medium (Mức trung bình):</strong> <span style="font-size: 12px; color: var(--gray-600);">Giao diện hiển thị, validate form</span></div>
+              <span class="badge badge-green" style="font-size: 12px; font-weight: 700;">132 / 132 Fixed (100%)</span>
+            </div>
+
+            <div style="background: var(--white); padding: 8px 12px; border-radius: var(--radius-sm); border: 1px solid var(--gray-200); display: flex; align-items: center; justify-content: space-between;">
+              <div><strong style="color: var(--gray-600); font-size: 14px;">Low (Mức thấp):</strong> <span style="font-size: 12px; color: var(--gray-600);">Căn chỉnh CSS, chính tả hiển thị</span></div>
+              <span class="badge badge-green" style="font-size: 12px; font-weight: 700;">54 / 54 Fixed (100%)</span>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="col">
-        <div class="info-card green">
-          <h3>📁 Tài Liệu Nghiệm Thu Minh Bạch</h3>
-          <ul class="text-sm">
-            <li><strong>Software Test Plan v3.0:</strong> Toàn văn kế hoạch &amp; tiêu chí nghiệm thu</li>
-            <li><strong>Excel 1,241 Cases (4 Sheets):</strong> Chi tiết từng bước kiểm thử</li>
-            <li><strong>Báo Cáo Đồ Án Tốt Nghiệp:</strong> Phân tích kiến trúc và kết quả thực nghiệm</li>
+
+      <!-- Right Column: Verification & Readiness -->
+      <div class="col" style="gap: 16px; display: flex; flex-direction: column; justify-content: space-between;">
+        <div class="info-card green" style="padding: 18px 22px; flex: 1;">
+          <h3 style="margin-bottom: 12px;">📁 Hồ Sơ Nghiệm Thu Minh Bạch</h3>
+          <ul class="text-sm" style="line-height: 1.8;">
+            <li><strong>Software Test Plan v3.0:</strong> Toàn văn kế hoạch, phạm vi và tiêu chí nghiệm thu chặt chẽ.</li>
+            <li><strong>Bảng tính 1,241 Test Cases (Excel 4 Sheets):</strong> Chi tiết từng bước kiểm thử và bằng chứng pass.</li>
+            <li><strong>Báo Cáo Đồ Án Tốt Nghiệp:</strong> Phân tích kiến trúc hệ thống và kết quả thực nghiệm hoàn chỉnh.</li>
           </ul>
-          <div class="highlight-box green mt-8">
-            <p class="text-xs fw-bold">✅ Hệ thống đã được kiểm thử hồi quy nghiêm ngặt, sẵn sàng triển khai thực tế trên môi trường sản xuất.</p>
+
+          <div style="background: var(--green-light); padding: 12px 16px; border-radius: var(--radius-sm); border-left: 4px solid var(--green); margin-top: 14px;">
+            <strong style="color: var(--green); font-size: 14px;">🏆 Đạt Tiêu Chuẩn Nghiệm Thu Đồ Án Xuất Sắc</strong>
+            <div style="font-size: 13px; color: var(--gray-700); margin-top: 4px;">
+              Hệ thống đã trải qua kiểm thử hồi quy nghiêm ngặt, sẵn sàng triển khai thực tế trên môi trường sản xuất.
+            </div>
           </div>
+        </div>
+
+        <div class="highlight-box green mt-auto" style="padding: 12px 20px; border-left: 5px solid var(--green);">
+          <p class="text-sm fw-bold text-center" style="margin:0; font-size: 14px;">✨ Kết quả nghiệm thu minh chứng cho năng lực lập trình, tính kỷ luật và sự hoàn thiện của tập thể nhóm.</p>
         </div>
       </div>
     </div>

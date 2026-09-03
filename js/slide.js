@@ -254,7 +254,16 @@
     if (!activeSlide) return;
 
     const noteData = activeSlide.getAttribute('data-notes');
-    pn.textContent = noteData || '';
+    if (noteData) {
+      pn.innerHTML = noteData
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/\n/g, '<br>')
+        .replace(/(👉|🎯|⚡|💡|📌|✅|•)/g, '<span style="color:#F37021; font-weight:bold; margin-right:6px;">$1</span>');
+    } else {
+      pn.innerHTML = '';
+    }
     pn.classList.toggle('visible', notesVisible && !!noteData);
   }
 
