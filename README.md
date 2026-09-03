@@ -93,17 +93,15 @@ Bộ slide HTML 16:9 chuẩn học đường FPT Polytechnic (Theme cam `#F37021
 - **Slide 27:** Nghiệm thu Kiểm thử: 1,241 Cases (100% Pass) & 290 Bugs Fixed (Khánh ~2p)
 
 ### Phần 7: Tổng Kết, Demo Trực Tiếp & Q&A (Slide 28 → 29) — Quân & Cả nhóm
-- **Slide 28:** Tổng kết Thành tựu & Bắt đầu Phiên Demo Sản phẩm 15 Phút (Quân)
+- **Slide 28:** Khởi động Hệ thống & Trải nghiệm Trực tiếp (Quân)
 - **Slide 29:** Lời Cảm ơn & Phiên Hỏi Đáp (Q&A 30 Phút) (Cả nhóm)
 
 ---
 
-## 🎬 4 Kịch bản Trọng tâm trong Phiên Demo Sản phẩm (15 Phút)
+## 🎬 Phiên Demo & Trải nghiệm Trực tiếp
 
-1. **Trợ lý AI Thông minh & Đề xuất KPI tự động:** Thao tác hỏi đáp ngữ cảnh doanh nghiệp với DeepSeek RAG và sinh KPI chuẩn SMART.
-2. **Cây OKR 3 Cấp & Review Queue:** Tạo mục tiêu đa cấp, nhân viên thực hiện Check-in có minh chứng và quản lý phê duyệt tập trung.
-3. **Quản lý Dự án Kanban & Tự động đồng bộ Task ↔ KPI:** Kéo thả thẻ việc trên Kanban 6 cột, hoàn thành task tự động kích hoạt tính lại tiến độ KPI liên quan.
-4. **Phân quyền RBAC & Cô lập Dữ liệu SaaS:** Đăng nhập các vai trò khác nhau, chứng minh tính năng cô lập dữ liệu theo TenantId bảo vệ bởi SQL Row-Level Security.
+- **Hệ thống Trực tiếp (Live Production):** [https://manasys.site](https://manasys.site)
+- **Video Demo Dự phòng (Online / Offline):** [Xem trên Google Drive](https://drive.google.com/file/d/1lyk_asB88SRet_-HTlTYOQtiDGmndWYT/view?usp=drive_link)
 
 ---
 
