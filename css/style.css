@@ -302,13 +302,13 @@ html, body {
 
 /* ---------- End Slide (Thank You) ---------- */
 .slide-end {
-  background: var(--white);
-  color: var(--gray-800);
+  background: var(--white) !important;
+  color: var(--gray-800) !important;
   justify-content: center;
   align-items: center;
   text-align: center;
   position: relative;
-  border-bottom: 12px solid var(--fpt-orange);
+  border-bottom: 12px solid var(--fpt-orange) !important;
 }
 
 .slide-end .slide-header { display: none; }
