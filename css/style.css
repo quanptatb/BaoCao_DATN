@@ -954,6 +954,96 @@ html, body {
   margin-top: 2px;
 }
 
+/* ---------- 15-Minute Live Demo Session Styles ---------- */
+.demo-scenarios-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--sp-20);
+  margin-bottom: var(--sp-24);
+}
+
+.demo-scenario-card {
+  background: var(--white);
+  border: 1px solid var(--gray-200);
+  border-left: 5px solid var(--fpt-orange);
+  border-radius: var(--radius-md);
+  padding: var(--sp-20);
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.demo-scenario-card.blue { border-left-color: var(--blue); }
+.demo-scenario-card.green { border-left-color: var(--green); }
+.demo-scenario-card.purple { border-left-color: var(--purple); }
+
+.demo-scenario-card .card-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--sp-12);
+}
+
+.demo-scenario-card .card-head h3 {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--gray-800);
+}
+
+.demo-scenario-card ul {
+  padding-left: 20px;
+  margin-bottom: 0;
+}
+
+.demo-scenario-card ul li {
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--gray-700);
+  margin-bottom: 6px;
+}
+
+.demo-action-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--sp-20);
+  background: var(--gray-50);
+  padding: var(--sp-16) var(--sp-24);
+  border-radius: var(--radius-md);
+  border: 1px dashed var(--fpt-orange);
+}
+
+.demo-action-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--fpt-orange);
+  color: var(--white);
+  font-size: 18px;
+  font-weight: 700;
+  padding: 12px 28px;
+  border-radius: var(--radius-md);
+  text-decoration: none;
+  box-shadow: var(--shadow-md);
+  transition: all 0.2s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.demo-action-btn:hover {
+  background: var(--fpt-orange-dark);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+.demo-action-btn.secondary {
+  background: var(--navy);
+}
+
+.demo-action-btn.secondary:hover {
+  background: var(--navy-light);
+}
 
 /* ---------- Highlight box ---------- */
 .highlight-box {
