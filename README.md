@@ -6,7 +6,7 @@ Bộ slide HTML 16:9 chuẩn học đường FPT Polytechnic (Theme cam `#F37021
 - **Giảng viên hướng dẫn:** ThS. Phan Hoàng Khải
 - **Lớp:** PRO2192.04 (Nhóm 98)
 - **Repository:** [https://github.com/quanptatb/BaoCao_DATN](https://github.com/quanptatb/BaoCao_DATN)
-- **Quy chuẩn thời gian bảo vệ:** **15 phút Slide** (2 phút/người) + **15 phút Demo sản phẩm trực tiếp** + **30 phút Hội đồng Q&A**.
+- **Quy chuẩn thời gian bảo vệ:** **15 phút Slide** (2–4 phút/người) + **15 phút Demo sản phẩm trực tiếp** + **30 phút Hội đồng Q&A**.
 
 ---
 
@@ -51,29 +51,50 @@ Bộ slide HTML 16:9 chuẩn học đường FPT Polytechnic (Theme cam `#F37021
 
 ---
 
-## 👥 Phân chia thứ tự trình bày (17 Slide — Khung 15 phút Thuyết trình)
+## 👥 Phân chia thứ tự trình bày (29 Slide — 7 Phần)
 
-> Mỗi thành viên trình bày chuẩn trong **2 phút** (Trưởng nhóm Quân ~3–4 phút mở đầu + AI + kết luận).
+### Phần 1: Mở Đầu (Slide 1 → 8) — Phạm Trần Anh Quân (Leader / AI)
+- **Slide 1:** Trang bìa (FPT Polytechnic, đề tài, tech badges, GVHD)
+- **Slide 2:** Thành viên nhóm VietMach (7 thành viên, ảnh, MSSV, vai trò)
+- **Slide 3:** Mục lục trình bày
+- **Slide 4:** Thực trạng & Vấn đề doanh nghiệp SME
+- **Slide 5:** Yêu cầu khách hàng (Khảo sát 15 SME)
+- **Slide 6:** Hướng giải quyết toàn diện
+- **Slide 7:** Mục tiêu, Tầm nhìn & Sứ mệnh
+- **Slide 8:** Định hướng phát triển hệ thống
 
-| STT | Tên Slide & Trọng tâm | Người trình bày | Vai trò | Thời lượng |
-|:---:|---|---|---|:---:|
-| **1** | **Trang bìa & Đội ngũ VietMach** (Đề tài, GVHD, 7 thành viên, tech badges) | **Phạm Trần Anh Quân** | PM — AI | ~1:00 |
-| **2** | **Bài toán Thực tế SME & Hướng Giải quyết** (Phân mảnh Excel/Zalo ↔ All-in-One) | **Phạm Trần Anh Quân** | PM — AI | ~1:00 |
-| **3** | **Đột phá AI-Native: 9 Luồng AI & RAG Pipeline** (DeepSeek LLM, RAG Context) | **Phạm Trần Anh Quân** | PM — AI | ~1:30 |
-| **4** | **Giao diện OKR Đa cấp & Dashboard KPI** (Cây OKR 3 cấp, Tiến độ realtime) | **Bùi Nguyễn Anh Như** | Frontend — KPI/OKR | ~1:00 |
-| **5** | **Quy trình Check-in & Review Queue** (Check-in 2 phút, Duyệt 1 chạm) | **Bùi Nguyễn Anh Như** | Frontend — KPI/OKR | ~1:00 |
-| **6** | **Động cơ Tính điểm & State Machine** (Vòng đời Check-in, Đánh giá 7 bậc) | **Phạm Trần An An** | Backend — KPI/OKR | ~1:00 |
-| **7** | **Bảo mật & Phân quyền Đa tầng** (RBAC 5 vai trò, SQL Server RLS) | **Phạm Trần An An** | Backend — KPI/OKR | ~1:00 |
-| **8** | **Giao diện Kanban Board & Quản trị Công việc** (6 cột Agile, Drag & Drop) | **Vũ Hoàng Huy Nhật** | Frontend — Vận hành | ~1:00 |
-| **9** | **Quản lý Dự án Trực quan & Nguồn lực** (Tiến độ tổng thể, Cân bằng tải) | **Vũ Hoàng Huy Nhật** | Frontend — Vận hành | ~1:00 |
-| **10** | **Liên kết Hai chiều Task ↔ KPI/OKR** (Impact Weight %, Tự động đồng bộ) | **Nguyễn Thế Bảo** | Backend — Vận hành | ~1:00 |
-| **11** | **Xử lý Sự kiện, Audit Log & Cảnh báo Quá hạn** (Background worker, Audit) | **Nguyễn Thế Bảo** | Backend — Vận hành | ~1:00 |
-| **12** | **Hệ thống Danh mục Động & Multi-tenant SaaS** (Tùy biến động, White-label) | **Trần Thanh Phong** | Fullstack — Danh mục | ~1:00 |
-| **13** | **Tối ưu SEO Kỹ thuật & Landing Page** (SeoHelper, Sitemap, Schema.org) | **Trần Thanh Phong** | Fullstack — Danh mục | ~1:00 |
-| **14** | **Kế hoạch & Ma trận Kiểm thử Toàn diện** (Quy trình Agile, 5 tầng test) | **Đoàn Quốc Khánh** | Tester | ~1:00 |
-| **15** | **Nghiệm thu Kiểm thử: 1,241 Cases (100% Pass)** (290 bugs fixed 100%) | **Đoàn Quốc Khánh** | Tester | ~1:00 |
-| **16** | **Tổng kết Thành tựu & Bắt đầu Phiên Demo (15 Phút)** (4 Kịch bản demo live) | **Phạm Trần Anh Quân** | PM — AI | ~1:00 |
-| **17** | **Lời Cảm ơn & Phiên Hỏi Đáp (Q&A 30 Phút)** (Tri ân Hội đồng & GVHD) | **Cả nhóm VietMach** | Nhóm 98 | — |
+### Phần 2: Trí Tuệ Nhân Tạo (AI Nổi Bật) (Slide 9 → 15) — Quân & Phong
+- **Slide 9:** Kiến trúc AI-Native (Sơ đồ luồng: Request → Gateway → RAG → DeepSeek → UI)
+- **Slide 10:** AI — So sánh Trước vs Sau khi áp dụng
+- **Slide 11:** AI — Chat Widget tích hợp RAG
+- **Slide 12:** AI — Gợi ý KPI & Goal Planning (Phong)
+- **Slide 13:** AI — Check-in Evaluator tự động (Phong)
+- **Slide 14:** AI — Smart Alerts & Phân tích hiệu suất (Quân)
+- **Slide 15:** AI — RAG Pipeline (Quân)
+
+### Phần 3: KPI / OKR (Slide 16 → 19) — Như (Frontend) & An (Backend)
+- **Slide 16:** Giao diện OKR Đa cấp & Dashboard KPI trực quan (Như ~2p)
+- **Slide 17:** Quy trình Check-in & Review Queue trực quan (Như ~2p)
+- **Slide 18:** Động cơ Tính điểm, Đánh giá 7 Bậc & State Machine (An ~2p)
+- **Slide 19:** Bảo mật & Phân quyền Đa tầng RBAC & SQL RLS (An ~2p)
+
+### Phần 4: Vận Hành (Slide 20 → 23) — Nhật (Frontend) & Bảo (Backend)
+- **Slide 20:** Giao diện Kanban Board & Quản trị Công việc trực quan (Nhật ~2p)
+- **Slide 21:** Quản lý Dự án Trực quan & Điều phối Nguồn lực (Nhật ~2p)
+- **Slide 22:** Liên kết Hai Chiều Task ↔ KPI/OKR Tự Động (Bảo ~2p)
+- **Slide 23:** Xử lý Sự kiện, Audit Log & Cảnh báo Quá hạn (Bảo ~2p)
+
+### Phần 5: Danh Mục & SEO (Slide 24 → 25) — Trần Thanh Phong (Fullstack)
+- **Slide 24:** Hệ thống Danh mục Động & Multi-tenant SaaS (Phong ~2p)
+- **Slide 25:** Tối ưu SEO Kỹ thuật & Landing Page (Phong ~2p)
+
+### Phần 6: Kiểm Thử (Slide 26 → 27) — Đoàn Quốc Khánh (Tester)
+- **Slide 26:** Kế hoạch & Ma trận Kiểm thử Toàn diện 5 tầng (Khánh ~2p)
+- **Slide 27:** Nghiệm thu Kiểm thử: 1,241 Cases (100% Pass) & 290 Bugs Fixed (Khánh ~2p)
+
+### Phần 7: Tổng Kết, Demo Trực Tiếp & Q&A (Slide 28 → 29) — Quân & Cả nhóm
+- **Slide 28:** Tổng kết Thành tựu & Bắt đầu Phiên Demo Sản phẩm 15 Phút (Quân)
+- **Slide 29:** Lời Cảm ơn & Phiên Hỏi Đáp (Q&A 30 Phút) (Cả nhóm)
 
 ---
 

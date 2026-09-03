@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Báo Cáo DATN — Hệ Thống Vận Hành Thông Minh SME (Nhóm 98 VietMach)</title>
+  <title>Báo Cáo DATN — Hệ Thống Vận Hành Thông Minh SME</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800;900&family=Be+Vietnam+Pro:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
@@ -11,8 +11,8 @@
 </head>
 <body>
 
-<!-- ========== TIMER & CONTROLS (15:00 COUNTDOWN) ========== -->
-<div id="timer" onclick="slideEngine.toggleTimer()" title="Click hoặc bấm T để Pause/Resume">
+<!-- ========== TIMER & CONTROLS ========== -->
+<div id="timer" onclick="slideEngine.toggleTimer()" title="Click hoặc T để pause/resume">
   <span>⏱</span>
   <span id="timer-display">15:00</span>
 </div>
@@ -21,215 +21,330 @@
   <button class="timer-btn" onclick="slideEngine.resetTimer()">↻ Reset (15:00)</button>
 </div>
 
-<!-- ========== PROGRESS BAR & COUNTER ========== -->
+<!-- ========== PROGRESS BAR ========== -->
 <div id="progress-bar" style="width:0%"></div>
-<div id="slide-counter">1 / 17</div>
+<div id="slide-counter">1 / 29</div>
 
-<!-- ========== PRESENTER NOTES (PHÍM N) ========== -->
+<!-- ========== PRESENTER NOTES ========== -->
 <div id="presenter-notes"></div>
 
-<!-- ========== SHORTCUTS HELP (PHÍM H / ?) ========== -->
+<!-- ========== SHORTCUTS HELP ========== -->
 <div id="shortcuts-help">
-  <h3>⌨️ Bảng Phím Tắt Điều Khiển</h3>
+  <h3>⌨️ Phím tắt</h3>
   <table>
     <tr><td><kbd>→</kbd> / <kbd>Space</kbd></td><td>Slide tiếp theo</td></tr>
-    <tr><td><kbd>←</kbd></td><td>Slide trước đó</td></tr>
-    <tr><td><kbd>Home</kbd></td><td>Về slide đầu tiên (Trang bìa)</td></tr>
-    <tr><td><kbd>End</kbd></td><td>Đến slide cuối cùng (Cảm ơn)</td></tr>
-    <tr><td><kbd>F</kbd></td><td>Bật / Tắt toàn màn hình (Fullscreen)</td></tr>
-    <tr><td><kbd>T</kbd></td><td>Tạm dừng / Tiếp tục đếm ngược (15:00)</td></tr>
-    <tr><td><kbd>R</kbd></td><td>Đặt lại đồng hồ về 15:00</td></tr>
-    <tr><td><kbd>N</kbd></td><td>Bật / Tắt kịch bản thuyết trình (Notes)</td></tr>
-    <tr><td><kbd>V</kbd></td><td>Phát / Dừng video demo</td></tr>
-    <tr><td><kbd>H</kbd> / <kbd>?</kbd></td><td>Bảng trợ giúp phím tắt</td></tr>
-    <tr><td><kbd>Esc</kbd></td><td>Đóng bảng trợ giúp</td></tr>
+    <tr><td><kbd>←</kbd></td><td>Slide trước</td></tr>
+    <tr><td><kbd>Home</kbd></td><td>Slide đầu tiên</td></tr>
+    <tr><td><kbd>End</kbd></td><td>Slide cuối cùng</td></tr>
+    <tr><td><kbd>F</kbd></td><td>Toàn màn hình</td></tr>
+    <tr><td><kbd>T</kbd></td><td>Pause / Resume timer</td></tr>
+    <tr><td><kbd>R</kbd></td><td>Reset timer 30:00</td></tr>
+    <tr><td><kbd>N</kbd></td><td>Bật / Tắt ghi chú trình bày</td></tr>
+    <tr><td><kbd>V</kbd></td><td>Play / Pause video demo</td></tr>
+    <tr><td><kbd>H</kbd> / <kbd>?</kbd></td><td>Bảng phím tắt này</td></tr>
+    <tr><td><kbd>Esc</kbd></td><td>Đóng popup</td></tr>
   </table>
 </div>
 
-<!-- ========== SLIDES VIEWPORT (16:9 NATIVE) ========== -->
+<!-- ========== SLIDES VIEWPORT ========== -->
 <div class="slides-viewport">
 
-<!-- ==========================================================================
-     SLIDE 1: TRANG BÌA & ĐỘI NGŨ VIETMACH (7 THÀNH VIÊN)
-     ========================================================================== -->
-<div class="slide slide-cover" data-notes="• Chào mừng Quý thầy cô Hội đồng và thầy hướng dẫn ThS. Phan Hoàng Khải.
-• Giới thiệu đề tài: Hệ thống Hỗ trợ Vận hành Thông minh cho Doanh nghiệp Vừa và Nhỏ (SME) - Quản lý Đa cấp & Ra quyết định bằng AI.
-• Đội ngũ Nhóm 98 (VietMach): 7 thành viên phụ trách chuyên biệt từ AI, Backend, Frontend đến Kiểm thử.
-• Kế hoạch bảo vệ: 15 phút thuyết trình slide (2 phút/người) + 15 phút Demo sản phẩm trực tiếp + 30 phút Q&A.">
+
+<!-- ==========================================
+     SLIDE 1: TRANG BÌA
+     ========================================== -->
+<div class="slide slide-cover" data-notes="Chào hội đồng, giới thiệu đề tài. Em xin kính chào quý thầy cô trong hội đồng. Nhóm em xin phép bắt đầu phần báo cáo dự án tốt nghiệp.">
   <div class="cover-content">
     <img src="assets/img/FPT_Polytechnic-26eda0e9.png" alt="FPT Polytechnic" class="school-logo">
-    <div class="school-name">Trường Cao đẳng FPT Polytechnic — Chuyên ngành Phát triển Phần mềm</div>
-    <div class="report-type">BÁO CÁO DỰ ÁN TỐT NGHIỆP (PRO2192.04 — NHÓM 98)</div>
-    <div class="title">HỆ THỐNG HỖ TRỢ VẬN HÀNH THÔNG MINH CHO DOANH NGHIỆP VỪA VÀ NHỎ<br>HỖ TRỢ QUẢN LÝ ĐA CẤP VÀ ĐƯA RA QUYẾT ĐỊNH BẰNG AI</div>
+    <div class="school-name">Trường Cao đẳng FPT Polytechnic</div>
+    <div class="report-type">Báo cáo dự án tốt nghiệp</div>
+    <div class="title">HỆ THỐNG HỖ TRỢ VẬN HÀNH THÔNG MINH<br>CHO DOANH NGHIỆP VỪA VÀ NHỎ<br>HỖ TRỢ QUẢN LÝ ĐA CẤP VÀ ĐƯA RA QUYẾT ĐỊNH BẰNG AI</div>
     <div class="meta">
-      <span class="meta-item">👥 <strong>Nhóm VietMach</strong> (7 thành viên)</span>
-      <span class="meta-item">📋 GVHD: <strong>ThS. Phan Hoàng Khải</strong></span>
-      <span class="meta-item">⏱ <strong>15p Slide</strong> | <strong>15p Demo</strong> | <strong>30p Q&A</strong></span>
+      <span class="meta-item">👥 Nhóm VietMach — 7 thành viên</span>
+      <span class="meta-item">📋 GVHD: Thầy Phan Hoàng Khải | 🏫 Lớp: PRO2192.04 (Nhóm 98)</span>
     </div>
-    
-    <!-- 7 Thành viên hiển thị ngay trên bìa -->
-    <div class="team-grid" style="margin-top: 24px; margin-bottom: 20px;">
-      <div class="team-card leader" style="padding: 10px;">
-        <img src="assets/img/quan.jpg" alt="Quân" style="width:54px; height:54px; border-radius:50%; margin: 0 auto 6px;">
-        <div class="name" style="font-size: 15px; font-weight: 700;">Phạm Trần Anh Quân</div>
-        <div class="role" style="font-size: 12px; color: var(--fpt-orange);">👑 Leader / AI (TB01758)</div>
-      </div>
-      <div class="team-card" style="padding: 10px;">
-        <img src="assets/img/nhu.jpg" alt="Như" style="width:54px; height:54px; border-radius:50%; margin: 0 auto 6px;">
-        <div class="name" style="font-size: 15px; font-weight: 700;">Bùi Nguyễn Anh Như</div>
-        <div class="role" style="font-size: 12px; color: var(--fpt-orange);">🎨 FE KPI/OKR (TB01785)</div>
-      </div>
-      <div class="team-card" style="padding: 10px;">
-        <img src="assets/img/an.jpg" alt="An" style="width:54px; height:54px; border-radius:50%; margin: 0 auto 6px;">
-        <div class="name" style="font-size: 15px; font-weight: 700;">Phạm Trần An An</div>
-        <div class="role" style="font-size: 12px; color: var(--fpt-orange);">⚙️ BE KPI/OKR (TB01817)</div>
-      </div>
-      <div class="team-card" style="padding: 10px;">
-        <img src="assets/img/nhat.png" alt="Nhật" style="width:54px; height:54px; border-radius:50%; margin: 0 auto 6px;">
-        <div class="name" style="font-size: 15px; font-weight: 700;">Vũ Hoàng Huy Nhật</div>
-        <div class="role" style="font-size: 12px; color: var(--fpt-orange);">🎨 FE Vận hành (TB01605)</div>
-      </div>
-      <div class="team-card" style="padding: 10px;">
-        <img src="assets/img/bao.png" alt="Bảo" style="width:54px; height:54px; border-radius:50%; margin: 0 auto 6px;">
-        <div class="name" style="font-size: 15px; font-weight: 700;">Nguyễn Thế Bảo</div>
-        <div class="role" style="font-size: 12px; color: var(--fpt-orange);">⚙️ BE Vận hành (TB01573)</div>
-      </div>
-      <div class="team-card" style="padding: 10px;">
-        <img src="assets/img/phong.png" alt="Phong" style="width:54px; height:54px; border-radius:50%; margin: 0 auto 6px;">
-        <div class="name" style="font-size: 15px; font-weight: 700;">Trần Thanh Phong</div>
-        <div class="role" style="font-size: 12px; color: var(--fpt-orange);">🔧 Fullstack (TB01649)</div>
-      </div>
-      <div class="team-card" style="padding: 10px;">
-        <img src="assets/img/khanh.jpg" alt="Khánh" style="width:54px; height:54px; border-radius:50%; margin: 0 auto 6px;">
-        <div class="name" style="font-size: 15px; font-weight: 700;">Đoàn Quốc Khánh</div>
-        <div class="role" style="font-size: 12px; color: var(--fpt-orange);">🧪 Tester (TB01544)</div>
-      </div>
-    </div>
-
     <div class="tech-badges">
       <span class="tech-badge">ASP.NET MVC 10</span>
-      <span class="tech-badge">SQL Server & RLS</span>
-      <span class="tech-badge">DeepSeek AI & RAG</span>
-      <span class="tech-badge">Entity Framework Core</span>
-      <span class="tech-badge">Multi-tenant SaaS</span>
-      <span class="tech-badge">1,241 Test Cases PASS</span>
+      <span class="tech-badge">SQL Server</span>
+      <span class="tech-badge">EF Core</span>
+      <span class="tech-badge">DeepSeek AI</span>
+      <span class="tech-badge">RAG Pipeline</span>
+      <span class="tech-badge">Bootstrap 5</span>
     </div>
   </div>
   <div class="speaker-badge">
     <img src="assets/img/quan.jpg" alt="Quân">
     <div>
       <div class="speaker-name">Phạm Trần Anh Quân</div>
-      <div class="speaker-role">PM — Leader — AI</div>
+      <div class="speaker-role">PM — Nhóm trưởng — AI</div>
     </div>
   </div>
 </div>
 
-<!-- ==========================================================================
-     SLIDE 2: BÀI TOÁN THỰC TẾ SME & HƯỚNG GIẢI QUYẾT TOÀN DIỆN
-     ========================================================================== -->
-<div class="slide" data-notes="• Thực trạng đau đớn của SME: Dữ liệu phân mảnh (Excel, Zalo, Trello, Sheet).
-• Hậu quả: Quản lý mất tầm nhìn realtime, công việc trễ hạn không báo trước, đánh giá nhân sự cảm tính, rò rỉ dữ liệu khi không có phân quyền.
-• Hướng giải quyết: Nền tảng All-in-One NEXTGEN hợp nhất OKR 3 cấp, KPI tự động, Kanban Task và AI hỗ trợ quyết định.
-• Giá trị cốt lõi: Single Source of Truth (Một nguồn dữ liệu duy nhất, minh bạch và tức thì).">
+<!-- ==========================================
+     SLIDE 2: THÀNH VIÊN NHÓM
+     ========================================== -->
+<div class="slide" data-notes="Nhóm em gồm 7 thành viên. Em là Quân, phụ trách leader và phần AI. Bạn Như frontend KPI/OKR, An backend KPI/OKR, Nhật frontend vận hành, Bảo backend vận hành, Phong fullstack danh mục, Khánh kiểm thử.">
   <div class="slide-header">
-    <div class="header-left"><img src="assets/img/FPT_Polytechnic-26eda0e9.png" alt="FPT"><span>PHẦN 1 — MỞ ĐẦU & TỔNG QUAN</span></div>
-    <div class="header-right">Quân — PM / Leader</div>
+    <div class="header-left">
+      <img src="assets/img/FPT_Polytechnic-26eda0e9.png" alt="FPT">
+      <span>BÁO CÁO DỰ ÁN TỐT NGHIỆP</span>
+    </div>
+    <div class="header-right">Nhóm VietMach</div>
   </div>
   <div class="slide-content">
-    <h1>Bài toán Thực tế SME & <span class="accent">Hướng Giải quyết</span></h1>
-    <p class="text-lg mb-16">Doanh nghiệp vừa và nhỏ (SME) Việt Nam đang lãng phí đến 35% năng suất vì phân mảnh công cụ:</p>
-    <div class="three-col">
-      <div class="info-card red">
-        <h3>❌ Thực trạng Phân mảnh</h3>
-        <ul class="text-sm">
-          <li>KPI chấm trên <strong>Excel rời rạc</strong></li>
-          <li>Giao việc & gửi file qua <strong>Zalo / Telegram</strong></li>
-          <li>Theo dõi OKR trên <strong>Google Sheets</strong></li>
-          <li>Quản lý công việc trên <strong>Trello / Jira rời</strong></li>
-          <li>Dữ liệu phân tán, không có liên kết</li>
-        </ul>
+    <h1>Thành viên nhóm <span class="accent">VietMach</span></h1>
+    <!-- Row 1: 4 members -->
+    <div class="team-grid">
+      <div class="team-card leader">
+        <img src="assets/img/quan.jpg" alt="Quân">
+        <div class="name">Phạm Trần Anh Quân</div>
+        <div class="mssv">TB01758</div>
+        <div class="role">👑 PM — Nhóm trưởng — AI</div>
       </div>
-      <div class="info-card red">
-        <h3>⚠️ Hậu quả Vận hành</h3>
-        <ul class="text-sm">
-          <li>Quản lý <strong>mù mờ tiến độ</strong> theo thời gian thực</li>
-          <li>Rủi ro trễ hạn bị <strong>giấu kín</strong> đến phút chót</li>
-          <li>Đánh giá nhân viên dựa trên <strong>cảm tính</strong></li>
-          <li>Không có <strong>Audit Log</strong>, dữ liệu dễ bị sửa lén</li>
-          <li>Nhân sự mất phương hướng vì thiếu mục tiêu chung</li>
-        </ul>
+      <div class="team-card">
+        <img src="assets/img/nhu.jpg" alt="Như">
+        <div class="name">Bùi Nguyễn Anh Như</div>
+        <div class="mssv">TB01785</div>
+        <div class="role">🎨 Frontend — KPI/OKR</div>
       </div>
-      <div class="info-card green">
-        <h3>🎯 Hướng Giải quyết NEXTGEN</h3>
-        <ul class="text-sm">
-          <li><strong>Single Source of Truth:</strong> 1 nền tảng hợp nhất duy nhất</li>
-          <li><strong>Liên kết 2 chiều:</strong> Task hàng ngày ↔ KPI/OKR tự động</li>
-          <li><strong>Bảo mật RBAC & SQL RLS:</strong> Cô lập dữ liệu đa tầng</li>
-          <li><strong>DeepSeek AI:</strong> Tự động hóa đề xuất & phân tích rủi ro</li>
-          <li><strong>Đánh giá 7 bậc:</strong> Chuẩn hóa xếp loại công bằng</li>
-        </ul>
+      <div class="team-card">
+        <img src="assets/img/an.jpg" alt="An">
+        <div class="name">Phạm Trần An An</div>
+        <div class="mssv">TB01817</div>
+        <div class="role">⚙️ Backend — KPI/OKR</div>
+      </div>
+      <div class="team-card">
+        <img src="assets/img/nhat.png" alt="Nhật">
+        <div class="name">Vũ Hoàng Huy Nhật</div>
+        <div class="mssv">TB01605</div>
+        <div class="role">🎨 Frontend — Vận hành</div>
       </div>
     </div>
-    <div class="highlight-box blue mt-auto">
-      <p class="text-sm fw-bold text-center">💡 Mục tiêu dự án: Chuyển đổi mô hình quản trị SME từ 'Bị động - Dựa vào cảm tính' sang 'Chủ động - Đo lường bằng dữ liệu thực & Trí tuệ nhân tạo'.</p>
+    <!-- Row 2: 3 members -->
+    <div class="team-grid row-2">
+      <div class="team-card">
+        <img src="assets/img/bao.png" alt="Bảo">
+        <div class="name">Nguyễn Thế Bảo</div>
+        <div class="mssv">TB01573</div>
+        <div class="role">⚙️ Backend — Vận hành</div>
+      </div>
+      <div class="team-card">
+        <img src="assets/img/phong.png" alt="Phong">
+        <div class="name">Trần Thanh Phong</div>
+        <div class="mssv">TB01649</div>
+        <div class="role">🔧 Fullstack — Danh mục</div>
+      </div>
+      <div class="team-card">
+        <img src="assets/img/khanh.jpg" alt="Khánh">
+        <div class="name">Đoàn Quốc Khánh</div>
+        <div class="mssv">TB01544</div>
+        <div class="role">🧪 Tester</div>
+      </div>
+    </div>
+  </div>
+  <div class="slide-footer">
+    <span>FPT Polytechnic — Dự án tốt nghiệp 2026</span>
+  </div>
+  <div class="speaker-badge">
+    <img src="assets/img/quan.jpg" alt="Quân">
+    <div><div class="speaker-name">Quân</div><div class="speaker-role">PM — AI</div></div>
+  </div>
+</div>
+
+<!-- ==========================================
+     SLIDE 3: MỤC LỤC TRÌNH BÀY
+     ========================================== -->
+<div class="slide" data-notes="Bài thuyết trình hôm nay sẽ chia thành 7 phần, mỗi thành viên trình bày phần mình phụ trách. Tổng thời gian 30 phút.">
+  <div class="slide-header">
+    <div class="header-left"><img src="assets/img/FPT_Polytechnic-26eda0e9.png" alt="FPT"><span>BÁO CÁO DỰ ÁN TỐT NGHIỆP</span></div>
+    <div class="header-right">Mục lục</div>
+  </div>
+  <div class="slide-content">
+    <h1>Mục lục <span class="accent">trình bày</span></h1>
+    <div class="two-col">
+      <div class="col">
+        <div class="info-card accent">
+          <h3>🟠 Phần 1 — Mở đầu <span class="text-xs text-muted">(~5 phút)</span></h3>
+          <p class="text-sm">Quân: Giới thiệu đề tài, thực trạng, yêu cầu khách hàng, hướng giải quyết, mục tiêu, tầm nhìn, định hướng phát triển</p>
+        </div>
+        <div class="info-card accent">
+          <h3>🤖 Phần 2 — AI nổi bật <span class="text-xs text-muted">(~5 phút)</span></h3>
+          <p class="text-sm">Quân & Phong: Kiến trúc AI-Native, 9 luồng AI, RAG Pipeline, so sánh trước/sau</p>
+        </div>
+        <div class="info-card blue">
+          <h3>📊 Phần 3 — KPI/OKR <span class="text-xs text-muted">(~6 phút)</span></h3>
+          <p class="text-sm">Như (Frontend) & An (Backend): Giao diện + chức năng OKR 3 cấp, KPI check-in, đánh giá, bảo mật</p>
+        </div>
+        <div class="info-card green">
+          <h3>⚡ Phần 4 — Vận hành <span class="text-xs text-muted">(~5 phút)</span></h3>
+          <p class="text-sm">Nhật (Frontend) & Bảo (Backend): Kanban Board, liên kết KPI/OKR, quản lý dự án trực quan</p>
+        </div>
+      </div>
+      <div class="col">
+        <div class="info-card purple">
+          <h3>📋 Phần 5 — Danh mục & SEO <span class="text-xs text-muted">(~3 phút)</span></h3>
+          <p class="text-sm">Phong: Hệ thống danh mục, cá nhân hóa, SaaS multi-tenant, tối ưu SEO</p>
+        </div>
+        <div class="info-card red">
+          <h3>🧪 Phần 6 — Kiểm thử <span class="text-xs text-muted">(~3 phút)</span></h3>
+          <p class="text-sm">Khánh: Kế hoạch kiểm thử, 84 test suites, thống kê kết quả, ma trận bảo mật</p>
+        </div>
+        <div class="info-card accent">
+          <h3>🎯 Phần 7 — Kết <span class="text-xs text-muted">(~3 phút)</span></h3>
+          <p class="text-sm">Quân: Kiến trúc kỹ thuật, kết quả, hạn chế, video demo, cảm ơn</p>
+        </div>
+        <div class="highlight-box" style="margin-top: auto;">
+          <p class="text-sm fw-bold text-center">⏱ Tổng thời gian: 30 phút trình bày<br>Hỏi đáp riêng sau buổi thuyết trình</p>
+        </div>
+      </div>
     </div>
   </div>
   <div class="slide-footer"><span>FPT Polytechnic — DATN 2026</span></div>
   <div class="speaker-badge"><img src="assets/img/quan.jpg" alt="Quân"><div><div class="speaker-name">Quân</div><div class="speaker-role">PM — AI</div></div></div>
 </div>
 
-<!-- ==========================================================================
-     SLIDE 3: ĐỘT PHÁ AI-NATIVE: 9 LUỒNG AI & RAG PIPELINE
-     ========================================================================== -->
-<div class="slide" data-notes="• Điểm đột phá: Hệ thống thiết kế theo kiến trúc AI-Native, không phải bọc API thông thường.
-• Tích hợp DeepSeek LLM qua RAG Pipeline: Bơm ngữ cảnh doanh nghiệp (KPI, OKR, Task, chính sách) vào Prompt, loại bỏ ảo giác.
-• 9 luồng AI hỗ trợ toàn diện: AI Chatbot nội bộ, Gợi ý KPI chuẩn SMART, Goal Planning tự động sinh Key Results, Check-in Evaluator, Smart Alerts cảnh báo rủi ro trễ hạn.
-• Hiệu quả: Rút ngắn thời gian lập kế hoạch từ 3 ngày xuống 3 giây.
-• Chuyển tiếp: Sau đây xin mời bạn Như trình bày giao diện KPI và OKR.">
-  <div class="slide-header">
-    <div class="header-left"><img src="assets/img/FPT_Polytechnic-26eda0e9.png" alt="FPT"><span>PHẦN 2 — TRÍ TUỆ NHÂN TẠO (AI)</span></div>
-    <div class="header-right">Quân — PM / AI</div>
-  </div>
+<!-- ==========================================
+     SLIDE 4: THỰC TRẠNG & VẤN ĐỀ
+     ========================================== -->
+<div class="slide" data-notes="Hiện nay, doanh nghiệp vừa và nhỏ quản lý công việc, mục tiêu, KPI trên Excel, Zalo, Google Sheet, Trello — dữ liệu rời rạc, thiếu liên kết, quản lý khó theo dõi tiến độ và đánh giá nhân viên khách quan.">
+  <div class="slide-header"><div class="header-left"><img src="assets/img/FPT_Polytechnic-26eda0e9.png" alt="FPT"><span>PHẦN 1 — MỞ ĐẦU</span></div><div class="header-right">Quân</div></div>
   <div class="slide-content">
-    <h1>Đột phá AI-Native: <span class="accent">9 Luồng AI &amp; RAG Pipeline</span></h1>
+    <h1>Thực trạng & <span class="accent">Vấn đề</span></h1>
+    <p class="text-lg">Doanh nghiệp vừa và nhỏ (SME) tại Việt Nam đang đối mặt với:</p>
+    <div class="three-col">
+      <div class="info-card red">
+        <h3>📂 Dữ liệu rời rạc</h3>
+        <ul class="text-sm">
+          <li>KPI theo dõi trên <strong>Excel</strong></li>
+          <li>Giao việc qua <strong>Zalo, email</strong></li>
+          <li>OKR trên <strong>Google Sheet</strong></li>
+          <li>Không có nguồn dữ liệu duy nhất (<em>Single Source of Truth</em>)</li>
+        </ul>
+      </div>
+      <div class="info-card red">
+        <h3>👁️ Thiếu tầm nhìn tổng thể</h3>
+        <ul class="text-sm">
+          <li>Quản lý <strong>không nhìn được tiến độ</strong> theo thời gian thực</li>
+          <li>Rủi ro vận hành bị <strong>giấu sâu</strong> trong báo cáo cuối kỳ</li>
+          <li>Đánh giá nhân viên dựa trên <strong>cảm tính</strong></li>
+          <li><strong>Không có cảnh báo</strong> khi công việc trễ hạn</li>
+        </ul>
+      </div>
+      <div class="info-card red">
+        <h3>🔓 Thiếu bảo mật & kiểm soát</h3>
+        <ul class="text-sm">
+          <li>Excel/Google Sheet <strong>không phân quyền</strong> theo vai trò</li>
+          <li>Nhân viên có thể xem/sửa dữ liệu <strong>không thuộc phạm vi</strong></li>
+          <li>Không có <strong>nhật ký kiểm toán</strong> (audit log)</li>
+          <li>Thiếu cơ chế <strong>duyệt — phê duyệt</strong></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="slide-footer"><span>FPT Polytechnic — DATN 2026</span></div>
+  <div class="speaker-badge"><img src="assets/img/quan.jpg" alt="Quân"><div><div class="speaker-name">Quân</div><div class="speaker-role">PM — AI</div></div></div>
+</div>
+
+<!-- ==========================================
+     SLIDE 5: YÊU CẦU KHÁCH HÀNG
+     ========================================== -->
+<div class="slide" data-notes="Dựa trên khảo sát thực tế, chúng em tổng hợp 6 nhóm yêu cầu cốt lõi từ khách hàng SME.">
+  <div class="slide-header"><div class="header-left"><img src="assets/img/FPT_Polytechnic-26eda0e9.png" alt="FPT"><span>PHẦN 1 — MỞ ĐẦU</span></div><div class="header-right">Quân</div></div>
+  <div class="slide-content">
+    <h1>Yêu cầu <span class="accent">khách hàng</span></h1>
+    <div class="three-col">
+      <div class="info-card accent"><h3>🎯 Quản lý mục tiêu</h3><p class="text-sm">Thiết lập OKR 3 cấp (Công ty → Phòng ban → Cá nhân), KPI với ngưỡng Pass/Fail, check-in định kỳ tự động nhắc.</p></div>
+      <div class="info-card blue"><h3>⚡ Vận hành công việc</h3><p class="text-sm">Kanban board quản lý dự án, phân công task, theo dõi tiến độ, tự động liên kết ngược KPI/OKR.</p></div>
+      <div class="info-card green"><h3>🤖 AI hỗ trợ quyết định</h3><p class="text-sm">Phân tích dữ liệu vận hành, cảnh báo rủi ro, gợi ý KPI, đánh giá check-in, tư vấn chiến lược.</p></div>
+      <div class="info-card purple"><h3>🔒 Bảo mật đa cấp</h3><p class="text-sm">RBAC 60 quyền hạn, Row-Level Security SQL Server, phân quyền theo phòng ban, tenant isolation.</p></div>
+      <div class="info-card"><h3>🏢 Quản lý đa tổ chức</h3><p class="text-sm">Multi-tenant SaaS, mỗi doanh nghiệp dữ liệu riêng biệt, gói cước linh hoạt, cá nhân hóa giao diện.</p></div>
+      <div class="info-card"><h3>📊 Báo cáo & Dashboard</h3><p class="text-sm">Dashboard tổng quan thời gian thực, xuất báo cáo Excel, biểu đồ ApexCharts, xếp hạng hiệu suất.</p></div>
+    </div>
+  </div>
+  <div class="slide-footer"><span>FPT Polytechnic — DATN 2026</span></div>
+  <div class="speaker-badge"><img src="assets/img/quan.jpg" alt="Quân"><div><div class="speaker-name">Quân</div><div class="speaker-role">PM — AI</div></div></div>
+</div>
+
+<!-- ==========================================
+     SLIDE 6: HƯỚNG GIẢI QUYẾT
+     ========================================== -->
+<div class="slide" data-notes="Giải pháp của nhóm em là xây dựng một nền tảng duy nhất kết nối mục tiêu chiến lược với thực thi vận hành, tích hợp AI phân tích và hỗ trợ ra quyết định.">
+  <div class="slide-header"><div class="header-left"><img src="assets/img/FPT_Polytechnic-26eda0e9.png" alt="FPT"><span>PHẦN 1 — MỞ ĐẦU</span></div><div class="header-right">Quân</div></div>
+  <div class="slide-content">
+    <h1>Hướng <span class="accent">giải quyết</span></h1>
+    <h3 class="text-muted mb-24">Connecting Goals with Execution — Kết nối mục tiêu với thực thi</h3>
+    <div class="flow">
+      <div class="flow-step">🏢 Sứ mệnh<br>Tầm nhìn</div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-step">🎯 OKR<br>3 cấp</div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-step">📊 KPI<br>Chỉ tiêu</div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-step">📋 Kanban<br>Công việc</div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-step">✅ Check-in<br>Tiến độ</div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-step">🤖 AI<br>Phân tích</div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-step">📈 Dashboard<br>Quyết định</div>
+    </div>
+    <div class="two-col" style="margin-top:32px;">
+      <div class="highlight-box">
+        <h3>🔗 Một nền tảng duy nhất</h3>
+        <ul class="text-sm">
+          <li>Xóa bỏ rào cản giữa công cụ rời rạc</li>
+          <li>Dữ liệu đồng bộ, nhất quán từ chiến lược đến thực thi</li>
+          <li>Mọi thành viên truy cập đúng dữ liệu theo vai trò</li>
+        </ul>
+      </div>
+      <div class="highlight-box blue">
+        <h3>🤖 AI không thay thế, AI hỗ trợ</h3>
+        <ul class="text-sm">
+          <li>AI tạo bản nháp (Draft), con người phê duyệt</li>
+          <li>Mọi gợi ý đều có trích dẫn nguồn dữ liệu</li>
+          <li>Từ chối trả lời khi thiếu bằng chứng (Abstain)</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="slide-footer"><span>FPT Polytechnic — DATN 2026</span></div>
+  <div class="speaker-badge"><img src="assets/img/quan.jpg" alt="Quân"><div><div class="speaker-name">Quân</div><div class="speaker-role">PM — AI</div></div></div>
+</div>
+
+<!-- ==========================================
+     SLIDE 7: MỤC TIÊU & TẦM NHÌN
+     ========================================== -->
+<div class="slide" data-notes="Mục tiêu tổng quát: xây dựng nền tảng vận hành thông minh giúp SME số hóa quản lý mục tiêu, vận hành và đánh giá nhân sự.">
+  <div class="slide-header"><div class="header-left"><img src="assets/img/FPT_Polytechnic-26eda0e9.png" alt="FPT"><span>PHẦN 1 — MỞ ĐẦU</span></div><div class="header-right">Quân</div></div>
+  <div class="slide-content">
+    <h1>Mục tiêu, <span class="accent">Tầm nhìn</span> & Sứ mệnh</h1>
     <div class="two-col">
       <div class="col">
-        <div class="info-card accent mb-16">
-          <h3>🧠 Kiến trúc RAG &amp; Context Injection</h3>
-          <p class="text-sm mb-8">Thay vì trả lời chung chung, hệ thống trích xuất dữ liệu nội bộ tức thì để làm giàu ngữ cảnh Prompt:</p>
-          <div class="code-block">
-            <span class="code-comment">// RAG Context Injection Pipeline</span><br>
-            <span class="code-keyword">var</span> ctx = <span class="code-keyword">await</span> _ragService.GetContextAsync(tenantId, departmentId);<br>
-            <span class="code-keyword">var</span> prompt = $<span class="code-string">"Dựa vào KPI hiện tại [{ctx.KpiSummary}], hãy phân tích..."</span>;<br>
-            <span class="code-keyword">var</span> result = <span class="code-keyword">await</span> _deepSeekClient.GenerateAsync(prompt);
-          </div>
+        <div class="info-card accent">
+          <h3>🎯 Mục tiêu tổng quát</h3>
+          <p class="text-sm">Xây dựng hệ thống quản lý vận hành thông minh tích hợp AI, phục vụ doanh nghiệp vừa và nhỏ quản lý mục tiêu, công việc và đánh giá nhân sự trên một nền tảng duy nhất.</p>
         </div>
-        <div class="info-card blue">
-          <h3>⚡ Hiệu quả Vận hành Thực tế</h3>
+        <div class="info-card">
+          <h3>📌 Mục tiêu cụ thể</h3>
           <ul class="text-sm">
-            <li>Lập kế hoạch mục tiêu quý: Từ <strong>3 ngày → 3 giây</strong></li>
-            <li>Độ chính xác gợi ý KPI theo chuẩn SMART: <strong>&gt; 92%</strong></li>
-            <li>Phát hiện sớm nguy cơ trễ hạn trước: <strong>7 – 14 ngày</strong></li>
+            <li>Quản lý OKR 3 cấp liên kết sứ mệnh</li>
+            <li>KPI check-in định kỳ, đánh giá 7 bậc</li>
+            <li>Kanban board liên kết KPI/OKR tự động</li>
+            <li>AI gợi ý, phân tích, cảnh báo rủi ro</li>
+            <li>RBAC 60 quyền + Row-Level Security</li>
+            <li>Dashboard thời gian thực + xuất Excel</li>
           </ul>
         </div>
       </div>
       <div class="col">
-        <div class="info-card green mb-16">
-          <h3>🤖 9 Luồng Nghiệp Vụ AI Thông Minh</h3>
-          <div class="tag-cloud" style="margin-top: 10px;">
-            <span class="tag tag-accent">1. AI Chatbot nội bộ RAG</span>
-            <span class="tag tag-accent">2. Gợi ý KPI chuẩn SMART</span>
-            <span class="tag tag-accent">3. Goal Planning sinh Key Results</span>
-            <span class="tag tag-blue">4. Check-in Evaluator tự động</span>
-            <span class="tag tag-blue">5. Smart Alerts cảnh báo rủi ro</span>
-            <span class="tag tag-blue">6. Phân tích hiệu suất nhân sự</span>
-            <span class="tag tag-green">7. Dự báo khả năng hoàn thành</span>
-            <span class="tag tag-green">8. Tóm tắt báo cáo tuần/tháng</span>
-            <span class="tag tag-green">9. Đề xuất giải pháp tháo gỡ điểm nghẽn</span>
-          </div>
+        <div class="info-card blue">
+          <h3>🔭 Tầm nhìn</h3>
+          <p class="text-sm">Trở thành nền tảng SaaS vận hành thông minh hàng đầu cho doanh nghiệp SME Việt Nam, nơi mỗi quyết định được hỗ trợ bởi dữ liệu và AI.</p>
         </div>
-        <div class="highlight-box green mt-auto">
-          <p class="text-sm fw-bold">🛡️ An toàn &amp; Bảo mật: DeepSeek chạy qua proxy bảo vệ dữ liệu, không sử dụng dữ liệu doanh nghiệp để huấn luyện model công cộng.</p>
+        <div class="info-card green">
+          <h3>🌟 Sứ mệnh</h3>
+          <p class="text-sm">Số hóa quy trình vận hành doanh nghiệp, nâng cao tính minh bạch trong đánh giá hiệu suất, hỗ trợ ra quyết định dựa trên dữ liệu — giảm thiểu thao tác thủ công, tối ưu hiệu suất quản lý.</p>
         </div>
       </div>
     </div>
@@ -238,9 +353,312 @@
   <div class="speaker-badge"><img src="assets/img/quan.jpg" alt="Quân"><div><div class="speaker-name">Quân</div><div class="speaker-role">PM — AI</div></div></div>
 </div>
 
-<!-- ==========================================================================
-     SLIDE 4: GIAO DIỆN OKR ĐA CẤP & DASHBOARD KPI TRỰC QUAN
-     ========================================================================== -->
+<!-- ==========================================
+     SLIDE 8: ĐỊNH HƯỚNG PHÁT TRIỂN
+     ========================================== -->
+<div class="slide" data-notes="Sau dự án tốt nghiệp, nhóm em có 5 hướng phát triển tiếp theo: mobile app, tích hợp email/Zalo, BI dashboard, AI Agent tự động, mở rộng multi-tenant.">
+  <div class="slide-header"><div class="header-left"><img src="assets/img/FPT_Polytechnic-26eda0e9.png" alt="FPT"><span>PHẦN 1 — MỞ ĐẦU</span></div><div class="header-right">Quân</div></div>
+  <div class="slide-content">
+    <h1>Định hướng <span class="accent">phát triển</span></h1>
+    <div class="three-col">
+      <div class="info-card accent"><h3>📱 Mobile App</h3><p class="text-sm">Phát triển ứng dụng di động cho nhân viên check-in KPI, nhận thông báo, cập nhật task ngay trên điện thoại.</p></div>
+      <div class="info-card blue"><h3>📧 Tích hợp đa kênh</h3><p class="text-sm">Kết nối Email, Zalo OA, Google Calendar để nhắc nhở deadline, gửi báo cáo tự động, đồng bộ lịch họp 1-on-1.</p></div>
+      <div class="info-card green"><h3>📈 BI Dashboard</h3><p class="text-sm">Dashboard phân tích kinh doanh nâng cao: dự báo hiệu suất, xu hướng KPI theo mùa, phân tích tương quan đa biến.</p></div>
+      <div class="info-card purple"><h3>🤖 AI Agent tự động</h3><p class="text-sm">AI Agent phân tích dữ liệu vận hành định kỳ, tự động sinh báo cáo tuần/tháng, phát hiện anomaly, đề xuất cải tiến.</p></div>
+      <div class="info-card"><h3>🏢 Mở rộng SaaS</h3><p class="text-sm">Cá nhân hóa AI theo từng doanh nghiệp, marketplace tích hợp phần mềm kế toán/nhân sự, thanh toán trực tuyến.</p></div>
+    </div>
+  </div>
+  <div class="slide-footer"><span>FPT Polytechnic — DATN 2026</span></div>
+  <div class="speaker-badge"><img src="assets/img/quan.jpg" alt="Quân"><div><div class="speaker-name">Quân</div><div class="speaker-role">PM — AI</div></div></div>
+</div>
+
+<!-- ==========================================
+     SLIDE 9: AI — TỔNG QUAN KIẾN TRÚC
+     ========================================== -->
+<div class="slide" data-notes="Phần AI: Trước đây gọi trực tiếp Gemini API, không kiểm soát hallucination, không bảo mật dữ liệu. Nay chuyển sang kiến trúc AI-Native: DeepSeek Model Gateway, Server-driven Grounding, Strict JSON Schema, Abstain khi thiếu dữ liệu.">
+  <div class="slide-header"><div class="header-left"><img src="assets/img/FPT_Polytechnic-26eda0e9.png" alt="FPT"><span>PHẦN 2 — AI NỔI BẬT</span></div><div class="header-right">Quân & Phong</div></div>
+  <div class="slide-content">
+    <h1>Kiến trúc <span class="accent">AI-Native</span></h1>
+    <h3 class="text-muted">Từ Legacy Gemini → Enterprise AI Architecture</h3>
+    <div class="two-col" style="margin-top: 16px;">
+      <div class="info-card red">
+        <h3>❌ Trước đây (Legacy)</h3>
+        <ul class="text-sm">
+          <li>Gọi trực tiếp Google Gemini API từ Controller</li>
+          <li>Trả text tự do, <strong>không kiểm soát hallucination</strong></li>
+          <li>Tự bịa điểm xác suất (<code>PotentialScore</code>)</li>
+          <li>Lưu raw prompt/response vào database</li>
+          <li>Thiếu kiểm tra quyền dữ liệu server-side</li>
+          <li>Gửi PII (email, SĐT) sang model AI</li>
+        </ul>
+      </div>
+      <div class="info-card green">
+        <h3>✅ Hiện tại (AI-Native)</h3>
+        <ul class="text-sm">
+          <li><strong>Model Gateway</strong> <code>IAIModelClient</code> — DeepSeek V4 flash</li>
+          <li><strong>Server-driven Grounding:</strong> Server tự sinh context, filter TenantId + ACL</li>
+          <li><strong>Strict JSON Schema:</strong> Output cấu trúc chặt chẽ, có <code>sourceIds</code></li>
+          <li><strong>Abstain:</strong> Từ chối trả lời khi thiếu bằng chứng</li>
+          <li><strong>Human-in-the-loop:</strong> AI tạo Draft → Người duyệt → Áp dụng</li>
+          <li>Không bao giờ gửi PII sang model</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="slide-footer"><span>FPT Polytechnic — DATN 2026</span></div>
+  <div class="speaker-badge"><img src="assets/img/quan.jpg" alt="Quân"><div><div class="speaker-name">Quân</div><div class="speaker-role">PM — AI</div></div></div>
+</div>
+
+<!-- ==========================================
+     SLIDE 10: AI — TRƯỚC/SAU SO SÁNH
+     ========================================== -->
+<div class="slide" data-notes="Bảng so sánh tổng quát: Trước dự án vs Sau khi có dự án — về quản lý mục tiêu, vận hành, đánh giá, bảo mật.">
+  <div class="slide-header"><div class="header-left"><img src="assets/img/FPT_Polytechnic-26eda0e9.png" alt="FPT"><span>PHẦN 2 — AI NỔI BẬT</span></div><div class="header-right">Quân</div></div>
+  <div class="slide-content">
+    <h1>So sánh <span class="accent">Trước / Sau</span></h1>
+    <table class="compare-table">
+      <thead><tr><th style="width:25%">Tiêu chí</th><th style="width:37%">❌ Trước (Thủ công)</th><th style="width:38%">✅ Sau (Hệ thống + AI)</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Quản lý mục tiêu</strong></td><td class="old">Excel rời rạc, không liên kết OKR↔KPI</td><td class="new">OKR 3 cấp → KPI → Task liên kết tự động</td></tr>
+        <tr><td><strong>Theo dõi tiến độ</strong></td><td class="old">Báo cáo cuối kỳ, chậm trễ, thiếu thực tế</td><td class="new">Dashboard thời gian thực, check-in định kỳ</td></tr>
+        <tr><td><strong>Đánh giá nhân viên</strong></td><td class="old">Cảm tính, không có rubric, thiên vị</td><td class="new">7 bậc xếp hạng tự động, rubric + AI hỗ trợ</td></tr>
+        <tr><td><strong>Phát hiện rủi ro</strong></td><td class="old">Phát hiện muộn khi đã ảnh hưởng</td><td class="new">Smart Alerts cảnh báo tức thì, AI phân tích xu hướng</td></tr>
+        <tr><td><strong>Bảo mật dữ liệu</strong></td><td class="old">Ai cũng xem/sửa được, không audit log</td><td class="new">RBAC 60 quyền + RLS SQL + Tenant isolation</td></tr>
+        <tr><td><strong>Giao việc</strong></td><td class="old">Zalo/Email, dễ bỏ sót, không trace</td><td class="new">Kanban 6 cột, liên kết KPI, bình luận, history</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="slide-footer"><span>FPT Polytechnic — DATN 2026</span></div>
+  <div class="speaker-badge"><img src="assets/img/quan.jpg" alt="Quân"><div><div class="speaker-name">Quân</div><div class="speaker-role">PM — AI</div></div></div>
+</div>
+
+<!-- ==========================================
+     SLIDE 11: AI — CHAT WIDGET
+     ========================================== -->
+<div class="slide" data-notes="AI Chat Widget cho phép quản lý đặt câu hỏi chiến lược, hệ thống kết hợp dữ liệu SQL snapshot và tài liệu RAG nội bộ để trả lời, có trích dẫn nguồn, từ chối khi không có căn cứ.">
+  <div class="slide-header"><div class="header-left"><img src="assets/img/FPT_Polytechnic-26eda0e9.png" alt="FPT"><span>PHẦN 2 — AI NỔI BẬT</span></div><div class="header-right">Quân</div></div>
+  <div class="slide-content">
+    <h1>AI Chat <span class="accent">Widget</span></h1>
+    <div class="two-col col-40-60">
+      <div class="col">
+        <div class="info-card accent">
+          <h3>💬 Trợ lý tư vấn chiến lược</h3>
+          <ul class="text-sm">
+            <li>Hỏi đáp tự nhiên bằng tiếng Việt</li>
+            <li>Kết hợp <strong>SQL snapshot</strong> + <strong>RAG tài liệu</strong></li>
+            <li>Trích dẫn nguồn rõ ràng (<code>sourceIds</code>)</li>
+            <li>Từ chối khi thiếu dữ liệu (Abstain)</li>
+            <li>Phân quyền: chỉ truy cập dữ liệu trong phạm vi</li>
+          </ul>
+        </div>
+        <div class="info-card">
+          <h3>🛠️ Công cụ sử dụng</h3>
+          <p class="text-sm"><strong>DeepSeek V4 Flash</strong> qua <code>IAIModelClient</code>, <strong>Qdrant</strong> vector search, <strong>BGE-M3</strong> embedding, <strong>MinIO</strong> lưu trữ tài liệu.</p>
+        </div>
+      </div>
+      <div class="col">
+        <div class="screenshot-frame">
+          <img src="assets/screenshots/ai_hero_light.png" alt="AI Chat Widget">
+        </div>
+        <div class="screenshot-caption">Giao diện AI Chat Widget — tư vấn có trích dẫn nguồn</div>
+      </div>
+    </div>
+  </div>
+  <div class="slide-footer"><span>FPT Polytechnic — DATN 2026</span></div>
+  <div class="speaker-badge"><img src="assets/img/quan.jpg" alt="Quân"><div><div class="speaker-name">Quân</div><div class="speaker-role">PM — AI</div></div></div>
+</div>
+
+<!-- ==========================================
+     SLIDE 12: AI — GỢI Ý KPI & GOAL PLANNING
+     ========================================== -->
+<div class="slide" data-notes="AI gợi ý KPI chuẩn SMART dựa trên OKR và lịch sử phòng ban. Goal Planning Agent phân rã mục tiêu thành task trên Kanban với Fit Score.">
+  <div class="slide-header"><div class="header-left"><img src="assets/img/FPT_Polytechnic-26eda0e9.png" alt="FPT"><span>PHẦN 2 — AI NỔI BẬT</span></div><div class="header-right">Phong</div></div>
+  <div class="slide-content">
+    <h1>Gợi ý KPI & <span class="accent">Goal Planning</span></h1>
+    <div class="two-col">
+      <div class="col">
+        <div class="info-card accent">
+          <h3>🎯 Gợi ý KPI thông minh</h3>
+          <ul class="text-sm">
+            <li>Phân tích OKR, vai trò, lịch sử phòng ban</li>
+            <li>Gợi ý KPI chuẩn <strong>SMART</strong> (định lượng, ngưỡng, đơn vị)</li>
+            <li>Người dùng chỉnh sửa và phê duyệt</li>
+            <li><strong>Công cụ:</strong> <code>KpiSuggestionAdvisor</code></li>
+          </ul>
+        </div>
+        <div class="info-card blue">
+          <h3>📋 Goal Planning Agent</h3>
+          <ul class="text-sm">
+            <li>Phân rã KPI/OKR → <strong>Work Items</strong> trên Kanban</li>
+            <li>Gán hạn chót, ưu tiên, người phụ trách</li>
+            <li>Tính <strong>Fit Score</strong>: 35% mục tiêu, 25% lịch sử, 20% phòng ban, 10% khối lượng, 10% chất lượng</li>
+            <li><strong>Công cụ:</strong> <code>GoalPlanningDraftService</code></li>
+          </ul>
+        </div>
+      </div>
+      <div class="col">
+        <div class="info-card green">
+          <h3>🔄 Quy trình AI → Người duyệt</h3>
+          <div class="flow" style="flex-direction: column; align-items: stretch; gap: 12px;">
+            <div class="flow-step" style="justify-content: center;">1️⃣ Người dùng chọn KPI/OKR cần phân rã</div>
+            <div class="flow-step" style="justify-content: center;">2️⃣ AI phân tích ngữ cảnh + sinh Draft</div>
+            <div class="flow-step" style="justify-content: center;">3️⃣ Hiển thị danh sách Task đề xuất + Fit Score</div>
+            <div class="flow-step" style="justify-content: center;">4️⃣ Người dùng chỉnh sửa, loại bỏ, phê duyệt</div>
+            <div class="flow-step" style="justify-content: center;">5️⃣ Task được tạo trên Kanban Board</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="slide-footer"><span>FPT Polytechnic — DATN 2026</span></div>
+  <div class="speaker-badge"><img src="assets/img/phong.png" alt="Phong"><div><div class="speaker-name">Phong</div><div class="speaker-role">Fullstack — AI</div></div></div>
+</div>
+
+<!-- ==========================================
+     SLIDE 13: AI — CHECK-IN EVALUATOR
+     ========================================== -->
+<div class="slide" data-notes="Check-in AI Evaluator đánh giá khách quan tiến độ check-in, so sánh tiến độ kỳ vọng vs thực tế, áp dụng rubric có phiên bản. Tính Confidence Score với 4 yếu tố.">
+  <div class="slide-header"><div class="header-left"><img src="assets/img/FPT_Polytechnic-26eda0e9.png" alt="FPT"><span>PHẦN 2 — AI NỔI BẬT</span></div><div class="header-right">Phong</div></div>
+  <div class="slide-content">
+    <h1>Check-in <span class="accent">AI Evaluator</span></h1>
+    <div class="two-col">
+      <div class="col">
+        <div class="info-card accent">
+          <h3>📊 Đánh giá check-in khách quan</h3>
+          <ul class="text-sm">
+            <li>So sánh <strong>tiến độ kỳ vọng</strong> vs <strong>tiến độ thực tế</strong> theo lịch deadline</li>
+            <li>Áp dụng <strong>Rubric</strong> định lượng + định tính có phiên bản (Versioning)</li>
+            <li>AI sinh nhận xét và điểm đánh giá Draft</li>
+            <li>Quản lý xem, chỉnh sửa, phê duyệt hoặc từ chối</li>
+          </ul>
+        </div>
+        <div class="info-card blue">
+          <h3>🔐 Confidence Score</h3>
+          <p class="text-sm">Tính điểm tự tin 4 yếu tố:</p>
+          <ul class="text-sm">
+            <li><strong>40%</strong> Coverage — Độ phủ dữ liệu check-in</li>
+            <li><strong>25%</strong> Authority — Quyền hạn người check-in</li>
+            <li><strong>20%</strong> Consistency — Tính nhất quán lịch sử</li>
+            <li><strong>15%</strong> Freshness — Độ mới dữ liệu</li>
+          </ul>
+        </div>
+      </div>
+      <div class="col">
+        <div class="info-card green">
+          <h3>✅ Cải tiến so với trước</h3>
+          <table class="compare-table" style="font-size:16px;">
+            <tr><td class="old">Quản lý chấm điểm thủ công, chủ quan</td></tr>
+            <tr><td class="new">→ AI đối chiếu dữ liệu, rubric chuẩn hóa</td></tr>
+            <tr><td class="old">Không có thang đo, mỗi người chấm khác nhau</td></tr>
+            <tr><td class="new">→ Rubric versioned, nhất quán toàn hệ thống</td></tr>
+            <tr><td class="old">Mất 30+ phút/nhân viên để đánh giá</td></tr>
+            <tr><td class="new">→ AI sinh draft 3-5 giây, quản lý chỉ cần duyệt</td></tr>
+          </table>
+        </div>
+        <p class="text-sm text-muted"><strong>Công cụ:</strong> <code>CheckInAiEvaluator</code>, <code>CheckInAiConfidenceCalculator</code>, <code>EvaluationRubric</code></p>
+      </div>
+    </div>
+  </div>
+  <div class="slide-footer"><span>FPT Polytechnic — DATN 2026</span></div>
+  <div class="speaker-badge"><img src="assets/img/phong.png" alt="Phong"><div><div class="speaker-name">Phong</div><div class="speaker-role">Fullstack — AI</div></div></div>
+</div>
+
+<!-- ==========================================
+     SLIDE 14: AI — SMART ALERTS & PERFORMANCE
+     ========================================== -->
+<div class="slide" data-notes="Smart Alerts tự động phát hiện rủi ro từ dữ liệu check-in: quá hạn, tắc nghẽn, khẩn cấp. Performance Analysis tổng hợp điểm mạnh, điểm nghẽn, khuyến nghị. Customer Segment phân tích khách hàng.">
+  <div class="slide-header"><div class="header-left"><img src="assets/img/FPT_Polytechnic-26eda0e9.png" alt="FPT"><span>PHẦN 2 — AI NỔI BẬT</span></div><div class="header-right">Quân</div></div>
+  <div class="slide-content">
+    <h1>Smart Alerts & <span class="accent">Performance</span></h1>
+    <div class="three-col">
+      <div class="info-card accent">
+        <h3>🚨 Smart Alerts</h3>
+        <ul class="text-sm">
+          <li>Phát hiện tự động: task quá hạn, KPI chậm tiến độ, check-in bỏ lỡ</li>
+          <li>Hợp nhất cảnh báo trùng lặp</li>
+          <li>Tự triệt tiêu khi rủi ro đã được giải quyết</li>
+          <li><strong>Công cụ:</strong> <code>AIAlertService</code></li>
+        </ul>
+      </div>
+      <div class="info-card blue">
+        <h3>📈 Performance Analysis</h3>
+        <ul class="text-sm">
+          <li>Phân tích tổng hợp hiệu suất từng phòng ban</li>
+          <li>Xác định điểm mạnh, điểm nghẽn</li>
+          <li>Khuyến nghị hành động cụ thể</li>
+          <li><strong>Công cụ:</strong> <code>PerformanceAnalysisAdvisor</code></li>
+        </ul>
+      </div>
+      <div class="info-card green">
+        <h3>👥 Customer Segment</h3>
+        <ul class="text-sm">
+          <li>Phân tích dữ liệu doanh thu và KPI kinh doanh</li>
+          <li>Gợi ý phân khúc khách hàng tiềm năng</li>
+          <li>Hỗ trợ phòng Sales lập kế hoạch</li>
+          <li><strong>Công cụ:</strong> <code>CustomerSegmentAdvisor</code></li>
+        </ul>
+      </div>
+    </div>
+    <div class="highlight-box" style="margin-top: 16px;">
+      <p class="text-sm text-center"><strong>🤖 Tổng cộng 9 luồng AI-Native:</strong> Chat, Gợi ý KPI, Goal Planning, Check-in Evaluator, OKR Key Result Advisor, Evaluation Review Draft, Customer Segment, Performance Analysis, Smart Alerts — tất cả đều có <strong>Human-in-the-loop</strong></p>
+    </div>
+  </div>
+  <div class="slide-footer"><span>FPT Polytechnic — DATN 2026</span></div>
+  <div class="speaker-badge"><img src="assets/img/quan.jpg" alt="Quân"><div><div class="speaker-name">Quân</div><div class="speaker-role">PM — AI</div></div></div>
+</div>
+
+<!-- ==========================================
+     SLIDE 15: AI — RAG PIPELINE
+     ========================================== -->
+<div class="slide" data-notes="RAG Pipeline: Upload file → ClamAV quét virus → MinIO lưu trữ → MinerU trích xuất text → BGE-M3 sinh vector 1024 chiều → Qdrant lưu vector có filter tenant + ACL → Khi truy vấn, kết hợp SQL kiểm tra quyền.">
+  <div class="slide-header"><div class="header-left"><img src="assets/img/FPT_Polytechnic-26eda0e9.png" alt="FPT"><span>PHẦN 2 — AI NỔI BẬT</span></div><div class="header-right">Quân</div></div>
+  <div class="slide-content">
+    <h1>RAG <span class="accent">Pipeline</span></h1>
+    <h3 class="text-muted">Retrieval-Augmented Generation — Nạp tri thức nội bộ cho AI</h3>
+    <div class="flow" style="margin-top: 24px;">
+      <div class="flow-step">📄 Upload<br>PDF/DOCX</div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-step">🛡️ ClamAV<br>Quét virus</div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-step">🗄️ MinIO<br>Lưu blob</div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-step">📝 MinerU<br>Trích xuất text</div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-step">🧠 BGE-M3<br>Vector 1024d</div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-step">🔍 Qdrant<br>Vector DB</div>
+    </div>
+    <div class="two-col" style="margin-top: 32px;">
+      <div class="info-card accent">
+        <h3>🔐 Bảo mật RAG</h3>
+        <ul class="text-sm">
+          <li>Mỗi vector chunk được gắn <strong>TenantId + ACL</strong></li>
+          <li>Khi truy vấn, lọc theo quyền người dùng hiện tại</li>
+          <li>SQL Authoritative Recheck trước khi trả kết quả</li>
+        </ul>
+      </div>
+      <div class="info-card">
+        <h3>📊 Giám sát & Hiệu chuẩn</h3>
+        <ul class="text-sm">
+          <li>Theo dõi chỉ số AI 30 ngày</li>
+          <li>Citation coverage, Abstain rate</li>
+          <li>Latency P95, Delta AI vs người duyệt</li>
+          <li>Ingestion Outbox retry & DeadLetter</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="slide-footer"><span>FPT Polytechnic — DATN 2026</span></div>
+  <div class="speaker-badge"><img src="assets/img/quan.jpg" alt="Quân"><div><div class="speaker-name">Quân</div><div class="speaker-role">PM — AI</div></div></div>
+</div>
+
+
+
+<!-- ==========================================
+     SLIDE 16–19: KPI / OKR (Như & An)
+     ========================================== -->
+
+<!-- SLIDE 16: GIAO DIỆN OKR ĐA CẤP & DASHBOARD KPI -->
 <div class="slide" data-notes="• Em là Như, phụ trách Frontend KPI/OKR.
 • Giao diện OKR đa cấp: Trực quan hóa hình cây 3 tầng (Công ty -> Phòng ban -> Cá nhân), giúp mọi nhân viên thấy rõ mục tiêu của mình đóng góp gì cho công ty.
 • Dashboard KPI: Cập nhật tiến độ realtime, thanh đo % trực quan, radar chart năng lực.
@@ -283,9 +701,7 @@
   <div class="speaker-badge"><img src="assets/img/nhu.jpg" alt="Như"><div><div class="speaker-name">Như</div><div class="speaker-role">Frontend — KPI/OKR</div></div></div>
 </div>
 
-<!-- ==========================================================================
-     SLIDE 5: QUY TRÌNH CHECK-IN & REVIEW QUEUE TRỰC QUAN
-     ========================================================================== -->
+<!-- SLIDE 17: QUY TRÌNH CHECK-IN & REVIEW QUEUE TRỰC QUAN -->
 <div class="slide" data-notes="• Giao diện Check-in định kỳ: Nhân viên chỉ mất 2 phút để tự đánh giá tiến độ, ghi chú kết quả đạt được và đính kèm file minh chứng.
 • Review Queue tập trung: Cấp quản lý không cần lục tìm từng người, toàn bộ yêu cầu chờ duyệt hiển thị tại 1 màn hình duy nhất.
 • Phê duyệt 1 chạm: Quản lý xem minh chứng, bấm Duyệt hoặc Từ chối kèm nhận xét tức thì.
@@ -329,9 +745,7 @@
   <div class="speaker-badge"><img src="assets/img/nhu.jpg" alt="Như"><div><div class="speaker-name">Như</div><div class="speaker-role">Frontend — KPI/OKR</div></div></div>
 </div>
 
-<!-- ==========================================================================
-     SLIDE 6: ĐỘNG CƠ TÍNH ĐIỂM, ĐÁNH GIÁ 7 BẬC & STATE MACHINE
-     ========================================================================== -->
+<!-- SLIDE 18: ĐỘNG CƠ TÍNH ĐIỂM, ĐÁNH GIÁ 7 BẬC & STATE MACHINE -->
 <div class="slide" data-notes="• Em là An, phụ trách Backend KPI/OKR.
 • State Machine nghiêm ngặt: Vòng đời Check-in khép kín (Draft -> Submitted -> Reviewed -> Finalized). Ngăn chặn tuyệt đối việc can thiệp điểm sau khi đã chốt.
 • Công thức tính điểm trọng số: Điểm tổng = Tổng (Điểm_i * Trọng số_i), bắt buộc tổng trọng số = 100%.
@@ -386,9 +800,7 @@
   <div class="speaker-badge"><img src="assets/img/an.jpg" alt="An"><div><div class="speaker-name">An</div><div class="speaker-role">Backend — KPI/OKR</div></div></div>
 </div>
 
-<!-- ==========================================================================
-     SLIDE 7: BẢO MẬT & PHÂN QUYỀN ĐA TẦNG (RBAC & SQL RLS)
-     ========================================================================== -->
+<!-- SLIDE 19: BẢO MẬT & PHÂN QUYỀN ĐA TẦNG (RBAC & SQL RLS) -->
 <div class="slide" data-notes="• Bảo vệ dữ liệu doanh nghiệp là ưu tiên sống còn.
 • RBAC 5 vai trò: SaaSAdmin, Doanh nghiệp Admin, Quản lý, Nhân viên, Khách. Kiểm soát chặt qua Action Filter trên Controller.
 • Điểm sáng kỹ thuật: Tích hợp SQL Server Row-Level Security (RLS) trực tiếp ở tầng database. Dù bị tấn công API, dữ liệu giữa các tenant và phòng ban vẫn được cô lập triệt để.
@@ -445,9 +857,11 @@
   <div class="speaker-badge"><img src="assets/img/an.jpg" alt="An"><div><div class="speaker-name">An</div><div class="speaker-role">Backend — KPI/OKR</div></div></div>
 </div>
 
-<!-- ==========================================================================
-     SLIDE 8: GIAO DIỆN KANBAN BOARD & QUẢN TRỊ CÔNG VIỆC TRỰC QUAN
-     ========================================================================== -->
+<!-- ==========================================
+     SLIDE 20–23: VẬN HÀNH (Nhật & Bảo)
+     ========================================== -->
+
+<!-- SLIDE 20: GIAO DIỆN KANBAN BOARD & QUẢN TRỊ CÔNG VIỆC TRỰC QUAN -->
 <div class="slide" data-notes="• Em là Nhật, phụ trách Frontend phân hệ Vận hành.
 • Bảng Kanban 6 cột chuẩn Agile: Backlog, To Do, In Progress, Review, Testing, Done.
 • Thao tác kéo thả tức thì (Drag & Drop) với hiệu ứng thị giác mượt mà, phản hồi API realtime.
@@ -460,7 +874,6 @@
     <h1>Giao diện Kanban Board &amp; <span class="accent">Quản trị Công việc</span></h1>
     <p class="text-sm mb-16">Mô hình luồng công việc 6 cột chuẩn hóa, trực quan và không độ trễ:</p>
     
-    <!-- Kanban 6 Cột Mô Phỏng -->
     <div class="kanban-demo mb-16">
       <div class="kanban-col">
         <div class="col-title">📥 Backlog (3)</div>
@@ -511,9 +924,7 @@
   <div class="speaker-badge"><img src="assets/img/nhat.png" alt="Nhật"><div><div class="speaker-name">Nhật</div><div class="speaker-role">Frontend — Vận hành</div></div></div>
 </div>
 
-<!-- ==========================================================================
-     SLIDE 9: QUẢN LÝ DỰ ÁN TRỰC QUAN & ĐIỀU PHỐI NGUỒN LỰC
-     ========================================================================== -->
+<!-- SLIDE 21: QUẢN LÝ DỰ ÁN TRỰC QUAN & ĐIỀU PHỐI NGUỒN LỰC -->
 <div class="slide" data-notes="• Giao diện Quản lý dự án tổng thể: Theo dõi danh sách dự án, % tiến độ tổng, ngày hết hạn và số lượng task còn lại.
 • Điều phối nguồn lực thông minh: Xem rõ khối lượng công việc của từng thành viên trong phòng ban, tránh tình trạng người quá tải việc, người lại nhàn rỗi.
 • Khắc phục triệt để nhược điểm giao việc qua Zalo: Không mất ngữ cảnh, lưu lịch sử trao đổi và bình luận trực tiếp trên từng đầu việc.">
@@ -562,9 +973,7 @@
   <div class="speaker-badge"><img src="assets/img/nhat.png" alt="Nhật"><div><div class="speaker-name">Nhật</div><div class="speaker-role">Frontend — Vận hành</div></div></div>
 </div>
 
-<!-- ==========================================================================
-     SLIDE 10: LIÊN KẾT HAI CHIỀU TASK ↔ KPI/OKR TỰ ĐỘNG
-     ========================================================================== -->
+<!-- SLIDE 22: LIÊN KẾT HAI CHIỀU TASK ↔ KPI/OKR TỰ ĐỘNG -->
 <div class="slide" data-notes="• Em là Bảo, phụ trách Backend Vận hành.
 • Đột phá cốt lõi: Liên kết 2 chiều giữa Task hàng ngày và Mục tiêu KPI/OKR.
 • Mỗi Task được gán trọng số đóng góp (Impact Weight %) vào một Key Result hoặc KPI.
@@ -628,9 +1037,7 @@
   <div class="speaker-badge"><img src="assets/img/bao.png" alt="Bảo"><div><div class="speaker-name">Bảo</div><div class="speaker-role">Backend — Vận hành</div></div></div>
 </div>
 
-<!-- ==========================================================================
-     SLIDE 11: XỬ LÝ SỰ KIỆN VẬN HÀNH, AUDIT LOG & CẢNH BÁO QUÁ HẠN
-     ========================================================================== -->
+<!-- SLIDE 23: XỬ LÝ SỰ KIỆN VẬN HÀNH, AUDIT LOG & CẢNH BÁO QUÁ HẠN -->
 <div class="slide" data-notes="• Background Service chạy ngầm: Tự động quét deadline các task hàng giờ, phát hiện sớm nguy cơ quá hạn để kích hoạt Smart Alert.
 • Audit Log bất biến: Ghi nhận chi tiết ai đã thao tác, chỉnh sửa trường gì, thời gian nào, giá trị cũ và mới.
 • Event-driven Notification: Thông báo chuông realtime khi có công việc mới hoặc bị trễ hạn.
@@ -677,9 +1084,11 @@
   <div class="speaker-badge"><img src="assets/img/bao.png" alt="Bảo"><div><div class="speaker-name">Bảo</div><div class="speaker-role">Backend — Vận hành</div></div></div>
 </div>
 
-<!-- ==========================================================================
-     SLIDE 12: HỆ THỐNG DANH MỤC ĐỘNG & KIẾN TRÚC MULTI-TENANT SAAS
-     ========================================================================== -->
+<!-- ==========================================
+     SLIDE 24–25: DANH MỤC & SEO (Phong)
+     ========================================== -->
+
+<!-- SLIDE 24: HỆ THỐNG DANH MỤC ĐỘNG & KIẾN TRÚC MULTI-TENANT SAAS -->
 <div class="slide" data-notes="• Em là Phong, phụ trách Fullstack Danh mục, SaaS và SEO.
 • Danh mục động 100%: Quản lý loại KPI, đơn vị tính, chu kỳ đánh giá, lý do không đạt. Doanh nghiệp tự do tùy biến mà không cần IT sửa code.
 • Multi-tenant SaaS: Phục vụ nhiều doanh nghiệp trên cùng một nền tảng, nhưng dữ liệu hoàn toàn cô lập theo TenantId.
@@ -730,9 +1139,7 @@
   <div class="speaker-badge"><img src="assets/img/phong.png" alt="Phong"><div><div class="speaker-name">Phong</div><div class="speaker-role">Fullstack — Danh mục</div></div></div>
 </div>
 
-<!-- ==========================================================================
-     SLIDE 13: TỐI ƯU SEO ON-PAGE, SITEMAP TỰ ĐỘNG & LANDING PAGE
-     ========================================================================== -->
+<!-- SLIDE 25: TỐI ƯU SEO ON-PAGE, SITEMAP TỰ ĐỘNG & LANDING PAGE -->
 <div class="slide" data-notes="• Landing Page chuyên nghiệp: Giới thiệu giải pháp, bảng so sánh gói cước và form đăng ký dùng thử giúp tăng tỷ lệ chuyển đổi khách hàng SME.
 • SeoHelper chuyên dụng: Tự động render thẻ Meta Description, OpenGraph preview trên Zalo/Facebook và Schema.org JSON-LD.
 • Tự động sinh sitemap.xml và robots.txt giúp website được Google lập chỉ mục nhanh chóng.
@@ -783,9 +1190,11 @@
   <div class="speaker-badge"><img src="assets/img/phong.png" alt="Phong"><div><div class="speaker-name">Phong</div><div class="speaker-role">Fullstack — Danh mục</div></div></div>
 </div>
 
-<!-- ==========================================================================
-     SLIDE 14: KẾ HOẠCH & MA TRẬN KIỂM THỬ TOÀN DIỆN
-     ========================================================================== -->
+<!-- ==========================================
+     SLIDE 26–27: KIỂM THỬ (Khánh)
+     ========================================== -->
+
+<!-- SLIDE 26: KẾ HOẠCH & MA TRẬN KIỂM THỬ TOÀN DIỆN -->
 <div class="slide" data-notes="• Em là Khánh, phụ trách Kiểm thử dự án.
 • Quy trình kiểm thử Agile 5 giai đoạn: Phân tích -> Viết Test Plan v3.0 -> Xây dựng Test Suite -> Thực thi kiểm thử -> Quản lý lỗi & Nghiệm thu Retest.
 • Ma trận kiểm thử 5 tầng hệ thống: Unit & Domain, Business Flow, Multi-tenant Security, AI Infrastructure và SQL Server DB.
@@ -837,9 +1246,7 @@
   <div class="speaker-badge"><img src="assets/img/khanh.jpg" alt="Khánh"><div><div class="speaker-name">Khánh</div><div class="speaker-role">Tester</div></div></div>
 </div>
 
-<!-- ==========================================================================
-     SLIDE 15: THỐNG KÊ 1,241 TEST CASES (100% PASS) & 290 BUGS FIXED
-     ========================================================================== -->
+<!-- SLIDE 27: THỐNG KÊ 1,241 TEST CASES (100% PASS) & 290 BUGS FIXED -->
 <div class="slide" data-notes="• Em tự hào công bố kết quả nghiệm thu chất lượng vượt bậc:
 • Tổng số 1,241 Test Cases bao phủ toàn diện: 641 kịch bản tự động xUnit và 600 kịch bản thủ công.
 • Tỷ lệ Đạt: 100.0% (1,241 / 1,241 PASS).
@@ -901,9 +1308,11 @@
   <div class="speaker-badge"><img src="assets/img/khanh.jpg" alt="Khánh"><div><div class="speaker-name">Khánh</div><div class="speaker-role">Tester</div></div></div>
 </div>
 
-<!-- ==========================================================================
-     SLIDE 16: TỔNG KẾT THÀNH TỰU & BẮT ĐẦU PHIÊN DEMO (15 PHÚT)
-     ========================================================================== -->
+<!-- ==========================================
+     SLIDE 28–29: KẾT & DEMO (Quân & Cả nhóm)
+     ========================================== -->
+
+<!-- SLIDE 28: TỔNG KẾT THÀNH TỰU & BẮT ĐẦU PHIÊN DEMO (15 PHÚT) -->
 <div class="slide" data-notes="• Em xin tổng kết thành quả của nhóm VietMach: Đã đóng gói hoàn chỉnh giải pháp vận hành SME với 27 Controller, 45 Entity, 9 luồng AI và 1,241 test cases đạt chuẩn.
 • Sau đây, nhóm xin trân trọng kính mời Quý thầy cô Hội đồng bước vào PHIÊN DEMO TRỰC TIẾP 15 PHÚT với 4 kịch bản trọng tâm:
 1. Trợ lý AI DeepSeek & RAG nội bộ.
@@ -967,7 +1376,6 @@
       </div>
     </div>
 
-    <!-- Thanh hành động chuyển đổi sang phiên Demo trực tiếp -->
     <div class="demo-action-bar">
       <span class="fw-bold text-sm" style="color: var(--gray-700);">🚀 Sẵn sàng khởi động phiên Demo:</span>
       <a href="http://localhost:5000" target="_blank" class="demo-action-btn">
@@ -982,9 +1390,7 @@
   <div class="speaker-badge"><img src="assets/img/quan.jpg" alt="Quân"><div><div class="speaker-name">Quân</div><div class="speaker-role">PM — AI</div></div></div>
 </div>
 
-<!-- ==========================================================================
-     SLIDE 17: LỜI CẢM ƠN & PHIÊN HỎI ĐÁP (Q&A 30 PHÚT)
-     ========================================================================== -->
+<!-- SLIDE 29: LỜI CẢM ƠN & PHIÊN HỎI ĐÁP (Q&A 30 PHÚT) -->
 <div class="slide slide-end" data-notes="• Nhóm VietMach xin trân trọng cảm ơn Quý thầy cô trong Hội đồng phản biện và thầy Phan Hoàng Khải đã lắng nghe và hướng dẫn nhóm.
 • Nhóm em đã sẵn sàng bước vào PHIÊN HỎI ĐÁP (Q&A 30 PHÚT) để tiếp thu các ý kiến đóng góp quý báu từ Quý thầy cô!">
   <div class="end-content">
@@ -1011,6 +1417,7 @@
     </div>
   </div>
 </div>
+
 
 </div><!-- .slides-viewport -->
 
