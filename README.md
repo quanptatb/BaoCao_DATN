@@ -63,12 +63,12 @@ Bộ slide HTML 16:9 chuẩn học đường FPT Polytechnic (Theme cam `#F37021
 - **Slide 7:** Mục tiêu, Tầm nhìn & Sứ mệnh
 - **Slide 8:** Định hướng phát triển hệ thống
 
-### Phần 2: Trí Tuệ Nhân Tạo (AI Nổi Bật) (Slide 9 → 15) — Quân & Phong
+### Phần 2: Trí Tuệ Nhân Tạo (AI Nổi Bật) (Slide 9 → 15) — Phạm Trần Anh Quân (PM / AI)
 - **Slide 9:** Kiến trúc AI-Native (Sơ đồ luồng: Request → Gateway → RAG → DeepSeek → UI)
 - **Slide 10:** AI — So sánh Trước vs Sau khi áp dụng
 - **Slide 11:** AI — Chat Widget tích hợp RAG
-- **Slide 12:** AI — Gợi ý KPI & Goal Planning (Phong)
-- **Slide 13:** AI — Check-in Evaluator tự động (Phong)
+- **Slide 12:** AI — Gợi ý KPI & Goal Planning (Quân)
+- **Slide 13:** AI — Check-in Evaluator tự động (Quân)
 - **Slide 14:** AI — Smart Alerts & Phân tích hiệu suất (Quân)
 - **Slide 15:** AI — RAG Pipeline (Quân)
 
