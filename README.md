@@ -51,12 +51,12 @@ Bộ slide HTML 16:9 chuẩn học đường FPT Polytechnic (Theme cam `#F37021
 
 ---
 
-## 👥 Phân chia thứ tự trình bày (29 Slide — 7 Phần)
+## 👥 Phân chia thứ tự trình bày (31 Slide — 7 Phần)
 
 ### Phần 1: Mở Đầu (Slide 1 → 8) — Phạm Trần Anh Quân (Leader / AI)
 - **Slide 1:** Trang bìa (FPT Polytechnic, đề tài, tech badges, GVHD)
 - **Slide 2:** Thành viên nhóm NEXTGEN (7 thành viên, ảnh, MSSV, vai trò)
-- **Slide 3:** Mục lục trình bày
+- **Slide 3:** Mục lục trình bày (Tổng quan 7 phần, 31 slide)
 - **Slide 4:** Thực trạng & Vấn đề doanh nghiệp SME
 - **Slide 5:** Yêu cầu khách hàng (Khảo sát 15 SME)
 - **Slide 6:** Hướng giải quyết toàn diện
@@ -72,29 +72,31 @@ Bộ slide HTML 16:9 chuẩn học đường FPT Polytechnic (Theme cam `#F37021
 - **Slide 14:** AI — Smart Alerts & Phân tích hiệu suất (Quân)
 - **Slide 15:** AI — RAG Pipeline (Quân)
 
-### Phần 3: KPI / OKR (Slide 16 → 19) — Như (Frontend) & An (Backend)
-- **Slide 16:** Giao diện OKR Đa cấp & Dashboard KPI trực quan (Như ~2p)
-- **Slide 17:** Quy trình Check-in & Review Queue trực quan (Như ~2p)
-- **Slide 18:** Động cơ Tính điểm, Đánh giá 7 Bậc & State Machine (An ~2p)
-- **Slide 19:** Bảo mật & Phân quyền Đa tầng RBAC & SQL RLS (An ~2p)
+### Phần 3: Quản Trị KPI / OKR (Slide 16 → 21) — Như (Frontend) & An (Backend)
+- **Slide 16:** Giao diện OKR Đa cấp & Dashboard KPI trực quan (Như ~1.5p)
+- **Slide 17:** Quy trình Check-in & Review Queue 1 Chạm (Như ~1.5p)
+- **Slide 18:** Vòng Đời Check-in & State Machine Khép Kín 4 Bước (An ~1p)
+- **Slide 19:** Động Cơ Tính Điểm & Thang Đánh Giá 7 Bậc FPT (An ~1p)
+- **Slide 20:** Bảo Mật Đa Tầng RBAC & Chuẩn An Ninh OWASP (An ~1p)
+- **Slide 21:** Bảo Mật Cơ Sở Dữ Liệu SQL Server Row-Level Security (RLS) (An ~1p)
 
-### Phần 4: Vận Hành (Slide 20 → 23) — Nhật (Frontend) & Bảo (Backend)
-- **Slide 20:** Giao diện Kanban Board & Quản trị Công việc trực quan (Nhật ~2p)
-- **Slide 21:** Quản lý Dự án Trực quan & Điều phối Nguồn lực (Nhật ~2p)
-- **Slide 22:** Liên kết Hai Chiều Task ↔ KPI/OKR Tự Động (Bảo ~2p)
-- **Slide 23:** Xử lý Sự kiện, Audit Log & Cảnh báo Quá hạn (Bảo ~2p)
+### Phần 4: Quản Trị Vận Hành (Slide 22 → 25) — Nhật (Frontend) & Bảo (Backend)
+- **Slide 22:** Giao diện Kanban Board & Quản trị Công việc Trực quan (Nhật ~1.5p)
+- **Slide 23:** Quản lý Dự án Trực quan & Cân bằng Tải Nhân sự (Nhật ~1.5p)
+- **Slide 24:** Liên kết Hai Chiều Task ↔ KPI/OKR Tự Động (Bảo ~1.5p)
+- **Slide 25:** Xử lý Sự kiện, Audit Log & Cảnh báo Quá hạn (Bảo ~1.5p)
 
-### Phần 5: Danh Mục & SEO (Slide 24 → 25) — Trần Thanh Phong (Fullstack)
-- **Slide 24:** Hệ thống Danh mục Động & Multi-tenant SaaS (Phong ~2p)
-- **Slide 25:** Tối ưu SEO Kỹ thuật & Landing Page (Phong ~2p)
+### Phần 5: Danh Mục & Quản Trị Hệ Thống (Slide 26 → 27) — Trần Thanh Phong (Fullstack)
+- **Slide 26:** Hệ thống Danh mục Động & Multi-tenant SaaS (Phong ~1.5p)
+- **Slide 27:** Quản trị Cơ cấu Tổ chức & Cấu hình Vận hành (Phong ~1.5p)
 
-### Phần 6: Kiểm Thử (Slide 26 → 27) — Đoàn Quốc Khánh (Tester)
-- **Slide 26:** Kế hoạch & Ma trận Kiểm thử Toàn diện 5 tầng (Khánh ~2p)
-- **Slide 27:** Nghiệm thu Kiểm thử: 1,241 Cases (100% Pass) & 290 Bugs Fixed (Khánh ~2p)
+### Phần 6: Kiểm Thử & Chất Lượng (Slide 28 → 29) — Đoàn Quốc Khánh (Tester)
+- **Slide 28:** Kế hoạch & Ma trận Kiểm thử Toàn diện 5 Tầng (Khánh ~1.5p)
+- **Slide 29:** Nghiệm thu Kiểm thử: 1,241 Cases (100% Pass) & 290 Bugs Fixed (Khánh ~1.5p)
 
-### Phần 7: Tổng Kết, Demo Trực Tiếp & Q&A (Slide 28 → 29) — Quân & Cả nhóm
-- **Slide 28:** Khởi động Hệ thống & Trải nghiệm Trực tiếp (Quân)
-- **Slide 29:** Lời Cảm ơn & Phiên Hỏi Đáp (Q&A 30 Phút) (Cả nhóm)
+### Phần 7: Tổng Kết, Demo Trực Tiếp & Q&A (Slide 30 → 31) — Quân & Cả nhóm
+- **Slide 30:** Khởi động Hệ thống & Trải nghiệm Trực tiếp (Quân ~1p)
+- **Slide 31:** Lời Cảm ơn & Phiên Hỏi Đáp (Q&A 30 Phút) (Cả nhóm)
 
 ---
 
