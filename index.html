@@ -256,7 +256,7 @@
       <div class="col" style="gap: 16px;">
         <div class="info-card purple" style="padding: 16px 22px;">
           <h3>📋 Phần 5 — Danh mục &amp; Quản trị</h3>
-          <p class="text-sm">Phong (Fullstack): Danh mục động không sửa code, SaaS Multi-tenant, Cơ cấu tổ chức.</p>
+          <p class="text-sm">Phong (Fullstack): Danh mục động không sửa code, Kiến trúc Multi-tenant, Cơ cấu tổ chức.</p>
         </div>
         <div class="info-card red" style="padding: 16px 22px;">
           <h3>🧪 Phần 6 — Kiểm thử chất lượng</h3>
@@ -1543,13 +1543,13 @@
      SLIDE 26–27: DANH MỤC & SAAS (Phong)
      ========================================== -->
 
-<!-- SLIDE 26: HỆ THỐNG DANH MỤC ĐỘNG & KIẾN TRÚC MULTI-TENANT SAAS -->
+<!-- SLIDE 26: HỆ THỐNG DANH MỤC ĐỘNG & KIẾN TRÚC MULTI-TENANT -->
 <div class="slide" data-notes="⏱ [Thời lượng: 45 giây — Phong]
-👉 Ý 1 (Danh mục động 100%): Em là Phong. Quản trị viên tự thêm loại KPI, đơn vị đo, chu kỳ chỉ trong 10 giây mà không cần IT sửa code hay migration DB.
-👉 Ý 2 (Kiến trúc Multi-tenant SaaS): Cô lập dữ liệu tuyệt đối qua TenantId và SQL RLS, quản lý gói cước linh hoạt (Starter, Pro, Enterprise).
-👉 Ý 3 (Cá nhân hóa White-label): Cho phép từng công ty đổi Logo, tên phần mềm và màu sắc nhận diện thương hiệu riêng.">
+👉 Ý 1 (Danh mục động 100%): Em là Phong. Quản trị viên tự thêm loại KPI, đơn vị đo chỉ trong 10 giây mà không cần IT can thiệp sửa code hay migrate database.
+👉 Ý 2 (Kiến trúc Multi-tenant): Vận hành linh hoạt đa chi nhánh, công ty thành viên với cơ chế cô lập dữ liệu tuyệt đối qua TenantId và SQL RLS.
+👉 Ý 3 (Tùy biến thương hiệu White-label): Cho phép từng đơn vị tùy biến Logo, tên nhận diện và màu sắc thương hiệu riêng biệt, hỗ trợ chế độ Sáng/Tối.">
   <div class="slide-header">
-    <div class="header-left"><img src="assets/img/FPT_Polytechnic-26eda0e9.png" alt="FPT"><span>PHẦN 5 — DANH MỤC &amp; SAAS</span></div>
+    <div class="header-left"><img src="assets/img/FPT_Polytechnic-26eda0e9.png" alt="FPT"><span>PHẦN 5 — DANH MỤC &amp; HỆ THỐNG</span></div>
     <div class="presenter-chip">
       <img src="assets/img/phong.png" alt="Phong" class="presenter-avatar">
       <div class="presenter-info">
@@ -1560,8 +1560,9 @@
     </div>
   </div>
   <div class="slide-content">
-    <h1>Hệ thống Danh mục Động &amp; <span class="accent">Multi-tenant SaaS</span></h1>
+    <h1>Hệ thống Danh mục Động &amp; <span class="accent">Kiến trúc Multi-tenant</span></h1>
     
+    <!-- 3 Core Feature Cards -->
     <div class="three-col" style="gap: 20px; margin-bottom: 12px;">
       <!-- Feature 1: Dynamic Catalog -->
       <div class="info-card accent" style="padding: 20px 22px;">
@@ -1574,14 +1575,14 @@
         </ul>
       </div>
 
-      <!-- Feature 2: Multi-tenant SaaS -->
+      <!-- Feature 2: Multi-tenant Architecture -->
       <div class="info-card green" style="padding: 20px 22px;">
-        <h3 style="font-size: 22px;">🏢 Multi-Tenant Cloud</h3>
+        <h3 style="font-size: 22px;">🏢 Kiến Trúc Multi-Tenant</h3>
         <ul class="text-sm" style="line-height: 1.7;">
-          <li>Phục vụ hàng ngàn doanh nghiệp trên 1 hệ thống.</li>
-          <li>Cô lập dữ liệu tuyệt đối bằng <strong>TenantId &amp; RLS</strong>.</li>
-          <li>Tự động kích hoạt tài khoản doanh nghiệp mới.</li>
-          <li><strong>Tiết kiệm 80% chi phí</strong> vận hành máy chủ.</li>
+          <li><strong>Vận hành tập trung:</strong> Quản lý đa đơn vị, chi nhánh trên 1 hệ thống.</li>
+          <li><strong>Cô lập dữ liệu tuyệt đối:</strong> Phân tách an toàn bằng <strong>TenantId &amp; RLS</strong>.</li>
+          <li><strong>Quản trị độc lập:</strong> Mỗi đơn vị có cấu hình tham số riêng biệt.</li>
+          <li><strong>Mở rộng linh hoạt:</strong> Sẵn sàng scale tài nguyên theo quy mô.</li>
         </ul>
       </div>
 
@@ -1589,53 +1590,44 @@
       <div class="info-card blue" style="padding: 20px 22px;">
         <h3 style="font-size: 22px;">🎨 White-label Branding</h3>
         <ul class="text-sm" style="line-height: 1.7;">
-          <li>Tùy biến Logo công ty trên thanh điều hướng.</li>
-          <li>Đổi tên hệ thống nhận diện thương hiệu riêng.</li>
-          <li>Tùy chỉnh màu sắc chủ đạo theo doanh nghiệp.</li>
-          <li>Hỗ trợ chuyển đổi mượt mà Sáng / Tối (Light / Dark).</li>
+          <li><strong>Tùy biến Logo:</strong> Đổi Logo thương hiệu trên thanh điều hướng.</li>
+          <li><strong>Định danh đơn vị:</strong> Đổi tên hệ thống nhận diện riêng từng đơn vị.</li>
+          <li><strong>Màu sắc chủ đạo:</strong> Tùy chỉnh bảng màu thương hiệu doanh nghiệp.</li>
+          <li><strong>Giao diện linh hoạt:</strong> Chuyển đổi mượt mà chế độ Sáng / Tối.</li>
         </ul>
       </div>
     </div>
 
-    <!-- 3 SaaS Pricing Tier Cards -->
-    <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; margin-bottom: 12px;">
-      <div style="background: var(--white); border: 1.5px solid var(--gray-300); border-radius: var(--radius-sm); padding: 14px 18px; display: flex; align-items: center; justify-content: space-between;">
-        <div>
-          <strong style="color: var(--navy); font-size: 20px;">Gói STARTER</strong>
-          <div class="text-sm" style="color: var(--gray-600);">Nhóm nhỏ 5–10 người</div>
-        </div>
-        <span class="badge" style="background: var(--gray-200); color: var(--navy);">Miễn phí</span>
+    <!-- 3 Technical Architecture Foundations -->
+    <div class="three-col" style="gap: 16px; margin-bottom: 8px;">
+      <div style="background: var(--off-white); border: 1.5px solid var(--gray-300); border-radius: var(--radius-sm); padding: 14px 18px;">
+        <h4 style="color: var(--fpt-orange-dark); font-size: 19px; margin-bottom: 6px; font-family: var(--font-heading);">🧩 Metadata-Driven Layer</h4>
+        <p style="font-size: 16px; line-height: 1.5; color: var(--gray-700); margin: 0;">Lưu trữ danh mục động dưới dạng Metadata, tự động sinh Form nghiệp vụ và kiểm tra hợp lệ dữ liệu.</p>
       </div>
 
-      <div style="background: var(--white); border: 2px solid var(--fpt-orange); border-radius: var(--radius-sm); padding: 14px 18px; display: flex; align-items: center; justify-content: space-between; box-shadow: var(--shadow-sm);">
-        <div>
-          <strong style="color: var(--fpt-orange-dark); font-size: 20px;">Gói PROFESSIONAL</strong>
-          <div class="text-sm" style="color: var(--gray-600);">Đầy đủ OKR, Kanban &amp; AI</div>
-        </div>
-        <span class="badge badge-orange">Phổ biến nhất</span>
+      <div style="background: var(--off-white); border: 1.5px solid var(--gray-300); border-radius: var(--radius-sm); padding: 14px 18px;">
+        <h4 style="color: var(--green); font-size: 19px; margin-bottom: 6px; font-family: var(--font-heading);">🔒 Data Isolation Engine</h4>
+        <p style="font-size: 16px; line-height: 1.5; color: var(--gray-700); margin: 0;">Session Context tự động nạp TenantId của người dùng, kết hợp SQL RLS ngăn chặn 100% rò rỉ chéo dữ liệu.</p>
       </div>
 
-      <div style="background: var(--white); border: 1.5px solid var(--purple); border-radius: var(--radius-sm); padding: 14px 18px; display: flex; align-items: center; justify-content: space-between;">
-        <div>
-          <strong style="color: var(--purple); font-size: 20px;">Gói ENTERPRISE</strong>
-          <div class="text-sm" style="color: var(--gray-600);">White-label &amp; AI Advisor</div>
-        </div>
-        <span class="badge badge-purple">Doanh nghiệp</span>
+      <div style="background: var(--off-white); border: 1.5px solid var(--navy); border-radius: var(--radius-sm); padding: 14px 18px;">
+        <h4 style="color: var(--navy); font-size: 19px; margin-bottom: 6px; font-family: var(--font-heading);">🎨 Dynamic CSS Variables</h4>
+        <p style="font-size: 16px; line-height: 1.5; color: var(--gray-700); margin: 0;">Cập nhật nhận diện và màu sắc thương hiệu thời gian thực qua hệ thống biến CSS, không cần build lại giao diện.</p>
       </div>
     </div>
 
-    <div class="highlight-box green mt-auto" style="padding: 14px 24px; border-left: 5px solid var(--green);">
-      <p class="text-sm fw-bold text-center" style="margin:0;">🚀 Khởi tạo doanh nghiệp mới chỉ sau 30 giây — Tiết kiệm 80% chi phí vận hành hạ tầng.</p>
+    <div class="highlight-box green mt-auto" style="padding: 12px 24px; border-left: 5px solid var(--green);">
+      <p class="text-sm fw-bold text-center" style="margin:0;">✨ Danh mục động kết hợp cô lập Multi-tenant giúp doanh nghiệp làm chủ hệ thống, mở rộng đa chi nhánh an toàn và bảo mật.</p>
     </div>
   </div>
-  <div class="slide-footer"><span>FPT Polytechnic — Dự án tốt nghiệp 2026</span><span>Phần 5: Danh mục &amp; SaaS</span></div>
+  <div class="slide-footer"><span>FPT Polytechnic — Dự án tốt nghiệp 2026</span><span>Phần 5: Danh mục &amp; Quản trị Hệ thống</span></div>
 </div>
 
 <!-- SLIDE 27: QUẢN TRỊ CƠ CẤU TỔ CHỨC & CẤU HÌNH VẬN HÀNH -->
 <div class="slide" data-notes="⏱ [Thời lượng: 45 giây — Phong]
 👉 Ý 1 (Cơ cấu phòng ban & chức danh): Em phụ trách DepartmentsController và PositionsController xây dựng mô hình cây phòng ban phân cấp, gán trưởng phòng linh hoạt.
 👉 Ý 2 (Hồ sơ nhân sự & Import Excel): EmployeesController hỗ trợ quản lý hồ sơ nhân viên và tính năng Import danh sách hàng loạt từ file Excel với cơ chế tự động validate dữ liệu.
-👉 Ý 3 (Tham số vận hành & Landing Page): SystemParametersController cho phép tùy biến tham số timeout, cờ bật tắt tính năng cho từng tenant, kết hợp Landing Page giới thiệu dịch vụ ở HomeController.
+👉 Ý 3 (Tham số vận hành & Phân quyền): SystemParametersController cho phép tùy biến tham số timeout, cờ bật tắt tính năng cho từng tenant, kết hợp ma trận phân quyền vai trò nội bộ RBAC an toàn.
 👉 Chuyển tiếp: Sau đây em xin nhường lời cho bạn Khánh báo cáo công tác Kiểm thử và Nghiệm thu chất lượng.">
   <div class="slide-header">
     <div class="header-left"><img src="assets/img/FPT_Polytechnic-26eda0e9.png" alt="FPT"><span>PHẦN 5 — QUẢN TRỊ HỆ THỐNG &amp; NHÂN SỰ</span></div>
@@ -1673,23 +1665,23 @@
         </div>
       </div>
 
-      <!-- Right Column: System Parameters & Landing Page -->
+      <!-- Right Column: System Parameters & Access Control -->
       <div class="col" style="gap: 16px; display: flex; flex-direction: column; justify-content: space-between;">
         <div class="info-card blue" style="padding: 20px 24px; flex: 1;">
           <h3 style="margin-bottom: 12px; font-size: 22px;">⚙️ Tham Số Vận Hành Hệ Thống</h3>
           <ul class="text-sm" style="line-height: 1.8;">
             <li><strong>Quản trị tập trung:</strong> Cấu hình hệ thống không can thiệp code.</li>
             <li><strong>Timeout &amp; Retry:</strong> Thiết lập giới hạn kết nối và gọi lại an toàn.</li>
-            <li><strong>Feature Flags:</strong> Bật/tắt phân hệ mới linh hoạt theo từng Tenant.</li>
+            <li><strong>Feature Flags:</strong> Bật/tắt phân hệ mới linh hoạt theo từng đơn vị.</li>
           </ul>
         </div>
 
-        <div class="info-card purple" style="padding: 20px 24px;">
-          <h3 style="margin-bottom: 12px; font-size: 22px;">🌐 Landing Page &amp; Dùng Thử 14 Ngày</h3>
+        <div class="info-card purple" style="padding: 20px 24px; flex: 1;">
+          <h3 style="margin-bottom: 12px; font-size: 22px;">🛡️ Phân Quyền &amp; Bảo Mật Dữ Liệu</h3>
           <ul class="text-sm" style="line-height: 1.8;">
-            <li><strong>Trang chủ SaaS:</strong> Giới thiệu hệ sinh thái giải pháp vận hành SME.</li>
-            <li><strong>Bảng giá minh bạch:</strong> So sánh quyền lợi chi tiết giữa các gói cước.</li>
-            <li><strong>Form đăng ký CTA:</strong> Kích hoạt tài khoản dùng thử tự động tức thì.</li>
+            <li><strong>Phân cấp vai trò (RBAC):</strong> Admin, Ban giám đốc, Trưởng phòng, Nhân viên.</li>
+            <li><strong>Kiểm soát truy cập:</strong> Phân quyền chặt chẽ theo sơ đồ phòng ban và chức danh.</li>
+            <li><strong>Nhật ký vận hành:</strong> Lưu vết lịch sử thao tác, đảm bảo an toàn hệ thống.</li>
           </ul>
         </div>
       </div>
