@@ -1352,11 +1352,13 @@
   <div class="slide-footer"><span>FPT Polytechnic — Dự án tốt nghiệp 2026</span><span>Phần 4: Vận hành (Frontend)</span></div>
 </div>
 
-<!-- SLIDE 24: LIÊN KẾT HAI CHIỀU TASK ↔ KPI/OKR TỰ ĐỘNG -->
-<div class="slide" data-notes="⏱ [Thời lượng: 45 giây — Bảo]
-👉 Ý 1 (Đột phá liên kết 2 chiều): Em là Bảo. Mỗi task được gán trọng số đóng góp (ImpactWeight) trực tiếp vào một Key Result hoặc KPI.
-👉 Ý 2 (Tự động tính lũy kế): Khi nhân viên kéo task sang Done, Event Handler tự động cập nhật % hoàn thành của KPI mà không cần người làm báo cáo.
-👉 Ý 3 (Giải quyết nghịch lý SME): Chấm dứt tình trạng 'làm việc bận rộn nhưng cuối kỳ KPI không đạt' nhờ 100% đầu việc đều gắn liền với mục tiêu.">
+<!-- SLIDE 24: LIÊN KẾT TASK VỚI KPI/OKR -->
+<div class="slide" data-notes="⏱ [Thời lượng: 55–60 giây — Bảo]
+👉 Mở đầu: Em là Bảo, phụ trách backend và vận hành. Ở phần này, em trình bày cách hệ thống biến tiến độ công việc thành dữ liệu phục vụ KPI và OKR.
+👉 Ý 1: Một task có thể liên kết với KPI hoặc Key Result và có trọng số đóng góp. Liên kết này là tùy chọn để vẫn hỗ trợ các công việc vận hành thông thường.
+👉 Ý 2: Khi tiến độ hoặc trạng thái task thay đổi, backend tổng hợp các task đang hoạt động theo trọng số.
+👉 Ý 3: Với KPI, kết quả được ghi thành check-in tự động ở trạng thái chờ duyệt. Với Key Result, hệ thống chỉ tạo đề xuất cập nhật, không tự ghi đè kết quả chính thức.
+👉 Kết luận: Cách làm này giảm tổng hợp thủ công nhưng vẫn giữ bước kiểm soát của người có thẩm quyền.">
   <div class="slide-header">
     <div class="header-left"><img src="assets/img/FPT_Polytechnic-26eda0e9.png" alt="FPT"><span>PHẦN 4 — VẬN HÀNH (BACKEND)</span></div>
     <div class="presenter-chip">
@@ -1369,25 +1371,25 @@
     </div>
   </div>
   <div class="slide-content">
-    <h1>Liên kết Hai Chiều: <span class="accent">Task ↔ KPI/OKR Tự Động</span></h1>
+    <h1>Liên kết Task với KPI/OKR: <span class="accent">Tự động nhưng có kiểm soát</span></h1>
     
     <div class="two-col" style="flex: 1; align-items: stretch; gap: 24px;">
-      <!-- Left: Bi-directional Flow Architecture -->
+      <!-- Left: Data relationship -->
       <div class="col" style="gap: 16px; display: flex; flex-direction: column; justify-content: space-between;">
         <div class="info-card accent" style="padding: 20px 24px; flex: 1;">
-          <h3 style="margin-bottom: 12px; font-size: 22px;">🔗 Cơ Chế Trọng Số Đóng Góp (Impact Weight)</h3>
+          <h3 style="margin-bottom: 12px; font-size: 22px;">🔗 Liên kết linh hoạt theo trọng số</h3>
           
           <!-- Visual Linkage Flow -->
           <div style="background: var(--white); border: 2px solid var(--fpt-orange); border-radius: var(--radius-md); padding: 16px 20px; box-shadow: var(--shadow-sm); margin-bottom: 16px;">
             <div style="display: flex; align-items: center; justify-content: space-between; gap: 10px;">
               <div style="background: var(--blue-light); border: 1.5px solid var(--navy); padding: 10px 14px; border-radius: var(--radius-sm); text-align: center; flex: 1;">
                 <div style="font-size: 18px; color: var(--gray-600); font-weight: 700;">ĐẦU VIỆC</div>
-                <strong style="color: var(--navy); font-size: 20px;">Công Việc (Task)</strong>
+                <strong style="color: var(--navy); font-size: 20px;">Task</strong>
               </div>
               <span style="font-size: 22px; color: var(--fpt-orange); font-weight: 800;">➔</span>
               <div style="background: var(--fpt-orange-glow); border: 1.5px solid var(--fpt-orange); padding: 10px 14px; border-radius: var(--radius-sm); text-align: center; flex: 1.2;">
-                <div style="font-size: 18px; color: var(--gray-600); font-weight: 700;">TỶ TRỌNG</div>
-                <strong style="color: var(--fpt-orange-dark); font-size: 20px;">Trọng Số (%)</strong>
+                <div style="font-size: 18px; color: var(--gray-600); font-weight: 700;">ĐÓNG GÓP</div>
+                <strong style="color: var(--fpt-orange-dark); font-size: 20px;">Trọng số (%)</strong>
               </div>
               <span style="font-size: 22px; color: var(--green); font-weight: 800;">➔</span>
               <div style="background: var(--green-light); border: 1.5px solid var(--green); padding: 10px 14px; border-radius: var(--radius-sm); text-align: center; flex: 1.2;">
@@ -1398,64 +1400,64 @@
           </div>
 
           <ul class="text-sm" style="line-height: 1.8;">
-            <li>Mỗi công việc hàng ngày gắn liền 1 <strong>Key Result</strong> hoặc <strong>KPI</strong> cụ thể.</li>
-            <li>Thiết lập <strong>tỷ trọng đóng góp (%)</strong> minh bạch vào mục tiêu chung.</li>
-            <li>Loại bỏ hoàn toàn các đầu việc vô thưởng vô phạt, không mang lại giá trị.</li>
+            <li>Task <strong>có thể</strong> liên kết với KPI hoặc Key Result.</li>
+            <li>Mỗi liên kết có <strong>trọng số đóng góp (%)</strong>.</li>
+            <li>Task vận hành thông thường vẫn được quản lý độc lập.</li>
           </ul>
         </div>
 
-        <div class="info-card green" style="padding: 18px 24px;">
-          <h3 style="margin-bottom: 8px; font-size: 22px;">⚡ Tự Động Đồng Bộ Tiến Độ Realtime</h3>
+        <div class="info-card blue" style="padding: 18px 24px;">
+          <h3 style="margin-bottom: 8px; font-size: 22px;">⚙️ Tổng hợp ngay trong luồng cập nhật</h3>
           <p class="text-sm" style="margin: 0; line-height: 1.7;">
-            Khi task chuyển <span class="badge badge-green">Done</span>, <strong>Event Handler</strong> kích hoạt tức thì, tự động tính lại tổng % hoàn thành KPI — <strong>không cần báo cáo thủ công</strong>.
+            Khi tiến độ hoặc trạng thái task thay đổi, backend tính lại kết quả từ các task đang hoạt động theo trọng số đã cấu hình.
           </p>
         </div>
       </div>
 
-      <!-- Right: Comparison & Key Metrics -->
+      <!-- Right: Controlled outcomes -->
       <div class="col" style="gap: 16px; display: flex; flex-direction: column; justify-content: space-between;">
         <div class="info-card blue" style="padding: 20px 24px; flex: 1;">
-          <h3 style="margin-bottom: 14px; font-size: 22px;">📊 So Sánh Đột Phá: Trước vs Sau</h3>
+          <h3 style="margin-bottom: 14px; font-size: 22px;">🛡️ Hai kết quả, hai mức kiểm soát</h3>
           
           <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 14px;">
-            <div style="background: var(--red-light); padding: 16px; border-radius: var(--radius-sm); border: 1.5px solid rgba(220, 53, 69, 0.3);">
-              <strong style="color: var(--red); font-size: 20px; display: block; margin-bottom: 8px;">❌ Trước Đây (Zalo / Excel)</strong>
+            <div style="background: var(--blue-light); padding: 16px; border-radius: var(--radius-sm); border: 1.5px solid rgba(25, 79, 128, 0.3);">
+              <strong style="color: var(--navy); font-size: 20px; display: block; margin-bottom: 8px;">📊 Khi liên kết KPI</strong>
               <div class="text-sm" style="color: var(--gray-700); line-height: 1.7;">
-                • Task làm một nơi, KPI tính một nẻo<br>
-                • Cuối tháng vất vả tổng hợp số liệu<br>
-                • Dễ ngụy tạo số liệu, thiếu minh chứng
+                • Tính tiến độ theo trọng số<br>
+                • Tạo check-in tự động trong ngày<br>
+                • Trạng thái ban đầu: <strong>Chờ duyệt</strong>
               </div>
             </div>
             
             <div style="background: var(--green-light); padding: 16px; border-radius: var(--radius-sm); border: 1.5px solid rgba(40, 167, 69, 0.3);">
-              <strong style="color: var(--green); font-size: 20px; display: block; margin-bottom: 8px;">✅ Sau Này (NEXTGEN Cloud)</strong>
+              <strong style="color: var(--green); font-size: 20px; display: block; margin-bottom: 8px;">🎯 Khi liên kết Key Result</strong>
               <div class="text-sm" style="color: var(--gray-700); line-height: 1.7;">
-                • <strong>100% Task</strong> gắn trực tiếp mục tiêu<br>
-                • Tiến độ đồng bộ tự động từng phút<br>
-                • Số liệu minh bạch, có minh chứng rõ ràng
+                • Tính giá trị đề xuất theo trọng số<br>
+                • Ghi nhận đề xuất vào lịch sử<br>
+                • <strong>Không tự sửa</strong> kết quả chính thức
               </div>
             </div>
           </div>
 
-          <!-- 3 Impact Metric Cards -->
+          <!-- 3 outcome cards -->
           <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; margin-top: 18px;">
-            <div style="background: var(--white); border: 1.5px solid var(--green); border-radius: var(--radius-sm); padding: 12px 10px; text-align: center;">
-              <div style="font-size: 28px; font-weight: 800; color: var(--green);">100%</div>
-              <div class="text-sm" style="color: var(--gray-700); font-weight: 600;">Task gắn mục tiêu</div>
+            <div style="background: var(--white); border: 1.5px solid var(--navy); border-radius: var(--radius-sm); padding: 12px 10px; text-align: center;">
+              <div style="font-size: 25px; font-weight: 800; color: var(--navy);">Tùy chọn</div>
+              <div class="text-sm" style="color: var(--gray-700); font-weight: 600;">Liên kết mục tiêu</div>
             </div>
             <div style="background: var(--white); border: 1.5px solid var(--navy); border-radius: var(--radius-sm); padding: 12px 10px; text-align: center;">
-              <div style="font-size: 28px; font-weight: 800; color: var(--navy);">0 Giờ</div>
-              <div class="text-sm" style="color: var(--gray-700); font-weight: 600;">Báo cáo thủ công</div>
+              <div style="font-size: 25px; font-weight: 800; color: var(--navy);">Tự động</div>
+              <div class="text-sm" style="color: var(--gray-700); font-weight: 600;">Tổng hợp tiến độ</div>
             </div>
             <div style="background: var(--white); border: 1.5px solid var(--fpt-orange); border-radius: var(--radius-sm); padding: 12px 10px; text-align: center;">
-              <div style="font-size: 28px; font-weight: 800; color: var(--fpt-orange-dark);">Realtime</div>
-              <div class="text-sm" style="color: var(--gray-700); font-weight: 600;">Cập nhật tức thì</div>
+              <div style="font-size: 25px; font-weight: 800; color: var(--fpt-orange-dark);">Có duyệt</div>
+              <div class="text-sm" style="color: var(--gray-700); font-weight: 600;">Kiểm soát kết quả</div>
             </div>
           </div>
         </div>
 
-        <div class="highlight-box green mt-auto" style="padding: 14px 24px; border-left: 5px solid var(--green);">
-          <p class="text-sm fw-bold text-center" style="margin:0;">✨ Giải quyết triệt để nghịch lý: Chấm dứt tình trạng nhân viên bận rộn nhưng mục tiêu công ty không đạt.</p>
+        <div class="highlight-box blue mt-auto" style="padding: 14px 24px; border-left: 5px solid var(--navy);">
+          <p class="text-sm fw-bold text-center" style="margin:0;">💡 Giảm tổng hợp thủ công, nhưng không bỏ qua bước xác nhận dữ liệu.</p>
         </div>
       </div>
     </div>
@@ -1463,12 +1465,13 @@
   <div class="slide-footer"><span>FPT Polytechnic — Dự án tốt nghiệp 2026</span><span>Phần 4: Vận hành (Backend)</span></div>
 </div>
 
-<!-- SLIDE 25: XỬ LÝ SỰ KIỆN, AUDIT LOG & CẢNH BÁO QUÁ HẠN -->
-<div class="slide" data-notes="⏱ [Thời lượng: 45 giây — Bảo]
-👉 Ý 1 (Background Worker định kỳ): Hosted Service chạy ngầm quét toàn bộ task mỗi giờ, phát hiện nguy cơ trễ hạn trước 24h/48h.
-👉 Ý 2 (Audit Log bất biến): Cơ chế Append-only lưu vết 100% thao tác: ai sửa, sửa trường gì, giá trị cũ/mới, cấm xóa/sửa dữ liệu lịch sử.
-👉 Ý 3 (Realtime Notification): Phát thông báo tức thì khi được giao task hoặc có bình luận nhắc tên (@mention).
-👉 Chuyển tiếp: Sau đây em xin nhường lời cho bạn Phong trình bày Phân hệ Danh mục, SaaS Multi-tenant và SEO.">
+<!-- SLIDE 25: AUDIT LOG, CẢNH BÁO VÀ XỬ LÝ NỀN -->
+<div class="slide" data-notes="⏱ [Thời lượng: 55–60 giây — Bảo]
+👉 Ý 1: Audit Log lưu người thao tác, hành động, bảng bị ảnh hưởng, thời điểm và dữ liệu trước–sau ở các luồng đã tích hợp. Khi cần đối soát, quản trị viên có thể truy lại thay đổi.
+👉 Ý 2: Khi người dùng mở trung tâm thông báo, hệ thống kiểm tra KPI sắp đến hạn hoặc quá hạn theo ngưỡng cấu hình và tránh tạo thông báo trùng.
+👉 Ý 3: Những tác vụ dài gồm đánh giá check-in bằng AI, nạp tài liệu và dọn lịch sử AI được tách sang HostedService để không chặn request web.
+👉 Công nghệ: Phần backend này được xây dựng bằng ASP.NET Core MVC trên .NET 10.
+👉 Chuyển tiếp: Sau đây em xin nhường lời cho bạn Phong trình bày phân hệ danh mục và quản trị hệ thống.">
   <div class="slide-header">
     <div class="header-left"><img src="assets/img/FPT_Polytechnic-26eda0e9.png" alt="FPT"><span>PHẦN 4 — VẬN HÀNH (BACKEND)</span></div>
     <div class="presenter-chip">
@@ -1481,33 +1484,33 @@
     </div>
   </div>
   <div class="slide-content">
-    <h1>Xử lý Sự kiện, <span class="accent">Audit Log &amp; Cảnh báo Quá hạn</span></h1>
+    <h1>Vận hành tin cậy: <span class="accent">Audit Log, cảnh báo &amp; xử lý nền</span></h1>
     
     <div class="three-col" style="gap: 20px; margin-bottom: 12px;">
       <div class="info-card accent" style="padding: 18px 20px;">
-        <h3 style="font-size: 22px;">⏰ Background Worker</h3>
+        <h3 style="font-size: 22px;">📜 Audit Log</h3>
         <ul class="text-sm" style="line-height: 1.7;">
-          <li>Service quét hạn chót toàn hệ thống mỗi giờ.</li>
-          <li>Cảnh báo sớm trước <strong>24h / 48h</strong> tới hạn.</li>
-          <li>Tự động đánh dấu Cờ Đỏ khi task quá hạn.</li>
+          <li>Ghi nhận người thao tác và hành động.</li>
+          <li>Lưu bảng bị ảnh hưởng và thời điểm.</li>
+          <li>Lưu dữ liệu <strong>trước – sau</strong> khi có tích hợp.</li>
         </ul>
       </div>
 
       <div class="info-card blue" style="padding: 18px 20px;">
-        <h3 style="font-size: 22px;">📜 Audit Log Bất Biến</h3>
+        <h3 style="font-size: 22px;">⏰ Cảnh báo KPI</h3>
         <ul class="text-sm" style="line-height: 1.7;">
-          <li>Lưu vết 100%: Tạo, Sửa, Xóa, Đổi trạng thái.</li>
-          <li>Ghi nhận: User ID, IP, Timestamp, Giá trị cũ &amp; mới.</li>
-          <li>Cơ chế <strong>Append-only</strong>, cấm tuyệt đối sửa/xóa.</li>
+          <li>Nhận diện KPI sắp đến hạn hoặc quá hạn.</li>
+          <li>Ngưỡng cảnh báo được cấu hình tập trung.</li>
+          <li>Kiểm tra trùng trước khi tạo thông báo.</li>
         </ul>
       </div>
 
       <div class="info-card green" style="padding: 18px 20px;">
-        <h3 style="font-size: 22px;">🔔 Event Realtime</h3>
+        <h3 style="font-size: 22px;">⚙️ HostedService</h3>
         <ul class="text-sm" style="line-height: 1.7;">
-          <li>Thông báo tức thì khi được phân công việc mới.</li>
-          <li>Phát tín hiệu khi được nhắc tên (@mention).</li>
-          <li>Đánh dấu đã đọc và lưu vết thông minh.</li>
+          <li>Đánh giá check-in bằng AI.</li>
+          <li>Nạp và lập chỉ mục tài liệu.</li>
+          <li>Dọn lịch sử AI theo chính sách lưu trữ.</li>
         </ul>
       </div>
     </div>
@@ -1515,22 +1518,22 @@
     <!-- Architecture Details -->
     <div style="background: var(--white); border: 2px solid var(--navy); border-radius: var(--radius-md); padding: 18px 24px; box-shadow: var(--shadow-sm); margin-bottom: 12px;">
       <div style="font-weight: 700; color: var(--navy); font-size: 20px; margin-bottom: 10px; display: flex; align-items: center; gap: 8px;">
-        <span>🛡️</span> Nguyên Tắc Bất Biến &amp; An Toàn Dữ Liệu Của Cơ Chế Audit Log
+        <span>🧭</span> Phân tách đúng trách nhiệm xử lý
       </div>
       <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
         <div style="background: var(--gray-50); padding: 12px 16px; border-radius: var(--radius-sm); border: 1.5px solid var(--gray-200);">
-          <strong style="color: var(--navy); font-size: 19px; display: block; margin-bottom: 4px;">🔒 Cơ Chế Ghi Thêm (Append-only)</strong>
-          <span class="text-sm" style="color: var(--gray-700); line-height: 1.6;">Chỉ cho phép thêm bản ghi mới; chặn tuyệt đối lệnh UPDATE / DELETE trên bảng Audit Log.</span>
+          <strong style="color: var(--navy); font-size: 19px; display: block; margin-bottom: 4px;">🌐 Trong request người dùng</strong>
+          <span class="text-sm" style="color: var(--gray-700); line-height: 1.6;">Đồng bộ tiến độ, ghi Audit Log và tạo cảnh báo theo đúng ngữ cảnh thao tác.</span>
         </div>
         <div style="background: var(--gray-50); padding: 12px 16px; border-radius: var(--radius-sm); border: 1.5px solid var(--gray-200);">
-          <strong style="color: var(--navy); font-size: 19px; display: block; margin-bottom: 4px;">⚡ Bất Đồng Bộ (.NET 10 HostedService)</strong>
-          <span class="text-sm" style="color: var(--gray-700); line-height: 1.6;">Quét hạn chót và phát cảnh báo chạy ngầm ở tiến trình nền, hoàn toàn không gây chậm hệ thống.</span>
+          <strong style="color: var(--navy); font-size: 19px; display: block; margin-bottom: 4px;">⚡ Trong tiến trình nền</strong>
+          <span class="text-sm" style="color: var(--gray-700); line-height: 1.6;">Tác vụ AI và xử lý tài liệu chạy bằng HostedService, tách khỏi luồng phản hồi của trang web.</span>
         </div>
       </div>
     </div>
 
     <div class="highlight-box blue mt-auto" style="padding: 14px 24px; border-left: 5px solid var(--navy);">
-      <p class="text-sm fw-bold text-center" style="margin:0;">🛡️ Hệ thống tự động vận hành ổn định 24/7 nhờ kiến trúc xử lý tác vụ nền không đồng bộ (Hosted Services trong .NET 10).</p>
+      <p class="text-sm fw-bold text-center" style="margin:0;">🛡️ ASP.NET Core MVC trên .NET 10 — có truy vết, cảnh báo và phân tách tác vụ dài.</p>
     </div>
   </div>
   <div class="slide-footer"><span>FPT Polytechnic — Dự án tốt nghiệp 2026</span><span>Phần 4: Vận hành (Backend)</span></div>

@@ -83,8 +83,8 @@ Bộ slide HTML 16:9 chuẩn học đường FPT Polytechnic (Theme cam `#F37021
 ### Phần 4: Quản Trị Vận Hành (Slide 22 → 25) — Nhật (Frontend) & Bảo (Backend)
 - **Slide 22:** Giao diện Kanban Board & Quản trị Công việc Trực quan (Nhật ~1.5p)
 - **Slide 23:** Quản lý Dự án Trực quan & Cân bằng Tải Nhân sự (Nhật ~1.5p)
-- **Slide 24:** Liên kết Hai Chiều Task ↔ KPI/OKR Tự Động (Bảo ~1.5p)
-- **Slide 25:** Xử lý Sự kiện, Audit Log & Cảnh báo Quá hạn (Bảo ~1.5p)
+- **Slide 24:** Liên kết Task với KPI/OKR — Tự động nhưng có kiểm soát (Bảo ~1p)
+- **Slide 25:** Vận hành tin cậy — Audit Log, cảnh báo và xử lý nền (Bảo ~1p)
 
 ### Phần 5: Danh Mục & Quản Trị Hệ Thống (Slide 26 → 27) — Trần Thanh Phong (Fullstack)
 - **Slide 26:** Hệ thống Danh mục Động & Multi-tenant SaaS (Phong ~1.5p)
