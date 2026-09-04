@@ -3,7 +3,7 @@
 Bộ slide HTML 16:9 chuẩn học đường FPT Polytechnic (Theme cam `#F37021` + trắng) phục vụ báo cáo bảo vệ dự án tốt nghiệp cho **Nhóm 98 — NEXTGEN (7 thành viên)**.
 
 - **Đề tài:** HỆ THỐNG HỖ TRỢ VẬN HÀNH THÔNG MINH CHO DOANH NGHIỆP VỪA VÀ NHỎ HỖ TRỢ QUẢN LÝ ĐA CẤP VÀ ĐƯA RA QUYẾT ĐỊNH BẰNG AI
-- **Giảng viên hướng dẫn:** ThS. Phan Hoàng Khải
+- **Giảng viên hướng dẫn:** GVHD. Phan Hoàng Khải
 - **Lớp:** PRO2192.04 (Nhóm 98)
 - **Repository:** [https://github.com/quanptatb/BaoCao_DATN](https://github.com/quanptatb/BaoCao_DATN)
 - **Quy chuẩn thời gian bảo vệ:** **15 phút Slide** (2–4 phút/người) + **15 phút Demo sản phẩm trực tiếp** + **30 phút Hội đồng Q&A**.

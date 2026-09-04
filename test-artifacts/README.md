@@ -9,7 +9,7 @@ Thư mục này lưu trữ toàn bộ các tài liệu kiểm thử và báo cá
 1. **📄 Báo cáo Đồ án Tốt nghiệp chính thức:**
    - Link: [Google Docs — Báo cáo Đồ án Tốt nghiệp](https://docs.google.com/document/d/1Rt56PMGVjDDXOcjXXaP2b1zO44llq96r/edit)
    - Đề tài: *Hệ Thống Hỗ Trợ Vận Hành Thông Minh Cho Doanh Nghiệp SME Tích Hợp Quản Lý Đa Cấp Và Đưa Ra Quyết Định Bằng AI*
-   - GVHD: ThS. Phan Hoàng Khải | Lớp: PRO2192.04
+   - GVHD. Phan Hoàng Khải | Lớp: PRO2192.04
 
 2. **📋 Kế hoạch Kiểm thử Phần mềm (Test Plan v3.0 Retest Final):**
    - Link: [Google Docs — Software Test Plan v3.0](https://docs.google.com/document/d/1GdT6y3eikPJAKkopWwhxh-kdZZdpOmi6/edit?usp=sharing&ouid=101719659203705778107&rtpof=true&sd=true)
