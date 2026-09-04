@@ -1210,9 +1210,9 @@
 
 <!-- SLIDE 22: KANBAN BOARD & QUẢN TRỊ CÔNG VIỆC TRỰC QUAN -->
 <div class="slide" data-notes="⏱ [Thời lượng: 45 giây — Nhật]
-👉 Ý 1 (Bảng Kanban 6 cột Agile): Em là Nhật. Luồng công việc chuẩn hóa 6 cột: Backlog, To Do, In Progress, Review, Testing, Done.
-👉 Ý 2 (Kéo thả mượt mà): HTML5 Drag &amp; Drop tức thì, cập nhật API realtime và tự động đổi trạng thái task ngay khi buông chuột.
-👉 Ý 3 (Nhận diện thẻ thông minh): Thẻ phân loại trực quan theo màu ưu tiên (Urgent, High, Normal, Low), có nhãn deadline và avatar người phụ trách.">
+👉 Ý 1 (Bảng Kanban 6 cột Agile): Em là Nhật. Luồng công việc chuẩn hóa 6 cột: Backlog (Chờ sắp xếp), To Do (Cần làm), In Progress (Đang làm), Review (Chờ duyệt), Done (Hoàn thành), Blocked (Bị chặn).
+👉 Ý 2 (Kéo thả mượt mà): HTML5 Drag &amp; Drop linh hoạt, cập nhật API ngay khi thả thẻ để đồng bộ trạng thái task.
+👉 Ý 3 (Nhận diện thẻ &amp; Bộ lọc thông minh): Thẻ phân loại trực quan theo 4 mức ưu tiên (Urgent, High, Normal, Low), deadline, người phụ trách, phòng ban và bình luận; hỗ trợ tìm kiếm và lọc nhanh theo Tất cả, Của tôi, Bị chặn, Ưu tiên, Quá hạn và AI.">
   <div class="slide-header">
     <div class="header-left"><img src="assets/img/FPT_Polytechnic-26eda0e9.png" alt="FPT"><span>PHẦN 4 — VẬN HÀNH (FRONTEND)</span></div>
     <div class="presenter-chip">
@@ -1226,7 +1226,7 @@
   </div>
   <div class="slide-content">
     <h1>Giao diện Kanban Board &amp; <span class="accent">Quản trị Công việc Trực quan</span></h1>
-    <p class="text-muted" style="margin-bottom: 8px;">Mô hình luồng công việc 6 cột chuẩn hóa Agile — Kéo thả phản hồi tức thì:</p>
+    <p class="text-muted" style="margin-bottom: 8px;">Mô hình luồng công việc 6 cột chuẩn hóa Agile — Kéo thả cập nhật trạng thái phản hồi tức thì:</p>
     
     <div class="kanban-demo mb-16" style="gap: 12px;">
       <div class="kanban-col">
@@ -1248,34 +1248,34 @@
         <div class="col-title">👁️ Review (2)</div>
         <div class="task-card"><span class="task-priority normal"></span>Code review Queue</div>
       </div>
-      <div class="kanban-col">
-        <div class="col-title">🧪 Testing (3)</div>
-        <div class="task-card"><span class="task-priority high"></span>Kiểm thử RBAC</div>
-      </div>
       <div class="kanban-col" style="background: var(--green-light); border: 1.5px solid var(--green);">
         <div class="col-title" style="color: var(--green);">✅ Done (28)</div>
         <div class="task-card" style="text-decoration: line-through; opacity: 0.75;"><span class="task-priority normal"></span>Đóng gói Test Plan</div>
         <div class="task-card" style="text-decoration: line-through; opacity: 0.75;"><span class="task-priority urgent"></span>Fix 290 Bugs đợt 1</div>
       </div>
+      <div class="kanban-col" style="background: var(--red-light); border: 1.5px solid var(--red);">
+        <div class="col-title" style="color: var(--red);">🚫 Blocked (1)</div>
+        <div class="task-card" style="border-left: 4px solid var(--red);"><span class="task-priority urgent"></span>Chờ cấp khóa API</div>
+      </div>
     </div>
 
     <div class="three-col" style="gap: 20px;">
       <div class="info-card accent" style="padding: 16px 20px;">
-        <h3>🎯 Kéo Thả Tức Thì</h3>
-        <p class="text-sm" style="margin:0;">HTML5 Drag &amp; Drop mượt mà, đồng bộ API ngay khi buông chuột.</p>
+        <h3>🎯 Kéo Thả Trạng Thái</h3>
+        <p class="text-sm" style="margin:0;">Kéo thả chuyển cột mượt mà, cập nhật API ngay khi thả thẻ.</p>
       </div>
       <div class="info-card blue" style="padding: 16px 20px;">
-        <h3>🏷️ Phân Loại Màu Sắc</h3>
-        <p class="text-sm" style="margin:0;">Nhận diện 4 mức ưu tiên: <span class="badge badge-red">Urgent</span> <span class="badge badge-orange">High</span> <span class="badge badge-blue">Normal</span> <span class="badge badge-green">Low</span>.</p>
+        <h3>🏷️ Thông Tin Thẻ Đầy Đủ</h3>
+        <p class="text-sm" style="margin:0;">Mức ưu tiên (<span class="badge badge-red">Urgent</span> <span class="badge badge-orange">High</span> <span class="badge badge-blue">Normal</span> <span class="badge badge-green">Low</span>), deadline, người phụ trách, phòng ban và bình luận.</p>
       </div>
       <div class="info-card green" style="padding: 16px 20px;">
-        <h3>🔍 Bộ Lọc 1 Chạm</h3>
-        <p class="text-sm" style="margin:0;">Lọc nhanh theo nhân sự, phòng ban, dự án và từ khóa chỉ 1 thao tác.</p>
+        <h3>🔍 Tìm Kiếm &amp; Bộ Lọc</h3>
+        <p class="text-sm" style="margin:0;">Tìm theo tên task/người phụ trách/phòng ban; lọc Tất cả, Của tôi, Bị chặn, Ưu tiên, Quá hạn và AI.</p>
       </div>
     </div>
 
     <div class="highlight-box green mt-auto" style="padding: 14px 24px; border-left: 5px solid var(--green);">
-      <p class="text-sm fw-bold text-center" style="margin:0;">🚀 Tăng 40% hiệu suất phối hợp — Xóa bỏ hoàn toàn tình trạng sót việc hoặc đùn đẩy trách nhiệm.</p>
+      <p class="text-sm fw-bold text-center" style="margin:0;">🚀 Chuẩn hóa vận hành công việc minh bạch — Giám sát luồng xử lý và phát hiện điểm nghẽn kịp thời.</p>
     </div>
   </div>
   <div class="slide-footer"><span>FPT Polytechnic — Dự án tốt nghiệp 2026</span><span>Phần 4: Vận hành (Frontend)</span></div>
@@ -1283,9 +1283,9 @@
 
 <!-- SLIDE 23: QUẢN LÝ DỰ ÁN TRỰC QUAN & ĐIỀU PHỐI NGUỒN LỰC -->
 <div class="slide" data-notes="⏱ [Thời lượng: 45 giây — Nhật]
-👉 Ý 1 (Danh mục dự án tập trung): Theo dõi % tiến độ tổng thể, phân loại ưu tiên và đếm ngược deadline dự án.
-👉 Ý 2 (Cân bằng tải nhân sự): Xem rõ khối lượng công việc của từng thành viên, cảnh báo khi 1 nhân viên bị giao quá 5 task khẩn cấp.
-👉 Ý 3 (Bình luận trực tiếp): Mọi trao đổi, đính kèm file đều lưu trên thẻ việc; không bao giờ bị trôi tin nhắn như Zalo.
+👉 Ý 1 (Danh mục dự án tập trung): Theo dõi danh mục dự án, tiến độ tính lũy kế từ task, phân loại ưu tiên, hiển thị deadline và cảnh báo gần hạn hoặc quá hạn.
+👉 Ý 2 (Điều phối nhân sự minh bạch): Quản lý phân vai trò rõ ràng, phân công nhiệm vụ và có thể cập nhật người phụ trách trong chi tiết task; thao tác kéo thả dùng để chuyển trạng thái thẻ Kanban.
+👉 Ý 3 (Bình luận trực tiếp trên task): Toàn bộ trao đổi và tiến trình thực hiện đều được bình luận trực tiếp trên từng thẻ việc, lưu vết lịch sử rõ ràng.
 👉 Chuyển tiếp: Sau đây em xin nhường lời cho bạn Bảo trình bày cơ chế liên kết Task và KPI tự động.">
   <div class="slide-header">
     <div class="header-left"><img src="assets/img/FPT_Polytechnic-26eda0e9.png" alt="FPT"><span>PHẦN 4 — VẬN HÀNH (FRONTEND)</span></div>
@@ -1299,7 +1299,7 @@
     </div>
   </div>
   <div class="slide-content">
-    <h1>Quản lý Dự án Trực quan &amp; <span class="accent">Cân bằng Tải Nhân sự</span></h1>
+    <h1>Quản lý Dự án Trực quan &amp; <span class="accent">Điều phối Công việc</span></h1>
     
     <div class="two-col" style="flex: 1; align-items: stretch; gap: 24px;">
       <!-- Left Column: Project Management & Workload -->
@@ -1307,19 +1307,19 @@
         <div class="info-card accent" style="padding: 20px 24px; flex: 1;">
           <h3 style="margin-bottom: 12px; font-size: 22px;">📁 Quản Trị Danh Mục Dự Án Tập Trung</h3>
           <ul class="text-sm" style="line-height: 1.8;">
-            <li><strong>Tiến độ lũy kế:</strong> Tự động tính toán % hoàn thành từ các task con.</li>
+            <li><strong>Tiến độ lũy kế:</strong> Tự động tính toán % hoàn thành từ các task thành phần.</li>
             <li><strong>Phân loại mức độ:</strong> <span class="badge badge-green">Low</span> <span class="badge badge-blue">Normal</span> <span class="badge badge-orange">High</span> <span class="badge badge-red">Urgent</span></li>
-            <li><strong>Đếm ngược Deadline:</strong> Cảnh báo trực quan số ngày còn lại theo thời gian thực.</li>
-            <li><strong>Phân vai trò rõ ràng:</strong> Minh bạch người chịu trách nhiệm và người phối hợp.</li>
+            <li><strong>Kiểm soát thời hạn:</strong> Hiển thị deadline và cảnh báo gần hạn hoặc quá hạn rõ ràng.</li>
+            <li><strong>Gắn kết mục tiêu:</strong> Minh bạch phòng ban, OKR và KPI liên kết của dự án.</li>
           </ul>
         </div>
 
         <div class="info-card blue" style="padding: 20px 24px; flex: 1;">
-          <h3 style="margin-bottom: 12px; font-size: 22px;">👥 Điều Phối Nhân Sự &amp; Cân Bằng Tải</h3>
+          <h3 style="margin-bottom: 12px; font-size: 22px;">👥 Phân Công &amp; Điều Phối Nhân Sự</h3>
           <ul class="text-sm" style="line-height: 1.8;">
-            <li><strong>Trực quan hóa Workload:</strong> Nắm bắt khối lượng công việc thực tế từng cá nhân.</li>
-            <li><strong>Cảnh báo quá tải:</strong> Phát tín hiệu khi 1 nhân sự phụ trách quá 5 task khẩn cấp.</li>
-            <li><strong>Tái phân bổ tức thì:</strong> Điều chuyển công việc chỉ bằng 1 thao tác kéo thả.</li>
+            <li><strong>Trách nhiệm rõ ràng:</strong> Gán cụ thể người phụ trách và phòng ban cho từng công việc.</li>
+            <li><strong>Cập nhật linh hoạt:</strong> Quản lý có thể cập nhật người phụ trách trong chi tiết task.</li>
+            <li><strong>Kéo thả đúng mục đích:</strong> Thao tác kéo thả được quy chuẩn riêng để đổi trạng thái Kanban.</li>
           </ul>
         </div>
       </div>
@@ -1329,17 +1329,17 @@
         <div class="info-card green" style="padding: 20px 24px; flex: 1;">
           <h3 style="margin-bottom: 12px; font-size: 22px;">💬 Trao Đổi Minh Bạch Trên Thẻ Việc</h3>
           <ul class="text-sm" style="line-height: 1.8;">
-            <li><strong>Bình luận tại chỗ:</strong> Đính kèm tài liệu và minh chứng nghiệm thu trực tiếp.</li>
-            <li><strong>Không thất lạc thông tin:</strong> Chấm dứt tình trạng trôi tin nhắn trên Zalo / mạng xã hội.</li>
-            <li><strong>Lưu vết xuyên suốt:</strong> Bảo lưu toàn bộ lịch sử từ lúc giao việc đến nghiệm thu.</li>
+            <li><strong>Bình luận tại chỗ:</strong> Trao đổi công việc và cập nhật tiến trình trực tiếp trên task.</li>
+            <li><strong>Không thất lạc thông tin:</strong> Chấm dứt tình trạng trôi tin nhắn trên mạng xã hội ngoài luồng.</li>
+            <li><strong>Lưu vết xuyên suốt:</strong> Bảo lưu toàn bộ lịch sử trao đổi từ lúc tạo việc đến hoàn thành.</li>
           </ul>
         </div>
 
         <div class="info-card purple" style="padding: 20px 24px; flex: 1;">
-          <h3 style="margin-bottom: 12px; font-size: 22px;">🎯 Xóa Bỏ Điểm Mù Quản Lý Trong SME</h3>
+          <h3 style="margin-bottom: 12px; font-size: 22px;">🎯 Tối Ưu Hóa Quản Lý Vận Hành SME</h3>
           <ul class="text-sm" style="line-height: 1.8;">
-            <li>Ban Giám đốc nắm bắt chính xác tiến độ 24/7 mà không cần chờ báo cáo miệng.</li>
-            <li>Tiết kiệm 50% thời gian họp giao ban định kỳ nhờ số hóa tập trung dữ liệu vận hành.</li>
+            <li>Ban quản lý theo dõi trực quan tiến độ dự án và tình trạng thực tế của từng đầu việc.</li>
+            <li>Tăng cường tính chủ động và tính kỷ luật trong đội ngũ nhờ thông tin minh bạch, tập trung.</li>
           </ul>
         </div>
       </div>
