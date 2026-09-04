@@ -39,6 +39,8 @@
   --yellow-light: #FFF3CD;
   --teal: #20C997;
   --purple: #6F42C1;
+  --navy: #1B2A4A;
+  --navy-light: #2D4373;
 
   /* Typography */
   --font-heading: 'Montserrat', 'Segoe UI', sans-serif;
@@ -1154,11 +1156,14 @@ html, body {
 }
 
 .demo-action-btn.secondary {
-  background: var(--navy);
+  background: var(--navy, #1B2A4A);
+  color: var(--white);
+  border: 1px solid rgba(255, 255, 255, 0.15);
 }
 
 .demo-action-btn.secondary:hover {
-  background: var(--navy-light);
+  background: var(--navy-light, #2D4373);
+  color: var(--white);
 }
 
 /* ---------- Highlight box ---------- */
