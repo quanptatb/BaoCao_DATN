@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="vi">
 <head>
   <meta charset="UTF-8">
@@ -75,19 +75,21 @@
 </head>
 <body>
 
-<!-- ========== TIMER & CONTROLS ========== -->
-<div id="timer" onclick="slideEngine.toggleTimer()" title="Click hoặc T để pause/resume">
-  <span>⏱</span>
-  <span id="timer-display">15:00</span>
-</div>
-<div class="timer-controls">
-  <button class="timer-btn" onclick="slideEngine.toggleTimer()">⏯ Pause</button>
-  <button class="timer-btn" onclick="slideEngine.resetTimer()">↻ Reset (15:00)</button>
+<!-- ========== TOP-CENTER TIMER CAPSULE ========== -->
+<div class="timer-capsule-wrapper">
+  <div id="timer" onclick="slideEngine.toggleTimer()" title="Click hoặc phím T để Pause/Resume">
+    <span class="timer-icon">⏱</span>
+    <span id="timer-display">15:00</span>
+  </div>
+  <div class="timer-controls">
+    <button class="timer-btn" onclick="slideEngine.toggleTimer()" title="Pause/Resume (phím T)">⏯ Pause</button>
+    <button class="timer-btn" onclick="slideEngine.resetTimer()" title="Reset về 15:00 (phím R)">↻ Reset</button>
+  </div>
 </div>
 
 <!-- ========== PROGRESS BAR ========== -->
 <div id="progress-bar" style="width:0%"></div>
-<div id="slide-counter">1 / 29</div>
+<div id="slide-counter">1 / 31</div>
 
 <!-- ========== PRESENTER NOTES ========== -->
 <div id="presenter-notes"></div>
@@ -136,13 +138,6 @@
       <span class="tech-badge">Bootstrap 5</span>
     </div>
   </div>
-  <div class="speaker-badge">
-    <img src="assets/img/quan.jpg" alt="Quân">
-    <div>
-      <div class="speaker-name">Phạm Trần Anh Quân</div>
-      <div class="speaker-role">PM — Nhóm trưởng — AI</div>
-    </div>
-  </div>
 </div>
 
 <!-- ==========================================
@@ -154,7 +149,14 @@
       <img src="assets/img/FPT_Polytechnic-26eda0e9.png" alt="FPT">
       <span>BÁO CÁO DỰ ÁN TỐT NGHIỆP</span>
     </div>
-    <div class="header-right">Nhóm NEXTGEN</div>
+    <div class="presenter-chip">
+      <img src="assets/img/quan.jpg" alt="Quân" class="presenter-avatar">
+      <div class="presenter-info">
+        <span class="presenter-name">Quân</span>
+        <span class="presenter-divider">&bull;</span>
+        <span class="presenter-role">PM — Leader</span>
+      </div>
+    </div>
   </div>
   <div class="slide-content">
     <h1>Thành viên nhóm <span class="accent">NEXTGEN</span></h1>
@@ -213,10 +215,6 @@
   <div class="slide-footer">
     <span>FPT Polytechnic — Dự án tốt nghiệp 2026</span>
   </div>
-  <div class="speaker-badge">
-    <img src="assets/img/quan.jpg" alt="Quân">
-    <div><div class="speaker-name">Quân</div><div class="speaker-role">PM — AI</div></div>
-  </div>
 </div>
 
 <!-- ==========================================
@@ -225,7 +223,14 @@
 <div class="slide" data-notes="Bài thuyết trình hôm nay gồm 31 slide, chia làm 7 phần do 7 thành viên trình bày trong 15 phút. Tiếp đó là 15 phút Demo hệ thống thực tế và 30 phút Q&A cùng Hội đồng.">
   <div class="slide-header">
     <div class="header-left"><img src="assets/img/FPT_Polytechnic-26eda0e9.png" alt="FPT"><span>BÁO CÁO DỰ ÁN TỐT NGHIỆP</span></div>
-    <div class="header-right">Mục lục trình bày</div>
+    <div class="presenter-chip">
+      <img src="assets/img/quan.jpg" alt="Quân" class="presenter-avatar">
+      <div class="presenter-info">
+        <span class="presenter-name">Quân</span>
+        <span class="presenter-divider">&bull;</span>
+        <span class="presenter-role">PM — Leader</span>
+      </div>
+    </div>
   </div>
   <div class="slide-content">
     <h1>Mục lục <span class="accent">trình bày</span></h1>
@@ -265,14 +270,20 @@
     </div>
   </div>
   <div class="slide-footer"><span>FPT Polytechnic — Dự án tốt nghiệp 2026</span><span>Tổng thời gian: 15' Slide + 15' Demo + 30' Q&amp;A</span></div>
-  <div class="speaker-badge"><img src="assets/img/quan.jpg" alt="Quân"><div><div class="speaker-name">Quân</div><div class="speaker-role">PM — Leader</div></div></div>
 </div>
 
 <!-- ==========================================
      SLIDE 4: THỰC TRẠNG & VẤN ĐỀ
      ========================================== -->
 <div class="slide" data-notes="Hiện nay, doanh nghiệp SME quản lý mục tiêu và công việc trên nhiều công cụ rời rạc như Excel, Zalo, Google Sheet, Trello. Hậu quả là dữ liệu bị phân mảnh, lãnh đạo không nhìn thấy tiến độ thực tế, đánh giá nhân sự cảm tính và thiếu cơ chế bảo mật phân quyền.">
-  <div class="slide-header"><div class="header-left"><img src="assets/img/FPT_Polytechnic-26eda0e9.png" alt="FPT"><span>PHẦN 1 — MỞ ĐẦU</span></div><div class="header-right">Quân — PM / AI</div></div>
+  <div class="slide-header"><div class="header-left"><img src="assets/img/FPT_Polytechnic-26eda0e9.png" alt="FPT"><span>PHẦN 1 — MỞ ĐẦU</span></div><div class="presenter-chip">
+      <img src="assets/img/quan.jpg" alt="Quân" class="presenter-avatar">
+      <div class="presenter-info">
+        <span class="presenter-name">Quân</span>
+        <span class="presenter-divider">&bull;</span>
+        <span class="presenter-role">PM — Leader</span>
+      </div>
+    </div></div>
   <div class="slide-content">
     <h1>Thực trạng &amp; <span class="accent">Vấn đề cốt lõi</span></h1>
     <p class="text-lg">Ba rào cản lớn nhất kìm hãm hiệu quả vận hành của doanh nghiệp SME:</p>
@@ -304,14 +315,20 @@
     </div>
   </div>
   <div class="slide-footer"><span>FPT Polytechnic — Dự án tốt nghiệp 2026</span><span>Phần 1: Mở đầu</span></div>
-  <div class="speaker-badge"><img src="assets/img/quan.jpg" alt="Quân"><div><div class="speaker-name">Quân</div><div class="speaker-role">PM — Leader</div></div></div>
 </div>
 
 <!-- ==========================================
      SLIDE 5: YÊU CẦU KHÁCH HÀNG
      ========================================== -->
 <div class="slide" data-notes="Khảo sát từ 15 doanh nghiệp SME cho thấy 6 nhóm yêu cầu trọng tâm: Thiết lập OKR/KPI đa cấp, Vận hành công việc Kanban, AI hỗ trợ ra quyết định, Bảo mật phân quyền chặt chẽ, Quản lý đa tổ chức SaaS và Báo cáo Dashboard trực quan.">
-  <div class="slide-header"><div class="header-left"><img src="assets/img/FPT_Polytechnic-26eda0e9.png" alt="FPT"><span>PHẦN 1 — MỞ ĐẦU</span></div><div class="header-right">Quân — PM / AI</div></div>
+  <div class="slide-header"><div class="header-left"><img src="assets/img/FPT_Polytechnic-26eda0e9.png" alt="FPT"><span>PHẦN 1 — MỞ ĐẦU</span></div><div class="presenter-chip">
+      <img src="assets/img/quan.jpg" alt="Quân" class="presenter-avatar">
+      <div class="presenter-info">
+        <span class="presenter-name">Quân</span>
+        <span class="presenter-divider">&bull;</span>
+        <span class="presenter-role">PM — Leader</span>
+      </div>
+    </div></div>
   <div class="slide-content">
     <h1>Yêu cầu <span class="accent">khách hàng SME</span></h1>
     <p class="text-lg">Tổng hợp 6 nhóm bài toán cốt lõi từ khảo sát thực tế doanh nghiệp:</p>
@@ -343,14 +360,20 @@
     </div>
   </div>
   <div class="slide-footer"><span>FPT Polytechnic — Dự án tốt nghiệp 2026</span><span>Phần 1: Mở đầu</span></div>
-  <div class="speaker-badge"><img src="assets/img/quan.jpg" alt="Quân"><div><div class="speaker-name">Quân</div><div class="speaker-role">PM — Leader</div></div></div>
 </div>
 
 <!-- ==========================================
      SLIDE 6: HƯỚNG GIẢI QUYẾT
      ========================================== -->
 <div class="slide" data-notes="Giải pháp toàn diện của nhóm là xây dựng hệ thống duy nhất kết nối liền mạch từ mục tiêu chiến lược xuống thực thi công việc hàng ngày, kết hợp cùng trí tuệ nhân tạo AI hỗ trợ phân tích và cảnh báo rủi ro.">
-  <div class="slide-header"><div class="header-left"><img src="assets/img/FPT_Polytechnic-26eda0e9.png" alt="FPT"><span>PHẦN 1 — MỞ ĐẦU</span></div><div class="header-right">Quân — PM / AI</div></div>
+  <div class="slide-header"><div class="header-left"><img src="assets/img/FPT_Polytechnic-26eda0e9.png" alt="FPT"><span>PHẦN 1 — MỞ ĐẦU</span></div><div class="presenter-chip">
+      <img src="assets/img/quan.jpg" alt="Quân" class="presenter-avatar">
+      <div class="presenter-info">
+        <span class="presenter-name">Quân</span>
+        <span class="presenter-divider">&bull;</span>
+        <span class="presenter-role">PM — Leader</span>
+      </div>
+    </div></div>
   <div class="slide-content">
     <h1>Hướng <span class="accent">giải quyết toàn diện</span></h1>
     <h3 class="text-muted" style="margin-bottom: 16px;">Kết nối mục tiêu chiến lược với thực thi vận hành (Goals ➔ Execution)</h3>
@@ -390,14 +413,20 @@
     </div>
   </div>
   <div class="slide-footer"><span>FPT Polytechnic — Dự án tốt nghiệp 2026</span><span>Phần 1: Mở đầu</span></div>
-  <div class="speaker-badge"><img src="assets/img/quan.jpg" alt="Quân"><div><div class="speaker-name">Quân</div><div class="speaker-role">PM — Leader</div></div></div>
 </div>
 
 <!-- ==========================================
      SLIDE 7: MỤC TIÊU & TẦM NHÌN
      ========================================== -->
 <div class="slide" data-notes="Mục tiêu tổng quát của đề tài là hoàn thiện nền tảng quản trị thông minh cho SME. Hệ thống giúp số hóa 100% quy trình mục tiêu và công việc, minh bạch hóa việc đánh giá và giúp lãnh đạo ra quyết định nhanh hơn 40%.">
-  <div class="slide-header"><div class="header-left"><img src="assets/img/FPT_Polytechnic-26eda0e9.png" alt="FPT"><span>PHẦN 1 — MỞ ĐẦU</span></div><div class="header-right">Quân — PM / AI</div></div>
+  <div class="slide-header"><div class="header-left"><img src="assets/img/FPT_Polytechnic-26eda0e9.png" alt="FPT"><span>PHẦN 1 — MỞ ĐẦU</span></div><div class="presenter-chip">
+      <img src="assets/img/quan.jpg" alt="Quân" class="presenter-avatar">
+      <div class="presenter-info">
+        <span class="presenter-name">Quân</span>
+        <span class="presenter-divider">&bull;</span>
+        <span class="presenter-role">PM — Leader</span>
+      </div>
+    </div></div>
   <div class="slide-content">
     <h1>Mục tiêu, <span class="accent">Tầm nhìn &amp; Sứ mệnh</span></h1>
     <div class="two-col" style="gap: 32px;">
@@ -431,14 +460,20 @@
     </div>
   </div>
   <div class="slide-footer"><span>FPT Polytechnic — Dự án tốt nghiệp 2026</span><span>Phần 1: Mở đầu</span></div>
-  <div class="speaker-badge"><img src="assets/img/quan.jpg" alt="Quân"><div><div class="speaker-name">Quân</div><div class="speaker-role">PM — Leader</div></div></div>
 </div>
 
 <!-- ==========================================
      SLIDE 8: ĐỊNH HƯỚNG PHÁT TRIỂN
      ========================================== -->
 <div class="slide" data-notes="Sau dự án tốt nghiệp, nhóm có 5 hướng phát triển hệ thống trong tương lai: Phát triển Mobile App, Tích hợp kênh liên lạc Zalo/Email, Nâng cấp BI Dashboard dự báo, Mở rộng AI Autonomous Agents và Tích hợp cổng thanh toán thương mại.">
-  <div class="slide-header"><div class="header-left"><img src="assets/img/FPT_Polytechnic-26eda0e9.png" alt="FPT"><span>PHẦN 1 — MỞ ĐẦU</span></div><div class="header-right">Quân — PM / AI</div></div>
+  <div class="slide-header"><div class="header-left"><img src="assets/img/FPT_Polytechnic-26eda0e9.png" alt="FPT"><span>PHẦN 1 — MỞ ĐẦU</span></div><div class="presenter-chip">
+      <img src="assets/img/quan.jpg" alt="Quân" class="presenter-avatar">
+      <div class="presenter-info">
+        <span class="presenter-name">Quân</span>
+        <span class="presenter-divider">&bull;</span>
+        <span class="presenter-role">PM — Leader</span>
+      </div>
+    </div></div>
   <div class="slide-content">
     <h1>Định hướng <span class="accent">phát triển tương lai</span></h1>
     <p class="text-lg">Kế hoạch nâng cấp và thương mại hóa sản phẩm sau giai đoạn tốt nghiệp:</p>
@@ -466,14 +501,20 @@
     </div>
   </div>
   <div class="slide-footer"><span>FPT Polytechnic — Dự án tốt nghiệp 2026</span><span>Phần 1: Mở đầu</span></div>
-  <div class="speaker-badge"><img src="assets/img/quan.jpg" alt="Quân"><div><div class="speaker-name">Quân</div><div class="speaker-role">PM — Leader</div></div></div>
 </div>
 
 <!-- ==========================================
      SLIDE 9: AI — TỔNG QUAN KIẾN TRÚC
      ========================================== -->
 <div class="slide" data-notes="Trước đây, hệ thống gọi trực tiếp Gemini API từ Controller, không kiểm soát ảo giác, tự bịa điểm số và tiềm ẩn nguy cơ rò rỉ dữ liệu PII. Nhóm đã tái cấu trúc toàn diện sang kiến trúc Enterprise AI-Native: Chuẩn hóa Model Gateway qua DeepSeek V4 Flash, Server-driven Grounding kiểm soát ngữ cảnh theo Tenant, ép Strict JSON Schema, cơ chế Abstain từ chối khi thiếu dữ liệu và luôn có con người phê duyệt (Human-in-the-loop).">
-  <div class="slide-header"><div class="header-left"><img src="assets/img/FPT_Polytechnic-26eda0e9.png" alt="FPT"><span>PHẦN 2 — TRÍ TUỆ NHÂN TẠO (AI)</span></div><div class="header-right">Quân — PM / AI</div></div>
+  <div class="slide-header"><div class="header-left"><img src="assets/img/FPT_Polytechnic-26eda0e9.png" alt="FPT"><span>PHẦN 2 — TRÍ TUỆ NHÂN TẠO (AI)</span></div><div class="presenter-chip">
+      <img src="assets/img/quan.jpg" alt="Quân" class="presenter-avatar">
+      <div class="presenter-info">
+        <span class="presenter-name">Quân</span>
+        <span class="presenter-divider">&bull;</span>
+        <span class="presenter-role">PM — AI</span>
+      </div>
+    </div></div>
   <div class="slide-content">
     <h1>Kiến trúc <span class="accent">AI-Native Doanh Nghiệp</span></h1>
     <h3 class="text-muted" style="margin-bottom: 8px;">Chuyển đổi từ mô hình thử nghiệm sang chuẩn Enterprise bảo mật:</h3>
@@ -499,14 +540,20 @@
     </div>
   </div>
   <div class="slide-footer"><span>FPT Polytechnic — Dự án tốt nghiệp 2026</span><span>Phần 2: Trí tuệ nhân tạo (AI)</span></div>
-  <div class="speaker-badge"><img src="assets/img/quan.jpg" alt="Quân"><div><div class="speaker-name">Quân</div><div class="speaker-role">PM — Leader</div></div></div>
 </div>
 
 <!-- ==========================================
      SLIDE 10: AI — TRƯỚC/SAU SO SÁNH
      ========================================== -->
 <div class="slide" data-notes="Bảng so sánh tổng quát trước và sau khi ứng dụng hệ thống và AI: Quản lý mục tiêu từ phân tán sang liên kết tự động; Theo dõi tiến độ từ báo cáo trễ sang Dashboard realtime; Đánh giá nhân sự từ cảm tính sang Rubric chuẩn hóa 7 bậc; Cảnh báo rủi ro tức thì và bảo mật đa tầng tuyệt đối.">
-  <div class="slide-header"><div class="header-left"><img src="assets/img/FPT_Polytechnic-26eda0e9.png" alt="FPT"><span>PHẦN 2 — TRÍ TUỆ NHÂN TẠO (AI)</span></div><div class="header-right">Quân — PM / AI</div></div>
+  <div class="slide-header"><div class="header-left"><img src="assets/img/FPT_Polytechnic-26eda0e9.png" alt="FPT"><span>PHẦN 2 — TRÍ TUỆ NHÂN TẠO (AI)</span></div><div class="presenter-chip">
+      <img src="assets/img/quan.jpg" alt="Quân" class="presenter-avatar">
+      <div class="presenter-info">
+        <span class="presenter-name">Quân</span>
+        <span class="presenter-divider">&bull;</span>
+        <span class="presenter-role">PM — AI</span>
+      </div>
+    </div></div>
   <div class="slide-content">
     <h1>So sánh đột phá: <span class="accent">Trước vs Sau Dự Án</span></h1>
     <p class="text-lg" style="margin-bottom: 12px;">Đánh giá toàn diện trên 5 tiêu chí vận hành cốt lõi:</p>
@@ -522,14 +569,20 @@
     </table>
   </div>
   <div class="slide-footer"><span>FPT Polytechnic — Dự án tốt nghiệp 2026</span><span>Phần 2: Trí tuệ nhân tạo (AI)</span></div>
-  <div class="speaker-badge"><img src="assets/img/quan.jpg" alt="Quân"><div><div class="speaker-name">Quân</div><div class="speaker-role">PM — Leader</div></div></div>
 </div>
 
 <!-- ==========================================
      SLIDE 11: AI — CHAT WIDGET
      ========================================== -->
 <div class="slide" data-notes="AI Chat Widget đóng vai trò trợ lý tư vấn chiến lược cho lãnh đạo. Hệ thống kết hợp dữ liệu vận hành từ SQL Snapshot và tri thức nội bộ từ vector RAG để trả lời chính xác, luôn trích dẫn nguồn văn bản và tự động từ chối khi không có dữ liệu căn cứ.">
-  <div class="slide-header"><div class="header-left"><img src="assets/img/FPT_Polytechnic-26eda0e9.png" alt="FPT"><span>PHẦN 2 — TRÍ TUỆ NHÂN TẠO (AI)</span></div><div class="header-right">Quân — PM / AI</div></div>
+  <div class="slide-header"><div class="header-left"><img src="assets/img/FPT_Polytechnic-26eda0e9.png" alt="FPT"><span>PHẦN 2 — TRÍ TUỆ NHÂN TẠO (AI)</span></div><div class="presenter-chip">
+      <img src="assets/img/quan.jpg" alt="Quân" class="presenter-avatar">
+      <div class="presenter-info">
+        <span class="presenter-name">Quân</span>
+        <span class="presenter-divider">&bull;</span>
+        <span class="presenter-role">PM — AI</span>
+      </div>
+    </div></div>
   <div class="slide-content">
     <h1>AI Chat Widget: <span class="accent">Trợ Lý Chiến Lược</span></h1>
     <div class="two-col col-40-60" style="gap: 32px; align-items: center;">
@@ -557,14 +610,20 @@
     </div>
   </div>
   <div class="slide-footer"><span>FPT Polytechnic — Dự án tốt nghiệp 2026</span><span>Phần 2: Trí tuệ nhân tạo (AI)</span></div>
-  <div class="speaker-badge"><img src="assets/img/quan.jpg" alt="Quân"><div><div class="speaker-name">Quân</div><div class="speaker-role">PM — Leader</div></div></div>
 </div>
 
 <!-- ==========================================
      SLIDE 12: AI — GỢI Ý KPI & GOAL PLANNING
      ========================================== -->
 <div class="slide" data-notes="AI gợi ý KPI chuẩn SMART dựa trên OKR và lịch sử phòng ban. Goal Planning Agent phân rã mục tiêu lớn thành các thẻ việc cụ thể trên Kanban với điểm phù hợp Fit Score tính từ 5 yếu tố trọng số.">
-  <div class="slide-header"><div class="header-left"><img src="assets/img/FPT_Polytechnic-26eda0e9.png" alt="FPT"><span>PHẦN 2 — TRÍ TUỆ NHÂN TẠO (AI)</span></div><div class="header-right">Quân — PM / AI</div></div>
+  <div class="slide-header"><div class="header-left"><img src="assets/img/FPT_Polytechnic-26eda0e9.png" alt="FPT"><span>PHẦN 2 — TRÍ TUỆ NHÂN TẠO (AI)</span></div><div class="presenter-chip">
+      <img src="assets/img/quan.jpg" alt="Quân" class="presenter-avatar">
+      <div class="presenter-info">
+        <span class="presenter-name">Quân</span>
+        <span class="presenter-divider">&bull;</span>
+        <span class="presenter-role">PM — AI</span>
+      </div>
+    </div></div>
   <div class="slide-content">
     <h1>Gợi ý KPI &amp; <span class="accent">Goal Planning Agent</span></h1>
     <div class="two-col" style="gap: 32px;">
@@ -601,14 +660,20 @@
     </div>
   </div>
   <div class="slide-footer"><span>FPT Polytechnic — Dự án tốt nghiệp 2026</span><span>Phần 2: Trí tuệ nhân tạo (AI)</span></div>
-  <div class="speaker-badge"><img src="assets/img/quan.jpg" alt="Quân"><div><div class="speaker-name">Quân</div><div class="speaker-role">PM — Leader</div></div></div>
 </div>
 
 <!-- ==========================================
      SLIDE 13: AI — CHECK-IN EVALUATOR
      ========================================== -->
 <div class="slide" data-notes="Check-in AI Evaluator đánh giá khách quan tiến độ định kỳ, so sánh tiến độ thực tế với kế hoạch dựa trên Rubric chuẩn hóa có phiên bản. Đồng thời thuật toán tính điểm Confidence Score dựa trên 4 yếu tố minh bạch.">
-  <div class="slide-header"><div class="header-left"><img src="assets/img/FPT_Polytechnic-26eda0e9.png" alt="FPT"><span>PHẦN 2 — TRÍ TUỆ NHÂN TẠO (AI)</span></div><div class="header-right">Quân — PM / AI</div></div>
+  <div class="slide-header"><div class="header-left"><img src="assets/img/FPT_Polytechnic-26eda0e9.png" alt="FPT"><span>PHẦN 2 — TRÍ TUỆ NHÂN TẠO (AI)</span></div><div class="presenter-chip">
+      <img src="assets/img/quan.jpg" alt="Quân" class="presenter-avatar">
+      <div class="presenter-info">
+        <span class="presenter-name">Quân</span>
+        <span class="presenter-divider">&bull;</span>
+        <span class="presenter-role">PM — AI</span>
+      </div>
+    </div></div>
   <div class="slide-content">
     <h1>Check-in <span class="accent">AI Evaluator Khách Quan</span></h1>
     <div class="two-col" style="gap: 32px;">
@@ -649,14 +714,20 @@
     </div>
   </div>
   <div class="slide-footer"><span>FPT Polytechnic — Dự án tốt nghiệp 2026</span><span>Phần 2: Trí tuệ nhân tạo (AI)</span></div>
-  <div class="speaker-badge"><img src="assets/img/quan.jpg" alt="Quân"><div><div class="speaker-name">Quân</div><div class="speaker-role">PM — Leader</div></div></div>
 </div>
 
 <!-- ==========================================
      SLIDE 14: AI — SMART ALERTS & PERFORMANCE
      ========================================== -->
 <div class="slide" data-notes="Hệ thống tích hợp Smart Alerts tự động quét rủi ro từ dữ liệu check-in, phân tích hiệu suất phòng ban và phân khúc khách hàng. Tổng cộng có 9 luồng AI-Native đồng bộ, tất cả đều tuân thủ nguyên tắc Human-in-the-loop.">
-  <div class="slide-header"><div class="header-left"><img src="assets/img/FPT_Polytechnic-26eda0e9.png" alt="FPT"><span>PHẦN 2 — TRÍ TUỆ NHÂN TẠO (AI)</span></div><div class="header-right">Quân — PM / AI</div></div>
+  <div class="slide-header"><div class="header-left"><img src="assets/img/FPT_Polytechnic-26eda0e9.png" alt="FPT"><span>PHẦN 2 — TRÍ TUỆ NHÂN TẠO (AI)</span></div><div class="presenter-chip">
+      <img src="assets/img/quan.jpg" alt="Quân" class="presenter-avatar">
+      <div class="presenter-info">
+        <span class="presenter-name">Quân</span>
+        <span class="presenter-divider">&bull;</span>
+        <span class="presenter-role">PM — AI</span>
+      </div>
+    </div></div>
   <div class="slide-content">
     <h1>Smart Alerts &amp; <span class="accent">Phân Tích Hiệu Suất</span></h1>
     <div class="three-col" style="gap: 24px; margin-top: 8px;">
@@ -692,14 +763,20 @@
     </div>
   </div>
   <div class="slide-footer"><span>FPT Polytechnic — Dự án tốt nghiệp 2026</span><span>Phần 2: Trí tuệ nhân tạo (AI)</span></div>
-  <div class="speaker-badge"><img src="assets/img/quan.jpg" alt="Quân"><div><div class="speaker-name">Quân</div><div class="speaker-role">PM — Leader</div></div></div>
 </div>
 
 <!-- ==========================================
      SLIDE 15: AI — RAG PIPELINE
      ========================================== -->
 <div class="slide" data-notes="RAG Pipeline: Khi tài liệu PDF/DOCX tải lên, hệ thống quét virus ClamAV, lưu trữ MinIO, bóc tách text MinerU, sinh vector 1024 chiều bằng BGE-M3 và lưu vào Qdrant với bộ lọc TenantId + ACL. Khi người dùng hỏi, chỉ trích xuất tài liệu họ có quyền truy cập.">
-  <div class="slide-header"><div class="header-left"><img src="assets/img/FPT_Polytechnic-26eda0e9.png" alt="FPT"><span>PHẦN 2 — TRÍ TUỆ NHÂN TẠO (AI)</span></div><div class="header-right">Quân — PM / AI</div></div>
+  <div class="slide-header"><div class="header-left"><img src="assets/img/FPT_Polytechnic-26eda0e9.png" alt="FPT"><span>PHẦN 2 — TRÍ TUỆ NHÂN TẠO (AI)</span></div><div class="presenter-chip">
+      <img src="assets/img/quan.jpg" alt="Quân" class="presenter-avatar">
+      <div class="presenter-info">
+        <span class="presenter-name">Quân</span>
+        <span class="presenter-divider">&bull;</span>
+        <span class="presenter-role">PM — AI</span>
+      </div>
+    </div></div>
   <div class="slide-content">
     <h1>RAG Pipeline: <span class="accent">Nạp Tri Thức Doanh Nghiệp</span></h1>
     <h3 class="text-muted" style="margin-bottom: 12px;">Quy trình xử lý dữ liệu và bảo mật đa tầng từ tệp tin đến Vector DB:</h3>
@@ -739,7 +816,6 @@
     </div>
   </div>
   <div class="slide-footer"><span>FPT Polytechnic — Dự án tốt nghiệp 2026</span><span>Phần 2: Trí tuệ nhân tạo (AI)</span></div>
-  <div class="speaker-badge"><img src="assets/img/quan.jpg" alt="Quân"><div><div class="speaker-name">Quân</div><div class="speaker-role">PM — Leader</div></div></div>
 </div>
 
 
@@ -752,7 +828,14 @@
 <div class="slide" data-notes="Em là Như, phụ trách Frontend KPI/OKR. Giao diện cây OKR 3 cấp giúp nhân viên và lãnh đạo nhìn thấy mối liên kết xuyên suốt từ mục tiêu Công ty ➔ Phòng ban ➔ Cá nhân. Dashboard tự động tính % hoàn thành lũy kế, thể hiện trực quan qua màu sắc: Xanh (Đạt), Vàng (Nguy cơ), Đỏ (Trễ hạn) để nắm bắt toàn cảnh trong 3 giây.">
   <div class="slide-header">
     <div class="header-left"><img src="assets/img/FPT_Polytechnic-26eda0e9.png" alt="FPT"><span>PHẦN 3 — QUẢN TRỊ KPI / OKR (FRONTEND)</span></div>
-    <div class="header-right">Như — Frontend</div>
+    <div class="presenter-chip">
+      <img src="assets/img/nhu.jpg" alt="Như" class="presenter-avatar">
+      <div class="presenter-info">
+        <span class="presenter-name">Như</span>
+        <span class="presenter-divider">&bull;</span>
+        <span class="presenter-role">Frontend — KPI/OKR</span>
+      </div>
+    </div>
   </div>
   <div class="slide-content">
     <h1>Cây OKR Đa Cấp &amp; <span class="accent">Dashboard Realtime</span></h1>
@@ -797,14 +880,20 @@
     </div>
   </div>
   <div class="slide-footer"><span>FPT Polytechnic — Dự án tốt nghiệp 2026</span><span>Phần 3: Quản trị KPI / OKR (Frontend)</span></div>
-  <div class="speaker-badge"><img src="assets/img/nhu.jpg" alt="Như"><div><div class="speaker-name">Như</div><div class="speaker-role">Frontend — KPI/OKR</div></div></div>
 </div>
 
 <!-- SLIDE 17: QUY TRÌNH CHECK-IN & REVIEW QUEUE TRỰC QUAN -->
 <div class="slide" data-notes="Quy trình Check-in và Review Queue: Nhân viên chỉ mất 2 phút để tự đánh giá, nhập minh chứng kết quả và tự chấm điểm tự tin (Confidence Level 1-10). Toàn bộ báo cáo chờ duyệt được gom về Review Queue tập trung để quản lý duyệt hoặc yêu cầu cập nhật chỉ với 1 chạm. Lịch sử đối thoại 2 chiều minh bạch, xóa bỏ tranh cãi cuối kỳ.">
   <div class="slide-header">
     <div class="header-left"><img src="assets/img/FPT_Polytechnic-26eda0e9.png" alt="FPT"><span>PHẦN 3 — QUẢN TRỊ KPI / OKR (FRONTEND)</span></div>
-    <div class="header-right">Như — Frontend</div>
+    <div class="presenter-chip">
+      <img src="assets/img/nhu.jpg" alt="Như" class="presenter-avatar">
+      <div class="presenter-info">
+        <span class="presenter-name">Như</span>
+        <span class="presenter-divider">&bull;</span>
+        <span class="presenter-role">Frontend — KPI/OKR</span>
+      </div>
+    </div>
   </div>
   <div class="slide-content">
     <h1>Quy trình Check-in &amp; <span class="accent">Review Queue 1 Chạm</span></h1>
@@ -849,7 +938,6 @@
     </div>
   </div>
   <div class="slide-footer"><span>FPT Polytechnic — Dự án tốt nghiệp 2026</span><span>Phần 3: Quản trị KPI / OKR (Frontend)</span></div>
-  <div class="speaker-badge"><img src="assets/img/nhu.jpg" alt="Như"><div><div class="speaker-name">Như</div><div class="speaker-role">Frontend — KPI/OKR</div></div></div>
 </div>
 
 <!-- ==========================================
@@ -858,7 +946,14 @@
 <div class="slide" data-notes="Em là An, phụ trách Backend KPI/OKR. Để đảm bảo tính toàn vẹn dữ liệu và chống gian lận sửa điểm, nhóm xây dựng State Machine khép kín 4 trạng thái: Draft ➔ Submitted ➔ Reviewed ➔ Finalized. Điểm đặc biệt là khi đã chuyển sang Finalized, điểm số trở thành bất biến (immutable), hệ thống chặn tuyệt đối mọi hành vi sửa đổi. Toàn bộ cỗ máy trạng thái này đã được kiểm thử tự động qua 120+ Unit Tests xUnit.">
   <div class="slide-header">
     <div class="header-left"><img src="assets/img/FPT_Polytechnic-26eda0e9.png" alt="FPT"><span>PHẦN 3 — QUẢN TRỊ KPI / OKR (BACKEND)</span></div>
-    <div class="header-right">An — Backend</div>
+    <div class="presenter-chip">
+      <img src="assets/img/an.jpg" alt="An" class="presenter-avatar">
+      <div class="presenter-info">
+        <span class="presenter-name">An</span>
+        <span class="presenter-divider">&bull;</span>
+        <span class="presenter-role">Backend — KPI/OKR</span>
+      </div>
+    </div>
   </div>
   <div class="slide-content">
     <h1>State Machine: <span class="accent">Vòng Đời Check-in 4 Bước</span></h1>
@@ -901,7 +996,6 @@
     </div>
   </div>
   <div class="slide-footer"><span>FPT Polytechnic — Dự án tốt nghiệp 2026</span><span>Phần 3: Quản trị KPI / OKR (Backend)</span></div>
-  <div class="speaker-badge"><img src="assets/img/an.jpg" alt="An"><div><div class="speaker-name">An</div><div class="speaker-role">Backend — KPI/OKR</div></div></div>
 </div>
 
 <!-- ==========================================
@@ -910,7 +1004,14 @@
 <div class="slide" data-notes="Về thuật toán tính điểm: Hệ thống tính điểm tự động theo tỷ trọng đóng góp của từng chỉ tiêu KR, tự cân đối đủ 100% và giới hạn trần tối đa 150% để chống số liệu ảo. Thang xếp loại 7 bậc chuẩn FPT từ Xuất sắc đến Kém đảm bảo đánh giá nhân sự công bằng, minh bạch và gắn trực tiếp với chính sách đãi ngộ.">
   <div class="slide-header">
     <div class="header-left"><img src="assets/img/FPT_Polytechnic-26eda0e9.png" alt="FPT"><span>PHẦN 3 — QUẢN TRỊ KPI / OKR (BACKEND)</span></div>
-    <div class="header-right">An — Backend</div>
+    <div class="presenter-chip">
+      <img src="assets/img/an.jpg" alt="An" class="presenter-avatar">
+      <div class="presenter-info">
+        <span class="presenter-name">An</span>
+        <span class="presenter-divider">&bull;</span>
+        <span class="presenter-role">Backend — KPI/OKR</span>
+      </div>
+    </div>
   </div>
   <div class="slide-content">
     <h1>Động Cơ Tính Điểm &amp; <span class="accent">Thang Đánh Giá 7 Bậc FPT</span></h1>
@@ -970,7 +1071,6 @@
     </div>
   </div>
   <div class="slide-footer"><span>FPT Polytechnic — Dự án tốt nghiệp 2026</span><span>Phần 3: Quản trị KPI / OKR (Backend)</span></div>
-  <div class="speaker-badge"><img src="assets/img/an.jpg" alt="An"><div><div class="speaker-name">An</div><div class="speaker-role">Backend — KPI/OKR</div></div></div>
 </div>
 
 <!-- ==========================================
@@ -979,7 +1079,14 @@
 <div class="slide" data-notes="Về bảo mật và phân quyền: Hệ thống thiết lập mô hình RBAC 5 vai trò kiểm soát chặt chẽ qua Action Filters và Service Layer. Đồng thời áp dụng phòng thủ chiều sâu theo chuẩn OWASP Top 10: Tự động gắn Token chống CSRF, dùng EF Core tham số hóa 100% chống SQL Injection và xác thực TenantId trên từng Entity chống tấn công IDOR.">
   <div class="slide-header">
     <div class="header-left"><img src="assets/img/FPT_Polytechnic-26eda0e9.png" alt="FPT"><span>PHẦN 3 — KPI / OKR (BACKEND)</span></div>
-    <div class="header-right">An — Backend</div>
+    <div class="presenter-chip">
+      <img src="assets/img/an.jpg" alt="An" class="presenter-avatar">
+      <div class="presenter-info">
+        <span class="presenter-name">An</span>
+        <span class="presenter-divider">&bull;</span>
+        <span class="presenter-role">Backend — KPI/OKR</span>
+      </div>
+    </div>
   </div>
   <div class="slide-content">
     <h1>Bảo Mật Đa Tầng: <span class="accent">RBAC &amp; Chuẩn OWASP</span></h1>
@@ -1037,7 +1144,6 @@
     </div>
   </div>
   <div class="slide-footer"><span>FPT Polytechnic — Dự án tốt nghiệp 2026</span><span>Phần 3: Quản trị KPI / OKR (Backend)</span></div>
-  <div class="speaker-badge"><img src="assets/img/an.jpg" alt="An"><div><div class="speaker-name">An</div><div class="speaker-role">Backend — KPI/OKR</div></div></div>
 </div>
 
 <!-- ==========================================
@@ -1046,7 +1152,14 @@
 <div class="slide" data-notes="Điểm sáng bảo mật lớn nhất của dự án là công nghệ SQL Server Row-Level Security (RLS). Cơ chế này cô lập dữ liệu giữa các công ty ngay tại Database Engine thông qua Security Predicate gắn TenantId vào Session Context. Ngay cả khi hacker khai thác được lỗi phần mềm ở tầng Web, cơ sở dữ liệu vẫn chặn đứng 100% nguy cơ rò rỉ dữ liệu chéo giữa các doanh nghiệp trong môi trường Cloud SaaS.">
   <div class="slide-header">
     <div class="header-left"><img src="assets/img/FPT_Polytechnic-26eda0e9.png" alt="FPT"><span>PHẦN 3 — KPI / OKR (BACKEND)</span></div>
-    <div class="header-right">An — Backend</div>
+    <div class="presenter-chip">
+      <img src="assets/img/an.jpg" alt="An" class="presenter-avatar">
+      <div class="presenter-info">
+        <span class="presenter-name">An</span>
+        <span class="presenter-divider">&bull;</span>
+        <span class="presenter-role">Backend — KPI/OKR</span>
+      </div>
+    </div>
   </div>
   <div class="slide-content">
     <h1>Bảo Mật Cơ Sở Dữ Liệu: <span class="accent">SQL Server RLS</span></h1>
@@ -1089,7 +1202,6 @@
     </div>
   </div>
   <div class="slide-footer"><span>FPT Polytechnic — Dự án tốt nghiệp 2026</span><span>Phần 3: Quản trị KPI / OKR (Backend)</span></div>
-  <div class="speaker-badge"><img src="assets/img/an.jpg" alt="An"><div><div class="speaker-name">An</div><div class="speaker-role">Backend — KPI/OKR</div></div></div>
 </div>
 
 <!-- ==========================================
@@ -1103,7 +1215,14 @@
 👉 Ý 3 (Nhận diện thẻ thông minh): Thẻ phân loại trực quan theo màu ưu tiên (Urgent, High, Normal, Low), có nhãn deadline và avatar người phụ trách.">
   <div class="slide-header">
     <div class="header-left"><img src="assets/img/FPT_Polytechnic-26eda0e9.png" alt="FPT"><span>PHẦN 4 — VẬN HÀNH (FRONTEND)</span></div>
-    <div class="header-right">Nhật — Frontend</div>
+    <div class="presenter-chip">
+      <img src="assets/img/nhat.png" alt="Nhật" class="presenter-avatar">
+      <div class="presenter-info">
+        <span class="presenter-name">Nhật</span>
+        <span class="presenter-divider">&bull;</span>
+        <span class="presenter-role">Frontend — Vận hành</span>
+      </div>
+    </div>
   </div>
   <div class="slide-content">
     <h1>Giao diện Kanban Board &amp; <span class="accent">Quản trị Công việc Trực quan</span></h1>
@@ -1160,7 +1279,6 @@
     </div>
   </div>
   <div class="slide-footer"><span>FPT Polytechnic — Dự án tốt nghiệp 2026</span><span>Phần 4: Vận hành (Frontend)</span></div>
-  <div class="speaker-badge"><img src="assets/img/nhat.png" alt="Nhật"><div><div class="speaker-name">Nhật</div><div class="speaker-role">Frontend — Vận hành</div></div></div>
 </div>
 
 <!-- SLIDE 23: QUẢN LÝ DỰ ÁN TRỰC QUAN & ĐIỀU PHỐI NGUỒN LỰC -->
@@ -1171,7 +1289,14 @@
 👉 Chuyển tiếp: Sau đây em xin nhường lời cho bạn Bảo trình bày cơ chế liên kết Task và KPI tự động.">
   <div class="slide-header">
     <div class="header-left"><img src="assets/img/FPT_Polytechnic-26eda0e9.png" alt="FPT"><span>PHẦN 4 — VẬN HÀNH (FRONTEND)</span></div>
-    <div class="header-right">Nhật — Frontend</div>
+    <div class="presenter-chip">
+      <img src="assets/img/nhat.png" alt="Nhật" class="presenter-avatar">
+      <div class="presenter-info">
+        <span class="presenter-name">Nhật</span>
+        <span class="presenter-divider">&bull;</span>
+        <span class="presenter-role">Frontend — Vận hành</span>
+      </div>
+    </div>
   </div>
   <div class="slide-content">
     <h1>Quản lý Dự án Trực quan &amp; <span class="accent">Cân bằng Tải Nhân sự</span></h1>
@@ -1225,7 +1350,6 @@
     </div>
   </div>
   <div class="slide-footer"><span>FPT Polytechnic — Dự án tốt nghiệp 2026</span><span>Phần 4: Vận hành (Frontend)</span></div>
-  <div class="speaker-badge"><img src="assets/img/nhat.png" alt="Nhật"><div><div class="speaker-name">Nhật</div><div class="speaker-role">Frontend — Vận hành</div></div></div>
 </div>
 
 <!-- SLIDE 24: LIÊN KẾT HAI CHIỀU TASK ↔ KPI/OKR TỰ ĐỘNG -->
@@ -1235,7 +1359,14 @@
 👉 Ý 3 (Giải quyết nghịch lý SME): Chấm dứt tình trạng 'làm việc bận rộn nhưng cuối kỳ KPI không đạt' nhờ 100% đầu việc đều gắn liền với mục tiêu.">
   <div class="slide-header">
     <div class="header-left"><img src="assets/img/FPT_Polytechnic-26eda0e9.png" alt="FPT"><span>PHẦN 4 — VẬN HÀNH (BACKEND)</span></div>
-    <div class="header-right">Bảo — Backend</div>
+    <div class="presenter-chip">
+      <img src="assets/img/bao.png" alt="Bảo" class="presenter-avatar">
+      <div class="presenter-info">
+        <span class="presenter-name">Bảo</span>
+        <span class="presenter-divider">&bull;</span>
+        <span class="presenter-role">Backend — Vận hành</span>
+      </div>
+    </div>
   </div>
   <div class="slide-content">
     <h1>Liên kết Hai Chiều: <span class="accent">Task ↔ KPI/OKR Tự Động</span></h1>
@@ -1330,7 +1461,6 @@
     </div>
   </div>
   <div class="slide-footer"><span>FPT Polytechnic — Dự án tốt nghiệp 2026</span><span>Phần 4: Vận hành (Backend)</span></div>
-  <div class="speaker-badge"><img src="assets/img/bao.png" alt="Bảo"><div><div class="speaker-name">Bảo</div><div class="speaker-role">Backend — Vận hành</div></div></div>
 </div>
 
 <!-- SLIDE 25: XỬ LÝ SỰ KIỆN, AUDIT LOG & CẢNH BÁO QUÁ HẠN -->
@@ -1341,7 +1471,14 @@
 👉 Chuyển tiếp: Sau đây em xin nhường lời cho bạn Phong trình bày Phân hệ Danh mục, SaaS Multi-tenant và SEO.">
   <div class="slide-header">
     <div class="header-left"><img src="assets/img/FPT_Polytechnic-26eda0e9.png" alt="FPT"><span>PHẦN 4 — VẬN HÀNH (BACKEND)</span></div>
-    <div class="header-right">Bảo — Backend</div>
+    <div class="presenter-chip">
+      <img src="assets/img/bao.png" alt="Bảo" class="presenter-avatar">
+      <div class="presenter-info">
+        <span class="presenter-name">Bảo</span>
+        <span class="presenter-divider">&bull;</span>
+        <span class="presenter-role">Backend — Vận hành</span>
+      </div>
+    </div>
   </div>
   <div class="slide-content">
     <h1>Xử lý Sự kiện, <span class="accent">Audit Log &amp; Cảnh báo Quá hạn</span></h1>
@@ -1397,7 +1534,6 @@
     </div>
   </div>
   <div class="slide-footer"><span>FPT Polytechnic — Dự án tốt nghiệp 2026</span><span>Phần 4: Vận hành (Backend)</span></div>
-  <div class="speaker-badge"><img src="assets/img/bao.png" alt="Bảo"><div><div class="speaker-name">Bảo</div><div class="speaker-role">Backend — Vận hành</div></div></div>
 </div>
 
 <!-- ==========================================
@@ -1411,7 +1547,14 @@
 👉 Ý 3 (Cá nhân hóa White-label): Cho phép từng công ty đổi Logo, tên phần mềm và màu sắc nhận diện thương hiệu riêng.">
   <div class="slide-header">
     <div class="header-left"><img src="assets/img/FPT_Polytechnic-26eda0e9.png" alt="FPT"><span>PHẦN 5 — DANH MỤC &amp; SAAS</span></div>
-    <div class="header-right">Phong — Fullstack</div>
+    <div class="presenter-chip">
+      <img src="assets/img/phong.png" alt="Phong" class="presenter-avatar">
+      <div class="presenter-info">
+        <span class="presenter-name">Phong</span>
+        <span class="presenter-divider">&bull;</span>
+        <span class="presenter-role">Fullstack — Danh mục</span>
+      </div>
+    </div>
   </div>
   <div class="slide-content">
     <h1>Hệ thống Danh mục Động &amp; <span class="accent">Multi-tenant SaaS</span></h1>
@@ -1483,7 +1626,6 @@
     </div>
   </div>
   <div class="slide-footer"><span>FPT Polytechnic — Dự án tốt nghiệp 2026</span><span>Phần 5: Danh mục &amp; SaaS</span></div>
-  <div class="speaker-badge"><img src="assets/img/phong.png" alt="Phong"><div><div class="speaker-name">Phong</div><div class="speaker-role">Fullstack — Danh mục</div></div></div>
 </div>
 
 <!-- SLIDE 27: QUẢN TRỊ CƠ CẤU TỔ CHỨC & CẤU HÌNH VẬN HÀNH -->
@@ -1494,7 +1636,14 @@
 👉 Chuyển tiếp: Sau đây em xin nhường lời cho bạn Khánh báo cáo công tác Kiểm thử và Nghiệm thu chất lượng.">
   <div class="slide-header">
     <div class="header-left"><img src="assets/img/FPT_Polytechnic-26eda0e9.png" alt="FPT"><span>PHẦN 5 — QUẢN TRỊ HỆ THỐNG &amp; NHÂN SỰ</span></div>
-    <div class="header-right">Phong — Fullstack</div>
+    <div class="presenter-chip">
+      <img src="assets/img/phong.png" alt="Phong" class="presenter-avatar">
+      <div class="presenter-info">
+        <span class="presenter-name">Phong</span>
+        <span class="presenter-divider">&bull;</span>
+        <span class="presenter-role">Fullstack — Danh mục</span>
+      </div>
+    </div>
   </div>
   <div class="slide-content">
     <h1>Quản Trị Cơ Cấu Tổ Chức &amp; <span class="accent">Cấu Hình Vận Hành</span></h1>
@@ -1548,7 +1697,6 @@
     </div>
   </div>
   <div class="slide-footer"><span>FPT Polytechnic — Dự án tốt nghiệp 2026</span><span>Phần 5: Quản trị Hệ thống &amp; Nhân sự</span></div>
-  <div class="speaker-badge"><img src="assets/img/phong.png" alt="Phong"><div><div class="speaker-name">Phong</div><div class="speaker-role">Fullstack — Danh mục</div></div></div>
 </div>
 
 <!-- ==========================================
@@ -1562,7 +1710,14 @@
 👉 Ý 3 (Ma trận 5 tầng hệ thống): Bao quát từ Unit logic điểm, Business flow review queue, Multi-tenant Security, AI Service đến Database Integration.">
   <div class="slide-header">
     <div class="header-left"><img src="assets/img/FPT_Polytechnic-26eda0e9.png" alt="FPT"><span>PHẦN 6 — KIỂM THỬ &amp; CHẤT LƯỢNG</span></div>
-    <div class="header-right">Khánh — Tester</div>
+    <div class="presenter-chip">
+      <img src="assets/img/khanh.jpg" alt="Khánh" class="presenter-avatar">
+      <div class="presenter-info">
+        <span class="presenter-name">Khánh</span>
+        <span class="presenter-divider">&bull;</span>
+        <span class="presenter-role">Tester</span>
+      </div>
+    </div>
   </div>
   <div class="slide-content">
     <h1>Kế hoạch &amp; <span class="accent">Ma trận Kiểm thử Toàn diện</span></h1>
@@ -1648,7 +1803,6 @@
     </div>
   </div>
   <div class="slide-footer"><span>FPT Polytechnic — Dự án tốt nghiệp 2026</span><span>Phần 6: Kiểm thử &amp; Chất lượng</span></div>
-  <div class="speaker-badge"><img src="assets/img/khanh.jpg" alt="Khánh"><div><div class="speaker-name">Khánh</div><div class="speaker-role">Tester</div></div></div>
 </div>
 
 <!-- SLIDE 29: THỐNG KÊ 1,241 TEST CASES (100% PASS) & 290 BUGS FIXED -->
@@ -1659,7 +1813,14 @@
 👉 Chuyển tiếp: Sau đây em xin nhường lời lại cho bạn Quân tổng kết và bắt đầu phiên Live Demo 15 phút.">
   <div class="slide-header">
     <div class="header-left"><img src="assets/img/FPT_Polytechnic-26eda0e9.png" alt="FPT"><span>PHẦN 6 — KIỂM THỬ &amp; CHẤT LƯỢNG</span></div>
-    <div class="header-right">Khánh — Tester</div>
+    <div class="presenter-chip">
+      <img src="assets/img/khanh.jpg" alt="Khánh" class="presenter-avatar">
+      <div class="presenter-info">
+        <span class="presenter-name">Khánh</span>
+        <span class="presenter-divider">&bull;</span>
+        <span class="presenter-role">Tester</span>
+      </div>
+    </div>
   </div>
   <div class="slide-content">
     <h1>Nghiệm thu Kiểm thử: <span class="accent">1,241 Cases (100% Pass)</span></h1>
@@ -1738,7 +1899,6 @@
     </div>
   </div>
   <div class="slide-footer"><span>FPT Polytechnic — Dự án tốt nghiệp 2026</span><span>Phần 6: Kiểm thử &amp; Chất lượng</span></div>
-  <div class="speaker-badge"><img src="assets/img/khanh.jpg" alt="Khánh"><div><div class="speaker-name">Khánh</div><div class="speaker-role">Tester</div></div></div>
 </div>
 
 <!-- ==========================================
@@ -1751,7 +1911,14 @@
 • Nhóm em xin phép mở hệ thống trực tiếp để thực hiện demo!">
   <div class="slide-header">
     <div class="header-left"><img src="assets/img/FPT_Polytechnic-26eda0e9.png" alt="FPT"><span>PHẦN 7 — TỔNG KẾT &amp; DEMO TRỰC TIẾP</span></div>
-    <div class="header-right">Quân — PM / Leader</div>
+    <div class="presenter-chip">
+      <img src="assets/img/quan.jpg" alt="Quân" class="presenter-avatar">
+      <div class="presenter-info">
+        <span class="presenter-name">Quân</span>
+        <span class="presenter-divider">&bull;</span>
+        <span class="presenter-role">PM — Leader</span>
+      </div>
+    </div>
   </div>
   <div class="slide-content" style="justify-content: center; align-items: center; text-align: center;">
     <div style="max-width: 1000px; margin: 0 auto; display: flex; flex-direction: column; align-items: center; gap: 24px;">
@@ -1792,7 +1959,6 @@
     </div>
   </div>
   <div class="slide-footer"><span>FPT Polytechnic — Dự án tốt nghiệp 2026</span><span>Phần 7: Tổng kết &amp; Live Demo</span></div>
-  <div class="speaker-badge"><img src="assets/img/quan.jpg" alt="Quân"><div><div class="speaker-name">Quân</div><div class="speaker-role">PM — Leader</div></div></div>
 </div>
 
 <!-- SLIDE 31: LỜI CẢM ƠN & PHIÊN HỎI ĐÁP (Q&A 30 PHÚT) -->
@@ -1829,3 +1995,4 @@
 <script src="js/slide.js"></script>
 </body>
 </html>
+

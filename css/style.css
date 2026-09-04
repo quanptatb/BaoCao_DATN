@@ -709,45 +709,69 @@ html, body {
   flex-shrink: 0;
 }
 
-/* ---------- Speaker Badge (bottom-left) ---------- */
+/* ---------- Speaker Badge (Deprecated / Hidden to prevent obscuring slide content) ---------- */
 .speaker-badge {
-  position: absolute;
-  bottom: 54px;
-  left: var(--sp-64);
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  padding: 6px 18px 6px 8px;
-  background: rgba(27, 42, 74, 0.95);
-  color: var(--white);
-  border-radius: var(--radius-full);
-  font-size: 19px;
-  font-weight: 500;
-  box-shadow: 0 4px 16px rgba(0,0,0,0.2);
-  backdrop-filter: blur(6px);
-  z-index: 10;
-  border: 1.5px solid rgba(243, 112, 33, 0.5);
+  display: none !important;
 }
 
-.speaker-badge img {
+/* ---------- Presenter Chip (Header Right) ---------- */
+.presenter-chip {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(27, 42, 74, 0.92);
+  border: 1.5px solid rgba(255, 255, 255, 0.25);
+  border-radius: var(--radius-full);
+  padding: 5px 16px 5px 6px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  user-select: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.presenter-chip:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+  border-color: rgba(255, 255, 255, 0.45);
+}
+
+.presenter-avatar {
   width: 36px;
   height: 36px;
   border-radius: 50%;
   object-fit: cover;
-  border: 2px solid var(--fpt-orange);
+  border: 2px solid var(--fpt-orange-light);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  flex-shrink: 0;
 }
 
-.speaker-badge .speaker-name {
+.presenter-info {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  line-height: 1;
+}
+
+.presenter-name {
+  font-family: var(--font-heading);
   font-weight: 700;
-  font-size: 18px;
-  line-height: 1.2;
+  font-size: 16px;
+  color: var(--white);
+  letter-spacing: 0.2px;
 }
 
-.speaker-badge .speaker-role {
-  font-size: 15px;
-  opacity: 0.9;
-  line-height: 1.2;
-  color: var(--fpt-orange-light);
+.presenter-divider {
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 14px;
+}
+
+.presenter-role {
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 600;
+  color: #ffca99;
+  letter-spacing: 0.1px;
 }
 
 /* ---------- Slide Footer ---------- */
@@ -765,40 +789,71 @@ html, body {
   color: var(--gray-500);
 }
 
-/* ---------- Timer (top-right overlay) ---------- */
-#timer {
+/* ---------- Top-Center Timer (Dynamic Island Capsule) ---------- */
+.timer-capsule-wrapper {
   position: fixed;
-  top: 16px;
-  right: 16px;
+  top: 12px;
+  left: 50%;
+  transform: translateX(-50%);
   z-index: 1000;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(17, 24, 39, 0.88);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: var(--radius-full);
+  padding: 4px 6px 4px 14px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  user-select: none;
+  transition: all 0.3s ease;
+}
+
+.timer-capsule-wrapper:hover {
+  background: rgba(17, 24, 39, 0.96);
+  border-color: rgba(243, 112, 33, 0.5);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.45);
+}
+
+#timer {
   display: flex;
   align-items: center;
   gap: 8px;
-  background: var(--gray-800);
   color: var(--white);
-  padding: 8px 18px;
-  border-radius: var(--radius-full);
   font-family: var(--font-mono);
-  font-size: 20px;
+  font-size: 16px;
   font-weight: 700;
-  box-shadow: var(--shadow-lg);
-  user-select: none;
   cursor: pointer;
-  transition: background 0.3s;
+  padding: 2px 6px;
+  border-radius: var(--radius-full);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+#timer:hover {
+  opacity: 0.9;
+  transform: scale(1.02);
+}
+
+.timer-icon {
+  font-size: 15px;
+  opacity: 0.9;
 }
 
 #timer.warning {
-  background: #856404;
+  color: #ffc107;
+  text-shadow: 0 0 8px rgba(255, 193, 7, 0.5);
   animation: pulse-warning 2s infinite;
 }
 
 #timer.danger {
-  background: var(--red);
+  color: #ff4d4f;
+  text-shadow: 0 0 10px rgba(255, 77, 79, 0.8);
   animation: pulse-danger 1s infinite;
 }
 
 #timer.paused {
-  opacity: 0.6;
+  opacity: 0.55;
 }
 
 @keyframes pulse-warning {
@@ -813,33 +868,43 @@ html, body {
 
 /* ---------- Timer Controls ---------- */
 .timer-controls {
-  position: fixed;
-  top: 16px;
-  right: 160px;
-  z-index: 1000;
   display: flex;
-  gap: 6px;
+  align-items: center;
+  gap: 4px;
+  max-width: 0;
   opacity: 0;
-  transition: opacity 0.3s;
+  overflow: hidden;
+  transition: max-width 0.35s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.25s ease, margin 0.3s ease;
+  margin-left: 0;
 }
 
-#timer:hover ~ .timer-controls,
-.timer-controls:hover {
+.timer-capsule-wrapper:hover .timer-controls,
+.timer-capsule-wrapper:focus-within .timer-controls {
+  max-width: 180px;
   opacity: 1;
+  margin-left: 4px;
 }
 
 .timer-btn {
-  background: var(--gray-700);
+  background: rgba(255, 255, 255, 0.12);
   color: var(--white);
-  border: none;
-  padding: 6px 12px;
-  border-radius: var(--radius-sm);
-  font-size: 13px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 4px 10px;
+  border-radius: var(--radius-full);
+  font-size: 12px;
+  font-weight: 600;
   cursor: pointer;
+  white-space: nowrap;
   font-family: var(--font-body);
+  transition: all 0.2s ease;
 }
 
-.timer-btn:hover { background: var(--gray-600); }
+.timer-btn:hover {
+  background: var(--fpt-orange);
+  border-color: var(--fpt-orange);
+  color: var(--white);
+  transform: translateY(-1px);
+}
 
 /* ---------- Progress Bar ---------- */
 #progress-bar {
@@ -1302,7 +1367,7 @@ html, body {
     height: 100vh;
     transform: none !important;
   }
-  #timer, .timer-controls, #progress-bar, #slide-counter, #presenter-notes, #shortcuts-help {
+  .timer-capsule-wrapper, #timer, .timer-controls, #progress-bar, #slide-counter, #presenter-notes, #shortcuts-help {
     display: none !important;
   }
 }

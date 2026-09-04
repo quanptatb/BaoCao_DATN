@@ -473,7 +473,7 @@
    * @returns {void}
    */
   function handleClick(e) {
-    if (e.target.closest('button, a, input, label, video, .timer-controls, #timer, #presenter-notes, #shortcuts-help, .demo-action-btn')) return;
+    if (e.target.closest('button, a, input, label, video, .timer-capsule-wrapper, .timer-controls, #timer, .presenter-chip, #presenter-notes, #shortcuts-help, .demo-action-btn')) return;
 
     const x = e.clientX;
     const w = window.innerWidth;
